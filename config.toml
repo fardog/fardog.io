@@ -1,4 +1,4 @@
-baseURL = "http://fardog.io/"
+baseURL = "https://fardog.io/"
 languageCode = "en-us"
 title = "fardog.io"
 theme = "cocoa"
