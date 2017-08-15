@@ -4,7 +4,7 @@ date: 2013-10-15T15:44:00-07:00
 categories: [code, Javascript, projects, node.js]
 ---
 
-[![_primes_ Twitter avatar](/media/2013-10-16_primes.png)][1]
+[![_primes_ Twitter avatar](/img/blog/2013-10-16_primes.png)][1]
 
 A few weeks ago I started [_primes_][1], a Twitter-backed [prime number][2] generator. When I say "Twitter-backed", I mean the bot that updates the account has very little idea of state: it only knows the last number it calculated because Twitter provides it. The program flow is this:
 
