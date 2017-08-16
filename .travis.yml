@@ -4,17 +4,19 @@ go:
 env:
   global:
   - HUGO_VERSION=0.26
+  matrix:
+    secure: LdRk3nrytn0yPqL+M9LD9I1pSyq0sCPcRFujabQGpz2/D2Y7VIaR7RY37h/pNdmS3t+VkewXjRw8CLSocWrcjWH+LJLnGWpNA/YULjN1bbYf0+1p701/dZjD07dNPvjzcnivO3tOP/uwR8mgs4wOdkeMf75OgvXubTRgDoyYc651qEsJpYizRAFwo0pa53RYAC/1hb+FOPivPpETpZsHYu3vxRJ1QAlfKl7wjbG1TDzxANtz8mlAQqOMiYcFpzIBTkUU9ouU+zKrBGeziUr8ZVXOeBUFCX6ABaCnSPIDOkD6lRb2VKAR/DqfzXDc86qCLWKt2/ilzhiwxhBESOp+ma2rMotKxiya0lSfJc7M6FkUA2hW6B4WB8cGFFJ9dQ5BgqUeMMuNbexZvGSHKIBPnsOPgflVSHyzBGq0Q5UJAJp5p/Rn7+l8B2J+fvmo5jShiRABBvHfpHXX1tCfe4GfHtqtiGfUpf+xGorwTTbslOQlRbntR6yrtCE3Vg6ziMy2W+sv8owRjHPgl/A6+5X84+WQULiQXVpVK3spWsF0Bxw2FdNLY8LTj7C8qsdxSYQYq3xpC39EresXW9LD31Q4J0Oc7RyKbmmw9zxn+wUopMi0cnAs86B6HlUUyywo1KgQC5BVMSG7q5G+4U+eNZOCkYAXMi5FZUUGkoQ8VWh+na0=
 before_install:
-- openssl aes-256-cbc -K $encrypted_140f60380cab_key -iv $encrypted_140f60380cab_iv
-  -in id_rsa.enc -out id_rsa -d
 - mkdir -p bin
 - curl -L https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
   -o bin/hugo.tar.gz
 - tar xzvvf bin/hugo.tar.gz -C ./bin
-- rm -rf public
-- git worktree add -B gh-pages public origin/gh-pages
 script:
-- git submodule init
 - "./bin/hugo"
-after_success:
-- cd public && git add -A && git commit -m "publish" && git push origin HEAD
+deploy:
+  provider: pages
+  local_dir: public
+  skip_cleanup: true
+  github_token: "$GITHUB_TOKEN"
+  on:
+    branch: master
