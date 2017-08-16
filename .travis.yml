@@ -3,17 +3,18 @@ go:
 - 1.7
 env:
   global:
-    - HUGO_VERSION=0.26
+  - HUGO_VERSION=0.26
 before_install:
-  - openssl aes-256-cbc -K $encrypted_12f0a651a9fa_key -iv $encrypted_12f0a651a9fa_iv
-    -in id_rsa.enc -out id_rsa -d
-  - mkdir -p bin
-  - curl -L https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz -o bin/hugo.tar.gz
-  - tar xzvvf bin/hugo.tar.gz -C ./bin
-  - rm -rf public
-  - git worktree add -B gh-pages public origin/gh-pages
+- openssl aes-256-cbc -K $encrypted_140f60380cab_key -iv $encrypted_140f60380cab_iv
+  -in id_rsa.enc -out id_rsa -d
+- mkdir -p bin
+- curl -L https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
+  -o bin/hugo.tar.gz
+- tar xzvvf bin/hugo.tar.gz -C ./bin
+- rm -rf public
+- git worktree add -B gh-pages public origin/gh-pages
 script:
-  - git submodule init
-  - ./bin/hugo
+- git submodule init
+- "./bin/hugo"
 after_success:
-  - cd public && git add -A && git commit -m "publish" && git push origin HEAD
+- cd public && git add -A && git commit -m "publish" && git push origin HEAD
