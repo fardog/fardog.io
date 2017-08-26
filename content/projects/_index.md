@@ -61,8 +61,8 @@ not necesarily in the "uptime" sense. You don't really know who's running these
 other services either, so why not trust Google?
 
 _secure-operator_ has been well received, made the rounds on a number of Golang
-newsletters, and is running in highly reliable for my use.
-
+newsletters, and has been running reliably in my home for months. The number of
+downloads it receives indicate it might be working well for others too.
 
 [github]: https://github.com/fardog
 [primes-twitter]: https://twitter.com/_primes_
