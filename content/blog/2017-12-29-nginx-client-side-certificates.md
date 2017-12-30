@@ -70,8 +70,8 @@ client-side certs, and is not a replacement for your typical certificate needed
 for HTTPS authentication; we'll get to that later.
 
 ```bash
-# sign a certificate for 365 days; replace that number with whatever's suitable
-# for your application
+# sign a certificate for 365 days; replace that number with whatever's
+# suitable for your application
 openssl req -new -x509 -days 365 -key ca.key -out ca.crt
 ```
 
