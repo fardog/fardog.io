@@ -1,6 +1,6 @@
 ---
 title: Client-Side Certificate Authentication with nginx
-date: 2017-12-29T22:10:00-07:00
+date: 2017-12-30T17:20:00-07:00
 categories: [nginx, security]
 ---
 
@@ -12,7 +12,7 @@ many users will suss out the bugs.
 
 Still, there _will be bugs_. Which is what I think every time I see a
 login page on some device in my home. Who wrote this? Is it even remotely
-secure? Definitely I don't want to expose this to the internet.
+secure? I definitely don't want to expose this to the internet.
 
 So: let's put something in front of it that can handle authentication for us!
 In this case, it's a system which is unauthenticated, but that we want to expose
