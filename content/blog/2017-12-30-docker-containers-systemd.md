@@ -1,6 +1,7 @@
 ---
 title: Running Docker containers with systemd
 date: 2017-12-30T18:10:00-08:00
+lastmod: 2018-01-01T15:27:00-08:00
 categories: [docker, systemd]
 ---
 

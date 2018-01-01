@@ -1,6 +1,7 @@
 ---
 title: fardog.io
 date: 2017-08-14T21:29:24-07:00
+lastmod: 2018-01-01T15:27:00-08:00
 ---
 
 Hi. I'm Nathan Wittstock, a software developer from Portland, Oregon. You've
