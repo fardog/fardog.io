@@ -51,9 +51,10 @@ systemctl start <unit_file>
 systemctl enable <unit_file>
 ```
 
-I'm using this method to run several containers on a [Digital Ocean][] instance,
-and it's worked as expected.
+I'm using this method to run several containers on a [Digital Ocean][do]
+instance, and it's worked as expected.
 
 [docker]: https://www.docker.com/
 [systemd]: https://freedesktop.org/wiki/Software/systemd/
 [letsencrypt]: https://letsencrypt.org
+[do]: https://www.digitalocean.com/
