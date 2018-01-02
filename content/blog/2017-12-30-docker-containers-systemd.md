@@ -1,6 +1,7 @@
 ---
 title: Running Docker containers with systemd
 date: 2017-12-30T18:10:00-08:00
+lastmod: 2018-01-01T15:27:00-08:00
 categories: [docker, systemd]
 ---
 
@@ -51,9 +52,10 @@ systemctl start <unit_file>
 systemctl enable <unit_file>
 ```
 
-I'm using this method to run several containers on a [Digital Ocean][] instance,
-and it's worked as expected.
+I'm using this method to run several containers on a [Digital Ocean][do]
+instance, and it's worked as expected.
 
 [docker]: https://www.docker.com/
 [systemd]: https://freedesktop.org/wiki/Software/systemd/
 [letsencrypt]: https://letsencrypt.org
+[do]: https://www.digitalocean.com/

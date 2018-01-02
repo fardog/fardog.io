@@ -19,23 +19,21 @@ url                    = "/blog/"
 blog = "blog/:year/:month/:day/:title/"
 
 [params]
-latestpostscount       = 5                             # how many posts to display on the home page
-i18n_flags             = false                         # whether to display small country flags for available translations
+latestpostscount       = 5
+i18n_flags             = false
 author                 = "Nathan Wittstock"
-cachebuster            = false                         # add the current unix timestamp in query string for cache busting css assets
+cachebuster            = false
 dateform               = "Jan 2, 2006"
 dateformfull           = "Mon Jan 2 2006 15:04:05 MST"
-# description            = "web engineer"
-# email                  = "nate@fardog.io"
-# extracssfiles          = [ "/css/override.css" ]       # In your `static` directory, add/remove files as necessary.
 faviconfile            = "favicon.ico"
 github                 = "//github.com/fardog"
 highlightjs            = true
 lang                   = "en"
 linkedin               = "//linkedin.com/in/nathan-wittstock-458251a/"
-noshowreadtime         = false                         # if true, don't show "<x> minutes read" in posts
-# selfintro              = ""
+noshowreadtime         = false
 twitter                = "//twitter.com/milkandtang"
 mastodon               = "//mastodon.social/@fardog"
 
 avatar                 = "img/profile.jpg"
+tracking_pixel         = "//fardog-io.appspot.com/observe.gif"
+privacy_link           = "/privacy/"
