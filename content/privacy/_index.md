@@ -3,24 +3,25 @@ title: Privacy
 date: 2018-01-01T14:16:00-08:00
 ---
 
-This site is served via [GitHub Pages][] and [Cloudflare][]. Refer to them for
-any information or statistics they may collect.
-
 Visitation statistics are collected for this site using [observe][], which I
 use to understand how often pages are viewed, and from where. This data is
 stored in a private [Google BigQuery][bq] table—to which only I have access—and
 is removed after 90 days. The information in this table is:
 
 * URL visited
-* Source IP address
+* Anonymized Source IP address (IPv4 to 20 bits, IPv6 to 32)
 * Time of visit
 * HTTP headers received
 
-[Observe][observe] itself runs on [Google App Engine][appengine].
+[Observe][observe] itself runs on [Google App Engine][appengine], which logs
+some information about the request. This information is kept for 7 days.
 
 If your browser sends a [Do Not Track][dnt] header, I store no information about
-the visit. This site does not use [cookies][] directly, however Cloudflare may
-set some.
+the visit to BigQuery. This site does not use [cookies][] directly, however
+Cloudflare may set some.
+
+This site is served via [GitHub Pages][] and [Cloudflare][]. Refer to them for
+any information or statistics they may collect.
 
 To view how this site is built, see [its repository][repo] and
 [this post][post], which details the setup.
