@@ -15,6 +15,12 @@ weight                 = -100
 identifier             = "blog"
 url                    = "/blog/"
 
+[[menu.main]]
+name                   = "Contact"
+weight                 = -90
+identifier             = "contact"
+url                    = "/contact/"
+
 [permalinks]
 blog = "blog/:year/:month/:day/:title/"
 
@@ -29,10 +35,9 @@ faviconfile            = "favicon.ico"
 github                 = "//github.com/fardog"
 highlightjs            = true
 lang                   = "en"
-linkedin               = "//linkedin.com/in/nathan-wittstock-458251a/"
 noshowreadtime         = false
 twitter                = "//twitter.com/milkandtang"
-mastodon               = "//mastodon.social/@fardog"
+mastodon               = "//social.coop/@fardog"
 
 avatar                 = "img/profile.jpg"
 tracking_pixel         = "//fardog-io.appspot.com/observe.gif"
