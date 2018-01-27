@@ -17,8 +17,9 @@ is removed after 90 days. The information in this table is:
 some information about the request. This information is kept for 7 days.
 
 If your browser sends a [Do Not Track][dnt] header, I store no information about
-the visit to BigQuery. This site does not use [cookies][] directly, however
-Cloudflare may set some.
+the visit to BigQuery.
+
+This site does not use [cookies][] directly, however Cloudflare may set some.
 
 This site is served via [GitHub Pages][] and [Cloudflare][]. Refer to them for
 any information or statistics they may collect.
