@@ -12,7 +12,7 @@ You can find me all over the internet; here's some ways to reach me:
 * File an [issue on this repo][issues] at GitHub
 * Email (`nate` at this domain)
 
-[mastodon]: https://social.coop/@fardog
+[mastodon]: https://mastodon.social/@fardog
 [twitter]: https://twitter.com/milkandtang
 [riot]: https://riot.im
 [matrix]: https://matrix.org
