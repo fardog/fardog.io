@@ -14,5 +14,5 @@ You can reach me via [Mastodon][], [Twitter][], or [other channels][contact].
 [ua]: https://www.urbanairship.com
 [projects]: ./projects/
 [twitter]: https://twitter.com/milkandtang
-[mastodon]: https://social.coop/@fardog
+[mastodon]: https://mastodon.social/@fardog
 [contact]: ./contact/
