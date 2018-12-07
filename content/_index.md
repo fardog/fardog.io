@@ -18,5 +18,5 @@ of my web design company (now defunct) but the username stuck around.
 [ua]: https://www.urbanairship.com
 [projects]: ./projects/
 [twitter]: https://twitter.com/milkandtang
-[mastodon]: https://social.coop/@fardog
+[mastodon]: https://mastodon.social/@fardog
 [contact]: ./contact/
