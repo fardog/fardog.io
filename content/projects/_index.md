@@ -7,14 +7,18 @@ I've written a lot of things—all can be found on my [github][]—however these
 are the ones that are of particular interest, or that I'm particularly proud
 of.
 
+[github]: https://github.com/fardog
+
 ## primes
 * **What?** A Twitter bot that tweets prime numbers, sequentially
-* **Where?** [twitter.com/\_primes\_][primes-twitter]
+* **Where?** [twitter.com/\_primes\_][primes-twitter] and
+  [botsin.space/@primes][primes-mastodon]
 * **Why?** Art?
 
-The [code][primes-github] for _primes_ is some of the worst I've written; it's
-a CoffeeScript project, written before I decided to like Javascript. It was
-also the first-ish thing I wrote for Node.js. But: one of the most successful?
+The original [code][primes-original] for _primes_ is some of the worst I've
+written; it's a CoffeeScript project, written before I decided to like
+Javascript. It was also the first-ish thing I wrote for Node.js. But: one of the
+most successful?
 
 I wrote _primes_ when thinking of twitter-as-database, but where it landed
 isn't exactly that. Still; the bot itself is completely stateless; it only
@@ -22,7 +26,15 @@ knows where it left off by retrieving its last tweeted prime number from
 Twitter. To start it, I manually tweeted `2` from the website, and started the
 bot.
 
-Since then, it's amassed over 8,000 followers. Neat.
+Since then, it's amassed over 13,000 followers. Neat.
+
+I later re-wrote it to run twitter and mastodon from the [same
+codebase][primes-github].
+
+[primes-twitter]: https://twitter.com/_primes_
+[primes-mastodon]: https://botsin.space/@primes
+[primes-original]: https://github.com/fardog/_primes_
+[primes-github]: https://github.com/fardog/primebot
 
 ## frock
 * **What?** A developer's tool for writing fake/mock services
@@ -42,6 +54,12 @@ It was written with Open Source in mind, so the
 of the [docs][frock-docs].
 
 It's been a great help to my team, and I hope others find it useful.
+
+[frock-github]: https://github.com/urbanairship/frock
+[frock-static]: https://github.com/urbanairship/frock-static
+[frock-proxy]: https://github.com/urbanairship/frock-proxy
+[frock-commits]: https://github.com/urbanairship/frock/commits/master
+[frock-docs]: https://github.com/urbanairship/frock/tree/master/docs
 
 ## secureoperator
 * **What?** A DNS server for your local network which uses Google's
@@ -64,14 +82,6 @@ _secure-operator_ has been well received, made the rounds on a number of Golang
 newsletters, and has been running reliably in my home for months. The number of
 downloads it receives indicate it might be working well for others too.
 
-[github]: https://github.com/fardog
-[primes-twitter]: https://twitter.com/_primes_
-[primes-github]: https://github.com/fardog/_primes_
-[frock-github]: https://github.com/urbanairship/frock
-[frock-static]: https://github.com/urbanairship/frock-static
-[frock-proxy]: https://github.com/urbanairship/frock-proxy
-[frock-commits]: https://github.com/urbanairship/frock/commits/master
-[frock-docs]: https://github.com/urbanairship/frock/tree/master/docs
 [gdns]: https://developers.google.com/speed/public-dns/docs/dns-over-https
 [secop-github]: https://github.com/fardog/secureoperator
 [dnscrypt]: https://www.dnscrypt.org/
