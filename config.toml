@@ -40,5 +40,4 @@ twitter                = "//twitter.com/milkandtang"
 mastodon               = "//mastodon.social/@fardog"
 
 avatar                 = "img/profile.jpg"
-tracking_pixel         = "//fardog-io.appspot.com/observe.gif"
 privacy_link           = "/privacy/"
