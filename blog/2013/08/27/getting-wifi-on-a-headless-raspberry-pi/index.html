@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="author" content="Nathan Wittstock">
+<meta name="description" content="One of the final steps in a to-be-announced project involved getting a headless Raspberry Pi up on WiFi at boot time—which turned out to be a little more challenging that first expected. Not because it was particularly difficult, but because the documentation was poor.
+Below are my full configuration files that were required. The WiFi USB dongle itself was an Adafruit USB WiFi with Antenna which is actually a B-LINK BBL-LW05-AR5; notable becuase of its sizeable antenna, and for working with the latest Raspbian Wheezy distribution.">
+
+<meta property="og:title" content="Getting WiFi on a Headless Raspberry Pi" />
+<meta property="og:description" content="One of the final steps in a to-be-announced project involved getting a headless Raspberry Pi up on WiFi at boot time—which turned out to be a little more challenging that first expected. Not because it was particularly difficult, but because the documentation was poor.
+Below are my full configuration files that were required. The WiFi USB dongle itself was an Adafruit USB WiFi with Antenna which is actually a B-LINK BBL-LW05-AR5; notable becuase of its sizeable antenna, and for working with the latest Raspbian Wheezy distribution." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://fardog.io/blog/2013/08/27/getting-wifi-on-a-headless-raspberry-pi/" />
+
+
+
+<meta property="article:published_time" content="2013-08-27T11:38:00-07:00"/>
+
+<meta property="article:modified_time" content="2013-08-27T11:38:00-07:00"/>
+
+
+
+
+
+
+
+
+
+
+
+
+<title>
+
+
+     Getting WiFi on a Headless Raspberry Pi 
+
+</title>
+<link rel="canonical" href="https://fardog.io/blog/2013/08/27/getting-wifi-on-a-headless-raspberry-pi/">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500">
+
+
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/pygments.css">
+    <link rel="stylesheet" href="/css/main.css">
+    
+
+
+
+
+<link rel="shortcut icon"
+
+    href="/favicon.ico"
+
+>
+
+
+
+
+
+
+
+
+</head>
+
+
+<body lang="en">
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            
+                
+                
+                
+                
+                
+                    
+                
+                    
+                
+                
+                <a href="/"><img class="avatar" src="/img/profile.jpg" srcset="https://fardog.io/img/profile.jpg 1x"></a>
+            
+            <a href="/"><div class="name">Nathan Wittstock</div></a>
+            
+            <nav>
+                <ul>
+                    
+                        <li class="nav-projects"><a href="https://fardog.io/projects/"><span>Projects</span></a></li>
+                    
+                        <li class="nav-blog"><a href="https://fardog.io/blog/"><span>Blog</span></a></li>
+                    
+                        <li class="nav-contact"><a href="https://fardog.io/contact/"><span>Contact</span></a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<section class="icons">
+    <div class="container">
+        <div class="content">
+        
+            <a href="//github.com/fardog" target="_blank" rel="noopener"><img class="icon" src="/img/github.svg" alt="github" /></a>
+        
+
+        
+            <a href="//twitter.com/milkandtang" target="_blank" rel="noopener"><img class="icon" src="/img/twitter.svg" alt="twitter" /></a>
+        
+
+        
+
+        
+            <a href="//mastodon.social/@fardog" target="_blank" rel="noopener"><img class="icon" src="/img/mastodon.svg" alt="mastodon" /></a>
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+        </div>
+    </div>
+</section>
+
+
+<section class="main post non-narrow zero-top-spacing">
+    <div class="container">
+        <div class="content">
+            <div class="front-matter">
+                <div class="title-container">
+                    <div class="page-heading">
+
+    Getting WiFi on a Headless Raspberry Pi
+
+</div>
+
+                    <div class="initials"><a href="https://fardog.io/"></a></div>
+                </div>
+                <div class="meta">
+                    
+                    <div class="date" title='Tue Aug 27 2013 11:38:00 -0700'>Aug 27, 2013</div>
+                    
+                    
+		    <div class="reading-time"><div class="middot"></div>3 minutes read</div>
+                    
+                </div>
+            </div>
+            <div class="markdown">
+                
+
+<p>One of the final steps in a to-be-announced project involved getting a headless <a href="http://www.raspberrypi.org/">Raspberry Pi</a> up on WiFi at boot time—which turned out to be a little more challenging that first expected. Not because it was particularly difficult, but because the documentation was poor.</p>
+
+<p>Below are my full configuration files that were required. The WiFi USB dongle itself was an <a href="https://www.adafruit.com/products/1030">Adafruit USB WiFi with Antenna</a> which is actually a B-LINK BBL-LW05-AR5; notable becuase of its sizeable antenna, and for working with the latest Raspbian Wheezy distribution.</p>
+
+<p>Prior to getting started, make sure your Raspbian is up to date by issuing:</p>
+
+<pre><code class="language-bash">sudo apt-get update
+sudo apt-get upgrade
+</code></pre>
+
+<p>At that point, reboot and connect your WiFi module to USB. Then, edit your config. It&rsquo;s worth noting that I have an interface <code>eth0</code> which is set to DHCP, and my <code>wlan0</code> interface which has a static IP. This allows me to use ethernet as a failsafe if something goes wrong.</p>
+
+<p>First, in the file <code>/etc/network/interfaces</code>:</p>
+
+<pre><code>auto lo
+
+iface lo inet loopback
+iface eth0 inet dhcp
+
+allow-hotplug wlan0
+iface wlan0 inet manual
+wpa-roam /etc/wpa_supplicant/wpa_supplicant.conf
+
+iface YOUR_WIFI_ID inet static
+address 192.168.1.5
+netmask 255.255.255.0
+gateway 192.168.1.1
+
+# iface default inet dhcp
+</code></pre>
+
+<p>This is setting up your ethernet to dhcp, your wifi to manual, sourcing the <code>wpa_supplicant.conf</code> file, and then assigning your named Wireless connection to a static IP. Note that <em>YOUR_WIFI_ID</em> above should be an identifier you make up yourself. For example, mine is <em>NORTH_WPA</em>.</p>
+
+<p>Now, configure the network information in <code>/etc/wpa_supplicant/wpa_supplicant.conf</code>:</p>
+
+<pre><code>ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+# update_config=1
+network={
+	ssid=&quot;Your SSID Name&quot;
+	proto=RSN
+	key_mgmt=WPA-PSK
+	pairwise=CCMP TKIP
+	group=CCMP TKIP
+	psk=&quot;Your WPA Password&quot;
+	id_str=&quot;YOUR_WIFI_ID&quot;
+}
+</code></pre>
+
+<p>Again, note that <em>YOUR_WIFI_ID</em> is present.</p>
+
+<p>At that point, reboot. Assuming you&rsquo;ve got all your information correct (and that your key management and etc. match mine) you&rsquo;ll be connected automatically at boot!</p>
+
+<p>Much of the information in this post was gleaned from <a href="http://pingbin.com/2012/12/setup-wifi-raspberry-pi/">this thread</a>. The original poster&rsquo;s information didn&rsquo;t work for me, but I was able to assemble a working config from various commenters&rsquo; information.</p>
+
+<h4 id="update-2014-01-06">UPDATE 2014-01-06</h4>
+
+<p>When I switched from the older-style Airport Extreme base stations to the new &ldquo;tower&rdquo;-shaped base stations, I was having issues with the WiFi disconnected and then not reconnecting without a reboot. To resolve this, I followed one of the answers in <a href="http://raspberrypi.stackexchange.com/questions/4120/how-to-automatically-reconnect-wifi">this stack exchange post</a>, reproduced below for convenience. This is originally from the user <a href="http://raspberrypi.stackexchange.com/users/6365/andaluz">AndaluZ</a>:</p>
+
+<blockquote>
+<p>Well, there is a very simple solution:</p>
+
+<ol>
+<li>Go to <code>/etc/ifplugd/action.d/</code> and rename the <code>ifupdown</code> file to <code>ifupdown.original</code></li>
+<li>Then do: <code>cp /etc/wpa_supplicant/ifupdown.sh ./ifupdown</code></li>
+<li>Finally: <code>sudo reboot</code></li>
+</ol>
+
+<p>That&rsquo;s all. Test this by turning off/on your AP; you should see that your Raspberry Pi properly reconnects.</p>
+</blockquote>
+
+                <br>
+		<p class="back-to-posts"><a href="/blog/">Back to posts</a></p>
+            </div>
+            <br>
+            <div class="disqus">
+                
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+  
+
+  <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+  </script>
+
+
+
+
+<section class="footer">
+    <div class="container">
+        <div class="content">
+            <p>&copy; 2020 Nathan Wittstock &mdash; Content: <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>, Code: <a href="https://github.com/fardog/fardog.io/blob/master/LICENSE">MIT</a>, unless otherwise noted.</p>
+            <p>
+                View the <a href="https://github.com/fardog/fardog.io">source</a> for this site.
+                
+                    <a href="/privacy/">Privacy</a>.
+                
+            </p>
+        </div>
+    </div>
+</section>
+</body>
+</html>
+

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>fardog.io</title>
+    <link>https://fardog.io/</link>
+    <description>Recent content on fardog.io</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 14 Aug 2017 21:29:24 -0700</lastBuildDate>
+    
+	<atom:link href="https://fardog.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>CentOS and KVM: Single interface, multiple VLANs for Guests</title>
+      <link>https://fardog.io/blog/2020/11/08/centos-and-kvm-single-interface-multiple-vlans-for-guests/</link>
+      <pubDate>Sun, 08 Nov 2020 01:55:00 -0800</pubDate>
+      
+      <guid>https://fardog.io/blog/2020/11/08/centos-and-kvm-single-interface-multiple-vlans-for-guests/</guid>
+      <description>KVM on Linux is a nice way to run isolated services on your home network; in my case: MySQl, a Unifi controller, various Docker containers, etc. However: if you want to run these services on different VLANs so they can be in isolated networks, the process is less straightforward. This document covers how to get CentOS network interfaces set up so multiple VLANs can co-exist on a single interface in a way that&amp;rsquo;s transparent to KVM guests.</description>
+    </item>
+    
+    <item>
+      <title>Docker Hub Tag Builds</title>
+      <link>https://fardog.io/blog/2019/01/01/docker-hub-tag-builds/</link>
+      <pubDate>Tue, 01 Jan 2019 12:59:11 -0800</pubDate>
+      
+      <guid>https://fardog.io/blog/2019/01/01/docker-hub-tag-builds/</guid>
+      <description>Docker Hub automatic builds are a great way to keep your Docker images up to date with a git repository, but building sensibly tagged releases isn&amp;rsquo;t very straightforward. It&amp;rsquo;s easy to create ones for a tag (like v4.1.1) but less so to create versioned images, such as:
+myimage:4 myimage:4.1 myimage:4.1.1  This means that when you release a v4.1.2, it becomes the new 4 and 4.1. It turns out that you can do this with docker automatic builds.</description>
+    </item>
+    
+    <item>
+      <title>Docker Read-Only Volumes with SELinux</title>
+      <link>https://fardog.io/blog/2018/01/27/docker-read-only-volumes-with-selinux/</link>
+      <pubDate>Sat, 27 Jan 2018 15:12:15 -0800</pubDate>
+      
+      <guid>https://fardog.io/blog/2018/01/27/docker-read-only-volumes-with-selinux/</guid>
+      <description>If you use Docker on an SELinux-enabled Linux distribution like Fedora, you may have run into issues mounting host volumes, and are probably aware of the z flag to modify the SELinux label:
+docker run --rm -v /var/www/letsencrypt:/var/www/letsencrypt:z nginx  What isn&amp;rsquo;t made very clear from the Docker docs is that you can specify multiple flags separated with commas, say ro,z to specify SELinux labeling and read-only:
+docker run --rm -v /var/www/letsencrypt:/var/www/letsencrypt:ro,z nginx  </description>
+    </item>
+    
+    <item>
+      <title>Running Docker containers with systemd</title>
+      <link>https://fardog.io/blog/2017/12/30/running-docker-containers-with-systemd/</link>
+      <pubDate>Sat, 30 Dec 2017 18:10:00 -0800</pubDate>
+      
+      <guid>https://fardog.io/blog/2017/12/30/running-docker-containers-with-systemd/</guid>
+      <description>Services in Docker containers can easily be run under systemd, but I had some difficulty finding good examples of how to do so. Here&amp;rsquo;s what I came up with.
+This example is a container running nginx, which has access to letsencrypt certificates, but could be adapted to any service. I&amp;rsquo;ve annotated lines below:
+[Unit] Description=nginx (Docker) # start this unit only after docker has started After=docker.service Requires=docker.service [Service] TimeoutStartSec=0 Restart=always # The following lines start with &#39;-&#39; because they are allowed to fail without # causing startup to fail.</description>
+    </item>
+    
+    <item>
+      <title>Client-Side Certificate Authentication with nginx</title>
+      <link>https://fardog.io/blog/2017/12/30/client-side-certificate-authentication-with-nginx/</link>
+      <pubDate>Sat, 30 Dec 2017 17:20:00 -0700</pubDate>
+      
+      <guid>https://fardog.io/blog/2017/12/30/client-side-certificate-authentication-with-nginx/</guid>
+      <description>Authentication in applications is tough. If you decide to roll your own, security issues are nearly guaranteed. Most anyone who writes software for a living will tell you to use something you didn&amp;rsquo;t write; that&amp;rsquo;s battle-tested and in wide use. Open source is even better; hopefully that many eyes and that many users will suss out the bugs.
+Still, there will be bugs. Which is what I think every time I see a login page on some device in my home.</description>
+    </item>
+    
+    <item>
+      <title>Removing old posts</title>
+      <link>https://fardog.io/blog/2017/12/30/removing-old-posts/</link>
+      <pubDate>Sat, 30 Dec 2017 17:10:00 -0700</pubDate>
+      
+      <guid>https://fardog.io/blog/2017/12/30/removing-old-posts/</guid>
+      <description>This site has a few old posts that are of dubious value and are never read; I&amp;rsquo;m removing them as part of a clean-up effort. For transparency&amp;rsquo;s sake, you can check this PR if you care about what was removed.</description>
+    </item>
+    
+    <item>
+      <title>Automatically publishing websites with Hugo, Travis, and Github</title>
+      <link>https://fardog.io/blog/2017/08/26/automatically-publishing-websites-with-hugo-travis-and-github/</link>
+      <pubDate>Sat, 26 Aug 2017 10:30:00 -0700</pubDate>
+      
+      <guid>https://fardog.io/blog/2017/08/26/automatically-publishing-websites-with-hugo-travis-and-github/</guid>
+      <description>Welcome to the new fardog.io: an HTTPS website which is hosted for free, easy to maintain, and automatically built when I push updates to a git repository. It&amp;rsquo;s backed by Hugo, Travis-CI, GitHub, and Cloudflare.
+Although I don&amp;rsquo;t intend for this article to be a complete how-to of launching a site like this, hopefully it gives you a basis to piece together how you can build your own.
+A History This site is rebuilt from the ashes of milkandtang.</description>
+    </item>
+    
+    <item>
+      <title>Retiring some old projects</title>
+      <link>https://fardog.io/blog/2014/10/23/retiring-some-old-projects/</link>
+      <pubDate>Thu, 23 Oct 2014 14:15:00 -0700</pubDate>
+      
+      <guid>https://fardog.io/blog/2014/10/23/retiring-some-old-projects/</guid>
+      <description>Some changes are coming; they&amp;rsquo;re changes for me, but a secondary effect is that I no longer have free hosting for some projects that have been in unmaintained-but-still-running status for the last few years. I&amp;rsquo;m taking the following offline:
+ Adventure: My &amp;ldquo;Choose your own adventure&amp;rdquo;-like story builder. This hasn&amp;rsquo;t seen an update since early 2012; very few people were using it. Re-launching this application would require a considerable effort, so I&amp;rsquo;m taking this offline for the foreseeable future.</description>
+    </item>
+    
+    <item>
+      <title>Mac OS X Audio in node.js, and a Chromecast</title>
+      <link>https://fardog.io/blog/2014/09/26/mac-os-x-audio-in-node.js-and-a-chromecast/</link>
+      <pubDate>Fri, 26 Sep 2014 12:05:00 -0700</pubDate>
+      
+      <guid>https://fardog.io/blog/2014/09/26/mac-os-x-audio-in-node.js-and-a-chromecast/</guid>
+      <description>A few weeks ago, a simple idea formed: why can&amp;rsquo;t you easily stream system audio to a Chromecast? Sure, if your chosen listening application already supports it, you&amp;rsquo;re set. Otherwise you&amp;rsquo;re left out.
+A solution seemed simple: node.js has streams, and they&amp;rsquo;re awesome! Take system audio, pipe it to an encoder, pipe that to an HTTP response, and tell the Chromecast where to look. Easy!
+Except, there&amp;rsquo;s no node.js package that supports OS X audio input, except via bindings to another library.</description>
+    </item>
+    
+    <item>
+      <title>XKCD Password Generation for Node.js</title>
+      <link>https://fardog.io/blog/2014/04/07/xkcd-password-generation-for-node.js/</link>
+      <pubDate>Mon, 07 Apr 2014 17:30:00 -0700</pubDate>
+      
+      <guid>https://fardog.io/blog/2014/04/07/xkcd-password-generation-for-node.js/</guid>
+      <description>I created an XKCD-style password generator for Node.js (see this comic for reference). You can find it on my github or do an npm install -g xkcd-password to get it on your path.
+There are others available, but most don&amp;rsquo;t include a CLI, or easily configurable options. Many use small word lists. So I made one that uses a sufficiently large list—113,809 words provided by the Moby Project—and both a simple commandline utility and a module that you can use in your Node.</description>
+    </item>
+    
+    <item>
+      <title>primes, A Twitter-backed prime number generator</title>
+      <link>https://fardog.io/blog/2013/10/15/primes-a-twitter-backed-prime-number-generator/</link>
+      <pubDate>Tue, 15 Oct 2013 15:44:00 -0700</pubDate>
+      
+      <guid>https://fardog.io/blog/2013/10/15/primes-a-twitter-backed-prime-number-generator/</guid>
+      <description>A few weeks ago I started primes, a Twitter-backed prime number generator. When I say &amp;ldquo;Twitter-backed&amp;rdquo;, I mean the bot that updates the account has very little idea of state: it only knows the last number it calculated because Twitter provides it. The program flow is this:
+ Start up Fetch the most recently calculated prime from the Twitter feed. Calculate the next prime. Post if an hour has passed since the last posting.</description>
+    </item>
+    
+    <item>
+      <title>An Addendum to &#34;Fixing a Famicom Disk System&#34;</title>
+      <link>https://fardog.io/blog/2013/10/08/an-addendum-to-fixing-a-famicom-disk-system/</link>
+      <pubDate>Tue, 08 Oct 2013 09:25:00 -0700</pubDate>
+      
+      <guid>https://fardog.io/blog/2013/10/08/an-addendum-to-fixing-a-famicom-disk-system/</guid>
+      <description>My old Sharp Twin Famicom threw the belt again, as they do. While replacing it, I wanted to make an update to my previous blog post about FDS belts, since my old article wasn&amp;rsquo;t as helpful as I&amp;rsquo;d have liked when I actually tried to use it.
+First, there&amp;rsquo;s now a far better repair article available at the Famicom Disk System website. This goes through the whole process of belt replacement as well as aligning the spindle hub, which I had a lot of problems with this time.</description>
+    </item>
+    
+    <item>
+      <title>Getting WiFi on a Headless Raspberry Pi</title>
+      <link>https://fardog.io/blog/2013/08/27/getting-wifi-on-a-headless-raspberry-pi/</link>
+      <pubDate>Tue, 27 Aug 2013 11:38:00 -0700</pubDate>
+      
+      <guid>https://fardog.io/blog/2013/08/27/getting-wifi-on-a-headless-raspberry-pi/</guid>
+      <description>One of the final steps in a to-be-announced project involved getting a headless Raspberry Pi up on WiFi at boot time—which turned out to be a little more challenging that first expected. Not because it was particularly difficult, but because the documentation was poor.
+Below are my full configuration files that were required. The WiFi USB dongle itself was an Adafruit USB WiFi with Antenna which is actually a B-LINK BBL-LW05-AR5; notable becuase of its sizeable antenna, and for working with the latest Raspbian Wheezy distribution.</description>
+    </item>
+    
+    <item>
+      <title>vim, fish shell, and vim-sensible</title>
+      <link>https://fardog.io/blog/2013/03/22/vim-fish-shell-and-vim-sensible/</link>
+      <pubDate>Fri, 22 Mar 2013 00:07:00 -0700</pubDate>
+      
+      <guid>https://fardog.io/blog/2013/03/22/vim-fish-shell-and-vim-sensible/</guid>
+      <description>Part of this evening was spent making vim workable for me, the first step was getting some sane defaults. vim-sensible was recommended in several places (as was Tim Pope&amp;rsquo;s also excellent pathogen), but immediately after installation I was getting an error:
+Error detected while processing ~/.vim/bundle/vim-sensible/plugin/sensible.vim: line 75: E484: Can&#39;t open file /tmp/v1NmKg8/0 Press ENTER or type command to continue  Frustratingly, line 75 held no obvious suggestions. After some time troubleshooting, I found it worked fine if I wasn&amp;rsquo;t using fish shell.</description>
+    </item>
+    
+    <item>
+      <title>Using Caps-Lock as a Compose key in XFCE4</title>
+      <link>https://fardog.io/blog/2013/02/22/using-caps-lock-as-a-compose-key-in-xfce4/</link>
+      <pubDate>Fri, 22 Feb 2013 14:03:00 -0700</pubDate>
+      
+      <guid>https://fardog.io/blog/2013/02/22/using-caps-lock-as-a-compose-key-in-xfce4/</guid>
+      <description>Why not take that useless key, and make it useful? The Compose Key—formerly present on many Unix keyboards of old—isn&amp;rsquo;t present on most modern laptops.
+In XFCE, this is a little more cumbersome than Gnome, since there isn&amp;rsquo;t a graphical interface for setxkbmap, but these two commands will swap the Caps lock for a compose key:
+setxkbmap -option ctrl:nocaps # disables caps lock setxkbmap -option compose:caps # sets caps key to compose  To make this active at login, you can add two entries to your &amp;ldquo;Session and Startup&amp;rdquo; -&amp;gt; &amp;ldquo;Application Autostart&amp;rdquo; available under the Settings Manager.</description>
+    </item>
+    
+    <item>
+      <title>Making noise in Python</title>
+      <link>https://fardog.io/blog/2013/02/16/making-noise-in-python/</link>
+      <pubDate>Sat, 16 Feb 2013 14:44:00 -0700</pubDate>
+      
+      <guid>https://fardog.io/blog/2013/02/16/making-noise-in-python/</guid>
+      <description>I&amp;rsquo;ve been working with PyAudio lately, on a project to synchronize sound streams across multiple devices. Nothing to say on that front yet, but I do have a nice snippet for programatically generating a tone:
+import math import numpy import pyaudio def sine(frequency, length, rate): length = int(length * rate) factor = float(frequency) * (math.pi * 2) / rate return numpy.sin(numpy.arange(length) * factor) def play_tone(stream, frequency=440, length=1, rate=44100): chunks = [] chunks.</description>
+    </item>
+    
+    <item>
+      <title>Simple &#39;workon&#39; Command for fish shell</title>
+      <link>https://fardog.io/blog/2013/02/15/simple-workon-command-for-fish-shell/</link>
+      <pubDate>Fri, 15 Feb 2013 00:15:00 -0700</pubDate>
+      
+      <guid>https://fardog.io/blog/2013/02/15/simple-workon-command-for-fish-shell/</guid>
+      <description>I put together a quick workon clone for the fish&amp;rsquo;s fish shell. Definitely nothing as complete or useful as virtualenvwrapper, but it fixes my need: switching simply between virtualenv&amp;rsquo;s and projects.
+Installation First, create a function file ~/.config/fish/functions/workon.fish with this defintion:
+function workon -d &amp;quot;Activate virtual environment in $WORKON_HOME&amp;quot; set tgt {$WORKON_HOME}/$argv[1] if [ -d $tgt ] cd $tgt # deactivate any active venv, and activate the target # this needs to be rewritten with the `type` fish command if test -n &amp;quot;$VIRTUAL_ENV&amp;quot; deactivate end .</description>
+    </item>
+    
+    <item>
+      <title>Fixing a Famicom Disk System</title>
+      <link>https://fardog.io/blog/2010/03/21/fixing-a-famicom-disk-system/</link>
+      <pubDate>Sun, 21 Mar 2010 12:00:00 -0700</pubDate>
+      
+      <guid>https://fardog.io/blog/2010/03/21/fixing-a-famicom-disk-system/</guid>
+      <description>*Update 2013-10-08: There is now a great article available at the Famicom Disk System site, which I&amp;rsquo;d highly recommend. See my addendum for more info.*
+This isn’t the usual fare from this blog, but this is good information that took me quite some time to find. I’m also an avid video game collector, and i recently picked up a Sharp Twin Famicom and a few Famicom Disk System games; notably Kid Icarus and the infamous Doki Doki Panic!</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="author" content="Nathan Wittstock">
+<meta name="description" content="Docker Hub automatic builds are a great way to keep your Docker images up to date with a git repository, but building sensibly tagged releases isn&rsquo;t very straightforward. It&rsquo;s easy to create ones for a tag (like v4.1.1) but less so to create versioned images, such as:
+myimage:4 myimage:4.1 myimage:4.1.1  This means that when you release a v4.1.2, it becomes the new 4 and 4.1. It turns out that you can do this with docker automatic builds.">
+
+<meta property="og:title" content="Docker Hub Tag Builds" />
+<meta property="og:description" content="Docker Hub automatic builds are a great way to keep your Docker images up to date with a git repository, but building sensibly tagged releases isn&rsquo;t very straightforward. It&rsquo;s easy to create ones for a tag (like v4.1.1) but less so to create versioned images, such as:
+myimage:4 myimage:4.1 myimage:4.1.1  This means that when you release a v4.1.2, it becomes the new 4 and 4.1. It turns out that you can do this with docker automatic builds." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://fardog.io/blog/2019/01/01/docker-hub-tag-builds/" />
+
+
+
+<meta property="article:published_time" content="2019-01-01T12:59:11-08:00"/>
+
+<meta property="article:modified_time" content="2019-01-01T12:59:11-08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+
+<title>
+
+
+     Docker Hub Tag Builds 
+
+</title>
+<link rel="canonical" href="https://fardog.io/blog/2019/01/01/docker-hub-tag-builds/">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500">
+
+
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/pygments.css">
+    <link rel="stylesheet" href="/css/main.css">
+    
+
+
+
+
+<link rel="shortcut icon"
+
+    href="/favicon.ico"
+
+>
+
+
+
+
+
+
+
+
+</head>
+
+
+<body lang="en">
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            
+                
+                
+                
+                
+                
+                    
+                
+                    
+                
+                
+                <a href="/"><img class="avatar" src="/img/profile.jpg" srcset="https://fardog.io/img/profile.jpg 1x"></a>
+            
+            <a href="/"><div class="name">Nathan Wittstock</div></a>
+            
+            <nav>
+                <ul>
+                    
+                        <li class="nav-projects"><a href="https://fardog.io/projects/"><span>Projects</span></a></li>
+                    
+                        <li class="nav-blog"><a href="https://fardog.io/blog/"><span>Blog</span></a></li>
+                    
+                        <li class="nav-contact"><a href="https://fardog.io/contact/"><span>Contact</span></a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<section class="icons">
+    <div class="container">
+        <div class="content">
+        
+            <a href="//github.com/fardog" target="_blank" rel="noopener"><img class="icon" src="/img/github.svg" alt="github" /></a>
+        
+
+        
+            <a href="//twitter.com/milkandtang" target="_blank" rel="noopener"><img class="icon" src="/img/twitter.svg" alt="twitter" /></a>
+        
+
+        
+
+        
+            <a href="//mastodon.social/@fardog" target="_blank" rel="noopener"><img class="icon" src="/img/mastodon.svg" alt="mastodon" /></a>
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+        </div>
+    </div>
+</section>
+
+
+<section class="main post non-narrow zero-top-spacing">
+    <div class="container">
+        <div class="content">
+            <div class="front-matter">
+                <div class="title-container">
+                    <div class="page-heading">
+
+    Docker Hub Tag Builds
+
+</div>
+
+                    <div class="initials"><a href="https://fardog.io/"></a></div>
+                </div>
+                <div class="meta">
+                    
+                    <div class="date" title='Tue Jan 1 2019 12:59:11 -0800'>Jan 1, 2019</div>
+                    
+                    
+		    <div class="reading-time"><div class="middot"></div>2 minutes read</div>
+                    
+                </div>
+            </div>
+            <div class="markdown">
+                <p><a href="https://hub.docker.com/">Docker Hub</a> automatic builds are a great way to keep your Docker images
+up to date with a <code>git</code> repository, but building sensibly tagged releases isn&rsquo;t
+very straightforward. It&rsquo;s easy to create ones for a tag (like <code>v4.1.1</code>) but
+less so to create versioned images, such as:</p>
+
+<pre><code>myimage:4
+myimage:4.1
+myimage:4.1.1
+</code></pre>
+
+<p>This means that when you release a <code>v4.1.2</code>, it becomes the new <code>4</code> and <code>4.1</code>.
+It turns out that you can do this with docker automatic builds. At the time I
+got this working it wasn&rsquo;t well documented, but these days it has <a href="https://docs.docker.com/docker-hub/builds/#regexes-and-automated-builds">docs</a>.</p>
+
+<blockquote>
+<p>Note: This information was adapted from something I found in a Google search,
+but I&rsquo;ve since lost the source. I&rsquo;ll update here if I find it again.</p>
+</blockquote>
+
+<p>To achieve this, set up your build rules as follows:</p>
+
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Docker Tag Name</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Branch</td>
+<td><code>master</code></td>
+<td><code>latest</code></td>
+</tr>
+
+<tr>
+<td>Tag</td>
+<td><code>/^v([0-9.]+)$/</code></td>
+<td><code>{\1}</code></td>
+</tr>
+
+<tr>
+<td>Tag</td>
+<td><code>/^v([0-9]+)\.([0-9]+)\.([0-9]+)$/</code></td>
+<td><code>{\1}</code></td>
+</tr>
+
+<tr>
+<td>Tag</td>
+<td><code>/^v([0-9]+)\.([0-9]+)\.([0-9]+)$/</code></td>
+<td><code>{\1}.{\2}</code></td>
+</tr>
+</tbody>
+</table>
+
+<p>Now, tag your versions in <code>git</code> as full semver specifiers, with a <code>v</code> in front,
+e.g.:</p>
+
+<pre><code>git tag -a v4.1.2 -m 4.1.2
+</code></pre>
+
+<p>When your docker image is auto-built from git, it will now have tags which
+match the example at the beginning of this post.</p>
+
+<p>Eventually I&rsquo;ll write up a more thorough post on how you can perform
+auto-builds and releases with github, docker hub, and travis. For now you can
+learn a lot from this post, and by looking at the <a href="https://github.com/fardog/secureoperator/blob/master/.travis.yml">travis config</a> for
+<a href="https://github.com/fardog/secureoperator/">secureoperator</a>.</p>
+
+                <br>
+		<p class="back-to-posts"><a href="/blog/">Back to posts</a></p>
+            </div>
+            <br>
+            <div class="disqus">
+                
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+  
+
+  <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+  </script>
+
+
+
+
+<section class="footer">
+    <div class="container">
+        <div class="content">
+            <p>&copy; 2020 Nathan Wittstock &mdash; Content: <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>, Code: <a href="https://github.com/fardog/fardog.io/blob/master/LICENSE">MIT</a>, unless otherwise noted.</p>
+            <p>
+                View the <a href="https://github.com/fardog/fardog.io">source</a> for this site.
+                
+                    <a href="/privacy/">Privacy</a>.
+                
+            </p>
+        </div>
+    </div>
+</section>
+</body>
+</html>
+

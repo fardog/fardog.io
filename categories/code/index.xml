@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Code on fardog.io</title>
+    <link>https://fardog.io/categories/code/</link>
+    <description>Recent content in Code on fardog.io</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 26 Aug 2017 10:30:00 -0700</lastBuildDate>
+    
+	<atom:link href="https://fardog.io/categories/code/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Automatically publishing websites with Hugo, Travis, and Github</title>
+      <link>https://fardog.io/blog/2017/08/26/automatically-publishing-websites-with-hugo-travis-and-github/</link>
+      <pubDate>Sat, 26 Aug 2017 10:30:00 -0700</pubDate>
+      
+      <guid>https://fardog.io/blog/2017/08/26/automatically-publishing-websites-with-hugo-travis-and-github/</guid>
+      <description>Welcome to the new fardog.io: an HTTPS website which is hosted for free, easy to maintain, and automatically built when I push updates to a git repository. It&amp;rsquo;s backed by Hugo, Travis-CI, GitHub, and Cloudflare.
+Although I don&amp;rsquo;t intend for this article to be a complete how-to of launching a site like this, hopefully it gives you a basis to piece together how you can build your own.
+A History This site is rebuilt from the ashes of milkandtang.</description>
+    </item>
+    
+    <item>
+      <title>Mac OS X Audio in node.js, and a Chromecast</title>
+      <link>https://fardog.io/blog/2014/09/26/mac-os-x-audio-in-node.js-and-a-chromecast/</link>
+      <pubDate>Fri, 26 Sep 2014 12:05:00 -0700</pubDate>
+      
+      <guid>https://fardog.io/blog/2014/09/26/mac-os-x-audio-in-node.js-and-a-chromecast/</guid>
+      <description>A few weeks ago, a simple idea formed: why can&amp;rsquo;t you easily stream system audio to a Chromecast? Sure, if your chosen listening application already supports it, you&amp;rsquo;re set. Otherwise you&amp;rsquo;re left out.
+A solution seemed simple: node.js has streams, and they&amp;rsquo;re awesome! Take system audio, pipe it to an encoder, pipe that to an HTTP response, and tell the Chromecast where to look. Easy!
+Except, there&amp;rsquo;s no node.js package that supports OS X audio input, except via bindings to another library.</description>
+    </item>
+    
+    <item>
+      <title>XKCD Password Generation for Node.js</title>
+      <link>https://fardog.io/blog/2014/04/07/xkcd-password-generation-for-node.js/</link>
+      <pubDate>Mon, 07 Apr 2014 17:30:00 -0700</pubDate>
+      
+      <guid>https://fardog.io/blog/2014/04/07/xkcd-password-generation-for-node.js/</guid>
+      <description>I created an XKCD-style password generator for Node.js (see this comic for reference). You can find it on my github or do an npm install -g xkcd-password to get it on your path.
+There are others available, but most don&amp;rsquo;t include a CLI, or easily configurable options. Many use small word lists. So I made one that uses a sufficiently large list—113,809 words provided by the Moby Project—and both a simple commandline utility and a module that you can use in your Node.</description>
+    </item>
+    
+    <item>
+      <title>primes, A Twitter-backed prime number generator</title>
+      <link>https://fardog.io/blog/2013/10/15/primes-a-twitter-backed-prime-number-generator/</link>
+      <pubDate>Tue, 15 Oct 2013 15:44:00 -0700</pubDate>
+      
+      <guid>https://fardog.io/blog/2013/10/15/primes-a-twitter-backed-prime-number-generator/</guid>
+      <description>A few weeks ago I started primes, a Twitter-backed prime number generator. When I say &amp;ldquo;Twitter-backed&amp;rdquo;, I mean the bot that updates the account has very little idea of state: it only knows the last number it calculated because Twitter provides it. The program flow is this:
+ Start up Fetch the most recently calculated prime from the Twitter feed. Calculate the next prime. Post if an hour has passed since the last posting.</description>
+    </item>
+    
+    <item>
+      <title>Making noise in Python</title>
+      <link>https://fardog.io/blog/2013/02/16/making-noise-in-python/</link>
+      <pubDate>Sat, 16 Feb 2013 14:44:00 -0700</pubDate>
+      
+      <guid>https://fardog.io/blog/2013/02/16/making-noise-in-python/</guid>
+      <description>I&amp;rsquo;ve been working with PyAudio lately, on a project to synchronize sound streams across multiple devices. Nothing to say on that front yet, but I do have a nice snippet for programatically generating a tone:
+import math import numpy import pyaudio def sine(frequency, length, rate): length = int(length * rate) factor = float(frequency) * (math.pi * 2) / rate return numpy.sin(numpy.arange(length) * factor) def play_tone(stream, frequency=440, length=1, rate=44100): chunks = [] chunks.</description>
+    </item>
+    
+    <item>
+      <title>Simple &#39;workon&#39; Command for fish shell</title>
+      <link>https://fardog.io/blog/2013/02/15/simple-workon-command-for-fish-shell/</link>
+      <pubDate>Fri, 15 Feb 2013 00:15:00 -0700</pubDate>
+      
+      <guid>https://fardog.io/blog/2013/02/15/simple-workon-command-for-fish-shell/</guid>
+      <description>I put together a quick workon clone for the fish&amp;rsquo;s fish shell. Definitely nothing as complete or useful as virtualenvwrapper, but it fixes my need: switching simply between virtualenv&amp;rsquo;s and projects.
+Installation First, create a function file ~/.config/fish/functions/workon.fish with this defintion:
+function workon -d &amp;quot;Activate virtual environment in $WORKON_HOME&amp;quot; set tgt {$WORKON_HOME}/$argv[1] if [ -d $tgt ] cd $tgt # deactivate any active venv, and activate the target # this needs to be rewritten with the `type` fish command if test -n &amp;quot;$VIRTUAL_ENV&amp;quot; deactivate end .</description>
+    </item>
+    
+  </channel>
+</rss>

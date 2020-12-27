@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="author" content="Nathan Wittstock">
+<meta name="description" content="A few weeks ago I started primes, a Twitter-backed prime number generator. When I say &ldquo;Twitter-backed&rdquo;, I mean the bot that updates the account has very little idea of state: it only knows the last number it calculated because Twitter provides it. The program flow is this:
+ Start up Fetch the most recently calculated prime from the Twitter feed. Calculate the next prime. Post if an hour has passed since the last posting.">
+
+<meta property="og:title" content="primes, A Twitter-backed prime number generator" />
+<meta property="og:description" content="A few weeks ago I started primes, a Twitter-backed prime number generator. When I say &ldquo;Twitter-backed&rdquo;, I mean the bot that updates the account has very little idea of state: it only knows the last number it calculated because Twitter provides it. The program flow is this:
+ Start up Fetch the most recently calculated prime from the Twitter feed. Calculate the next prime. Post if an hour has passed since the last posting." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://fardog.io/blog/2013/10/15/primes-a-twitter-backed-prime-number-generator/" />
+
+
+
+<meta property="article:published_time" content="2013-10-15T15:44:00-07:00"/>
+
+<meta property="article:modified_time" content="2013-10-15T15:44:00-07:00"/>
+
+
+
+
+
+
+
+
+
+
+
+
+<title>
+
+
+     primes, A Twitter-backed prime number generator 
+
+</title>
+<link rel="canonical" href="https://fardog.io/blog/2013/10/15/primes-a-twitter-backed-prime-number-generator/">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500">
+
+
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/pygments.css">
+    <link rel="stylesheet" href="/css/main.css">
+    
+
+
+
+
+<link rel="shortcut icon"
+
+    href="/favicon.ico"
+
+>
+
+
+
+
+
+
+
+
+</head>
+
+
+<body lang="en">
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            
+                
+                
+                
+                
+                
+                    
+                
+                    
+                
+                
+                <a href="/"><img class="avatar" src="/img/profile.jpg" srcset="https://fardog.io/img/profile.jpg 1x"></a>
+            
+            <a href="/"><div class="name">Nathan Wittstock</div></a>
+            
+            <nav>
+                <ul>
+                    
+                        <li class="nav-projects"><a href="https://fardog.io/projects/"><span>Projects</span></a></li>
+                    
+                        <li class="nav-blog"><a href="https://fardog.io/blog/"><span>Blog</span></a></li>
+                    
+                        <li class="nav-contact"><a href="https://fardog.io/contact/"><span>Contact</span></a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<section class="icons">
+    <div class="container">
+        <div class="content">
+        
+            <a href="//github.com/fardog" target="_blank" rel="noopener"><img class="icon" src="/img/github.svg" alt="github" /></a>
+        
+
+        
+            <a href="//twitter.com/milkandtang" target="_blank" rel="noopener"><img class="icon" src="/img/twitter.svg" alt="twitter" /></a>
+        
+
+        
+
+        
+            <a href="//mastodon.social/@fardog" target="_blank" rel="noopener"><img class="icon" src="/img/mastodon.svg" alt="mastodon" /></a>
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+        </div>
+    </div>
+</section>
+
+
+<section class="main post non-narrow zero-top-spacing">
+    <div class="container">
+        <div class="content">
+            <div class="front-matter">
+                <div class="title-container">
+                    <div class="page-heading">
+
+    primes, A Twitter-backed prime number generator
+
+</div>
+
+                    <div class="initials"><a href="https://fardog.io/"></a></div>
+                </div>
+                <div class="meta">
+                    
+                    <div class="date" title='Tue Oct 15 2013 15:44:00 -0700'>Oct 15, 2013</div>
+                    
+                    
+		    <div class="reading-time"><div class="middot"></div>One minute read</div>
+                    
+                </div>
+            </div>
+            <div class="markdown">
+                <p><a href="https://twitter.com/_primes_"><img src="/img/blog/2013-10-16_primes.png" alt="_primes_ Twitter avatar" /></a></p>
+
+<p>A few weeks ago I started <a href="https://twitter.com/_primes_"><em>primes</em></a>, a Twitter-backed <a href="http://en.wikipedia.org/wiki/Prime_number">prime number</a> generator. When I say &ldquo;Twitter-backed&rdquo;, I mean the bot that updates the account has very little idea of state: it only knows the last number it calculated because Twitter provides it. The program flow is this:</p>
+
+<ol>
+<li>Start up</li>
+<li>Fetch the most recently calculated prime from the Twitter feed.</li>
+<li>Calculate the next prime.</li>
+<li>Post if an hour has passed since the last posting. Wait if not, then post.</li>
+<li>Steps 2–4 forever.</li>
+</ol>
+
+<p>Technically steps two and four are merged after the first posting, since Twitter returns your latest tweet as a response when you post it. You can <a href="http://github.com/fardog/_primes_">view the code</a> on Github. It&rsquo;s written in CoffeeScript on Node.js, and uses <a href="https://github.com/laverdet/node-fibers">node-fibers</a> since I orginally built the prime number algorithm as a <a href="http://en.wikipedia.org/wiki/Generator_(computer_programming)">generator</a>, but it&rsquo;s unnecessary in this case.</p>
+
+<p>The only state the application maintains is an internal &ldquo;last posting&rdquo; date, just as a fail-safe if the server it runs on spontaneously changed time: I didn&rsquo;t want it accidentally posting too quickly.</p>
+
+<p>You should give it a follow if you love primes! Or maybe <a href="http://github.com/fardog/_primes_">fork the code</a> and make some new Twitter bots? I&rsquo;d love to see some.</p>
+
+                <br>
+		<p class="back-to-posts"><a href="/blog/">Back to posts</a></p>
+            </div>
+            <br>
+            <div class="disqus">
+                
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+  
+
+  <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+  </script>
+
+
+
+
+<section class="footer">
+    <div class="container">
+        <div class="content">
+            <p>&copy; 2020 Nathan Wittstock &mdash; Content: <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>, Code: <a href="https://github.com/fardog/fardog.io/blob/master/LICENSE">MIT</a>, unless otherwise noted.</p>
+            <p>
+                View the <a href="https://github.com/fardog/fardog.io">source</a> for this site.
+                
+                    <a href="/privacy/">Privacy</a>.
+                
+            </p>
+        </div>
+    </div>
+</section>
+</body>
+</html>
+

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fds on fardog.io</title>
+    <link>https://fardog.io/tags/fds/</link>
+    <description>Recent content in Fds on fardog.io</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 08 Oct 2013 09:25:00 -0700</lastBuildDate>
+    
+	<atom:link href="https://fardog.io/tags/fds/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>An Addendum to &#34;Fixing a Famicom Disk System&#34;</title>
+      <link>https://fardog.io/blog/2013/10/08/an-addendum-to-fixing-a-famicom-disk-system/</link>
+      <pubDate>Tue, 08 Oct 2013 09:25:00 -0700</pubDate>
+      
+      <guid>https://fardog.io/blog/2013/10/08/an-addendum-to-fixing-a-famicom-disk-system/</guid>
+      <description>My old Sharp Twin Famicom threw the belt again, as they do. While replacing it, I wanted to make an update to my previous blog post about FDS belts, since my old article wasn&amp;rsquo;t as helpful as I&amp;rsquo;d have liked when I actually tried to use it.
+First, there&amp;rsquo;s now a far better repair article available at the Famicom Disk System website. This goes through the whole process of belt replacement as well as aligning the spindle hub, which I had a lot of problems with this time.</description>
+    </item>
+    
+    <item>
+      <title>Fixing a Famicom Disk System</title>
+      <link>https://fardog.io/blog/2010/03/21/fixing-a-famicom-disk-system/</link>
+      <pubDate>Sun, 21 Mar 2010 12:00:00 -0700</pubDate>
+      
+      <guid>https://fardog.io/blog/2010/03/21/fixing-a-famicom-disk-system/</guid>
+      <description>*Update 2013-10-08: There is now a great article available at the Famicom Disk System site, which I&amp;rsquo;d highly recommend. See my addendum for more info.*
+This isn’t the usual fare from this blog, but this is good information that took me quite some time to find. I’m also an avid video game collector, and i recently picked up a Sharp Twin Famicom and a few Famicom Disk System games; notably Kid Icarus and the infamous Doki Doki Panic!</description>
+    </item>
+    
+  </channel>
+</rss>

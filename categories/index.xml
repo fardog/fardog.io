@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on fardog.io</title>
+    <link>https://fardog.io/categories/</link>
+    <description>Recent content in Categories on fardog.io</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://fardog.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Cleanup</title>
+      <link>https://fardog.io/categories/cleanup/</link>
+      <pubDate>Sat, 30 Dec 2017 17:10:00 -0700</pubDate>
+      
+      <guid>https://fardog.io/categories/cleanup/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Code</title>
+      <link>https://fardog.io/categories/code/</link>
+      <pubDate>Sat, 26 Aug 2017 10:30:00 -0700</pubDate>
+      
+      <guid>https://fardog.io/categories/code/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>https://fardog.io/categories/docker/</link>
+      <pubDate>Sat, 30 Dec 2017 18:10:00 -0800</pubDate>
+      
+      <guid>https://fardog.io/categories/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Electronics</title>
+      <link>https://fardog.io/categories/electronics/</link>
+      <pubDate>Tue, 08 Oct 2013 09:25:00 -0700</pubDate>
+      
+      <guid>https://fardog.io/categories/electronics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fish</title>
+      <link>https://fardog.io/categories/fish/</link>
+      <pubDate>Fri, 22 Mar 2013 00:07:00 -0700</pubDate>
+      
+      <guid>https://fardog.io/categories/fish/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gaming</title>
+      <link>https://fardog.io/categories/gaming/</link>
+      <pubDate>Tue, 08 Oct 2013 09:25:00 -0700</pubDate>
+      
+      <guid>https://fardog.io/categories/gaming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Golang</title>
+      <link>https://fardog.io/categories/golang/</link>
+      <pubDate>Sat, 26 Aug 2017 10:30:00 -0700</pubDate>
+      
+      <guid>https://fardog.io/categories/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Javascript</title>
+      <link>https://fardog.io/categories/javascript/</link>
+      <pubDate>Fri, 26 Sep 2014 12:05:00 -0700</pubDate>
+      
+      <guid>https://fardog.io/categories/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://fardog.io/categories/linux/</link>
+      <pubDate>Tue, 27 Aug 2013 11:38:00 -0700</pubDate>
+      
+      <guid>https://fardog.io/categories/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Nginx</title>
+      <link>https://fardog.io/categories/nginx/</link>
+      <pubDate>Sat, 30 Dec 2017 17:20:00 -0700</pubDate>
+      
+      <guid>https://fardog.io/categories/nginx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Node.js</title>
+      <link>https://fardog.io/categories/node.js/</link>
+      <pubDate>Fri, 26 Sep 2014 12:05:00 -0700</pubDate>
+      
+      <guid>https://fardog.io/categories/node.js/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>https://fardog.io/categories/projects/</link>
+      <pubDate>Thu, 23 Oct 2014 14:15:00 -0700</pubDate>
+      
+      <guid>https://fardog.io/categories/projects/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Publishing</title>
+      <link>https://fardog.io/categories/publishing/</link>
+      <pubDate>Sat, 26 Aug 2017 10:30:00 -0700</pubDate>
+      
+      <guid>https://fardog.io/categories/publishing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pyaudio</title>
+      <link>https://fardog.io/categories/pyaudio/</link>
+      <pubDate>Sat, 16 Feb 2013 14:44:00 -0700</pubDate>
+      
+      <guid>https://fardog.io/categories/pyaudio/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://fardog.io/categories/python/</link>
+      <pubDate>Sat, 16 Feb 2013 14:44:00 -0700</pubDate>
+      
+      <guid>https://fardog.io/categories/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Raspberry Pi</title>
+      <link>https://fardog.io/categories/raspberry-pi/</link>
+      <pubDate>Tue, 27 Aug 2013 11:38:00 -0700</pubDate>
+      
+      <guid>https://fardog.io/categories/raspberry-pi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Repair</title>
+      <link>https://fardog.io/categories/repair/</link>
+      <pubDate>Tue, 08 Oct 2013 09:25:00 -0700</pubDate>
+      
+      <guid>https://fardog.io/categories/repair/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Security</title>
+      <link>https://fardog.io/categories/security/</link>
+      <pubDate>Sat, 30 Dec 2017 17:20:00 -0700</pubDate>
+      
+      <guid>https://fardog.io/categories/security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sound</title>
+      <link>https://fardog.io/categories/sound/</link>
+      <pubDate>Sat, 16 Feb 2013 14:44:00 -0700</pubDate>
+      
+      <guid>https://fardog.io/categories/sound/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Synthesizers</title>
+      <link>https://fardog.io/categories/synthesizers/</link>
+      <pubDate>Sat, 16 Feb 2013 14:44:00 -0700</pubDate>
+      
+      <guid>https://fardog.io/categories/synthesizers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Systemd</title>
+      <link>https://fardog.io/categories/systemd/</link>
+      <pubDate>Sat, 30 Dec 2017 18:10:00 -0800</pubDate>
+      
+      <guid>https://fardog.io/categories/systemd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Virtualenv</title>
+      <link>https://fardog.io/categories/virtualenv/</link>
+      <pubDate>Fri, 15 Feb 2013 00:15:00 -0700</pubDate>
+      
+      <guid>https://fardog.io/categories/virtualenv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Virtualenvwrapper</title>
+      <link>https://fardog.io/categories/virtualenvwrapper/</link>
+      <pubDate>Fri, 15 Feb 2013 00:15:00 -0700</pubDate>
+      
+      <guid>https://fardog.io/categories/virtualenvwrapper/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Xfce</title>
+      <link>https://fardog.io/categories/xfce/</link>
+      <pubDate>Fri, 22 Feb 2013 14:03:00 -0700</pubDate>
+      
+      <guid>https://fardog.io/categories/xfce/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

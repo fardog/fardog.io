@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="author" content="Nathan Wittstock">
+<meta name="description" content="Welcome to the new fardog.io: an HTTPS website which is hosted for free, easy to maintain, and automatically built when I push updates to a git repository. It&rsquo;s backed by Hugo, Travis-CI, GitHub, and Cloudflare.
+Although I don&rsquo;t intend for this article to be a complete how-to of launching a site like this, hopefully it gives you a basis to piece together how you can build your own.
+A History This site is rebuilt from the ashes of milkandtang.">
+
+<meta property="og:title" content="Automatically publishing websites with Hugo, Travis, and Github" />
+<meta property="og:description" content="Welcome to the new fardog.io: an HTTPS website which is hosted for free, easy to maintain, and automatically built when I push updates to a git repository. It&rsquo;s backed by Hugo, Travis-CI, GitHub, and Cloudflare.
+Although I don&rsquo;t intend for this article to be a complete how-to of launching a site like this, hopefully it gives you a basis to piece together how you can build your own.
+A History This site is rebuilt from the ashes of milkandtang." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://fardog.io/blog/2017/08/26/automatically-publishing-websites-with-hugo-travis-and-github/" />
+
+
+
+<meta property="article:published_time" content="2017-08-26T10:30:00-07:00"/>
+
+<meta property="article:modified_time" content="2017-08-26T10:30:00-07:00"/>
+
+
+
+
+
+
+
+
+
+
+
+
+<title>
+
+
+     Automatically publishing websites with Hugo, Travis, and Github 
+
+</title>
+<link rel="canonical" href="https://fardog.io/blog/2017/08/26/automatically-publishing-websites-with-hugo-travis-and-github/">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500">
+
+
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/pygments.css">
+    <link rel="stylesheet" href="/css/main.css">
+    
+
+
+
+
+<link rel="shortcut icon"
+
+    href="/favicon.ico"
+
+>
+
+
+
+
+
+
+
+
+</head>
+
+
+<body lang="en">
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            
+                
+                
+                
+                
+                
+                    
+                
+                    
+                
+                
+                <a href="/"><img class="avatar" src="/img/profile.jpg" srcset="https://fardog.io/img/profile.jpg 1x"></a>
+            
+            <a href="/"><div class="name">Nathan Wittstock</div></a>
+            
+            <nav>
+                <ul>
+                    
+                        <li class="nav-projects"><a href="https://fardog.io/projects/"><span>Projects</span></a></li>
+                    
+                        <li class="nav-blog"><a href="https://fardog.io/blog/"><span>Blog</span></a></li>
+                    
+                        <li class="nav-contact"><a href="https://fardog.io/contact/"><span>Contact</span></a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<section class="icons">
+    <div class="container">
+        <div class="content">
+        
+            <a href="//github.com/fardog" target="_blank" rel="noopener"><img class="icon" src="/img/github.svg" alt="github" /></a>
+        
+
+        
+            <a href="//twitter.com/milkandtang" target="_blank" rel="noopener"><img class="icon" src="/img/twitter.svg" alt="twitter" /></a>
+        
+
+        
+
+        
+            <a href="//mastodon.social/@fardog" target="_blank" rel="noopener"><img class="icon" src="/img/mastodon.svg" alt="mastodon" /></a>
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+        </div>
+    </div>
+</section>
+
+
+<section class="main post non-narrow zero-top-spacing">
+    <div class="container">
+        <div class="content">
+            <div class="front-matter">
+                <div class="title-container">
+                    <div class="page-heading">
+
+    Automatically publishing websites with Hugo, Travis, and Github
+
+</div>
+
+                    <div class="initials"><a href="https://fardog.io/"></a></div>
+                </div>
+                <div class="meta">
+                    
+                    <div class="date" title='Sat Aug 26 2017 10:30:00 -0700'>Aug 26, 2017</div>
+                    
+                    
+		    <div class="reading-time"><div class="middot"></div>5 minutes read</div>
+                    
+                </div>
+            </div>
+            <div class="markdown">
+                
+
+<p>Welcome to the new <a href="https://fardog.io/">fardog.io</a>: an HTTPS website which is hosted for free,
+easy to maintain, and automatically built when I push updates to a git
+repository. It&rsquo;s backed by <a href="https://gohugo.io/">Hugo</a>, <a href="https://travis-ci.org/">Travis-CI</a>, <a href="https://github.com/">GitHub</a>, and
+<a href="https://www.cloudflare.com/">Cloudflare</a>.</p>
+
+<p>Although I don&rsquo;t intend for this article to be a complete how-to of launching a
+site like this, hopefully it gives you a basis to piece together how you can
+build your own.</p>
+
+<h1 id="a-history">A History</h1>
+
+<p>This site is rebuilt from the ashes of milkandtang.com (defunct, now redirects
+to this site) with the intention to preserve links to old articles, but
+modernize everything else about the setup. The old site was built on
+<a href="http://octopress.org/">Octopress</a>, which—for a non-Ruby developer—was always problematic to build:
+it required unfamiliar tooling, installation of packages I didn&rsquo;t otherwise
+need, and the typical <code>gem</code> and <code>rvm</code> foolin&rsquo; that doesn&rsquo;t feel particularly
+worth it when you just want to update a blog post.</p>
+
+<h1 id="the-requirements">The Requirements</h1>
+
+<p>I went in with the following requirements:</p>
+
+<ul>
+<li>HTTPS hosted</li>
+<li>Staticaly generated</li>
+<li>Built with a familar toolchain</li>
+<li>Old links preserved</li>
+<li>No &ldquo;build&rdquo; step; should be published automatically on commit/push</li>
+</ul>
+
+<p>&ldquo;Free&rdquo; was not a requirement, but it ended up being (nearly) so due to the
+tools/services I chose.</p>
+
+<h1 id="the-tools">The Tools</h1>
+
+<p>fardog.io is built using the following:</p>
+
+<ul>
+<li><a href="https://gohugo.io/">Hugo</a>: a static-site generator written in <a href="https://golang.org/">Go</a></li>
+<li><a href="https://travis-ci.org/">Travis-CI</a>: a Continuous Integration (CI) service with a GitHub
+pages publisher out-of-the-box</li>
+<li><a href="https://github.com/">GitHub</a>/<a href="https://pages.github.com/">GitHub Pages</a>: the ubiquitous code-hosting platform,
+and their free static-site-hosting service</li>
+<li><a href="https://www.cloudflare.com/">Cloudflare</a>: a service which provides a Content-Delivery Network (CDN),
+DNS hosting, and HTTPS termination</li>
+<li><a href="https://aws.amazon.com/s3/">Amazon S3</a>: a file-hosting service; here, it&rsquo;s used to handle redirections
+for the old milkandtang.com domain</li>
+<li><a href="https://aws.amazon.com/route53/">Amazon Route 53</a>: a DNS service; here, used to handle the old
+milkandtang.com domain</li>
+</ul>
+
+<p>Although I pay for many of these services for other reasons, here they are all
+used at their &ldquo;free&rdquo; tiers, with the exception of the Amazon services; those
+cost about $0.53 USD/month, fluctuating slightly based on usage.</p>
+
+<h1 id="the-build-process">The Build Process</h1>
+
+<p>The <a href="https://github.com/fardog/fardog.io">code</a> for the site is hosted in a public repository on GitHub; this code
+contains the raw posts, configuration for Hugo, and the <a href="https://github.com/fardog/fardog.io/blob/master/.travis.yml">travis
+configuration</a> which is the declarative file which tells Travis how
+to build the static site.</p>
+
+<p>Really, you can learn the most from these two files:</p>
+
+<ul>
+<li><a href="https://github.com/fardog/fardog.io/blob/master/.travis.yml"><code>.travis.yml</code></a> the Travis configuration file</li>
+<li><a href="https://github.com/fardog/fardog.io/blob/master/config.toml"><code>config.toml</code></a> the Hugo configuration file</li>
+</ul>
+
+<h2 id="travis-configuration">Travis Configuration</h2>
+
+<p>The Travis configuration is the more interesting configuration; it&rsquo;s embedded
+below, with annotations in-line:</p>
+
+<script src="https://gist.github.com/fardog/97abb2bc066cdeada5fbf9fb8e0ed079.js"></script>
+
+<p>The only other information Travis needs is your <a href="https://github.com/settings/tokens">GitHub Token</a>; you&rsquo;ll
+want to generate one specificaly for this purpose. The
+<a href="https://docs.travis-ci.com/user/deployment/pages/">Travis docs</a> cover what access this token needs to your
+account. Once you have that, it just needs to be encrypted and stored in your
+<code>.travis.yml</code>, which is done with Travis&rsquo; CLI tools, run in your repository:</p>
+
+<pre><code class="language-bash">travis encrypt GITHUB_TOKEN=&lt;your_token&gt; --add env.matrix
+</code></pre>
+
+<p>This will encrypt the token, and insert it into your <code>.travis.yml</code>.</p>
+
+<h1 id="custom-domain-setup">Custom Domain Setup</h1>
+
+<p>At this point, you should have Travis set up and auto-building your static
+site, and posting that build to the <code>gh-pages</code> branch of your repository, but
+not at a custom domain.</p>
+
+<p>Follow the instructions at GitHub: <a href="https://help.github.com/articles/quick-start-setting-up-a-custom-domain/">Setting up a custom domain</a>,
+which will direct you create a file in the root of your built site named
+<code>CNAME</code>. Hugo automatically puts any files in a directory named <code>static</code> at the
+root of your site; see <a href="https://github.com/fardog/fardog.io/tree/master/static">my <code>static</code> directory</a> for an example.</p>
+
+<h1 id="https-setup">HTTPS Setup</h1>
+
+<p>By now, your site should be served at your custom domain, but is not yet SSL
+protected. It&rsquo;s time to set up your account at <a href="https://www.cloudflare.com/">Cloudflare</a>.</p>
+
+<p>Once you sign up for a free account, Cloudflare will walk you through the
+process of setting up your domain and transferring DNS. There are only a few
+settings you&rsquo;ll need to change after the fact:</p>
+
+<ul>
+<li>Crypto &gt; SSL: Change &ldquo;Full&rdquo; to &ldquo;Flexible&rdquo;. This will allow Cloudflare to hit
+GitHub&rsquo;s servers without strict SSL, since its certificates won&rsquo;t match your
+bare domain.</li>
+<li>Crypto &gt; Always use HTTPS: Change to &ldquo;on&rdquo;. This will redirect all HTTP
+requests to your domain to HTTPS.</li>
+<li>Crypto &gt; Automatic HTTPS Rewrites: Change to &ldquo;on&rdquo;. This will rewrite any URLs
+that are local to your domain over to HTTPS. Not strictly necessary, but
+allows you to be a little less careful with how you&rsquo;re linking things.
+Ideally, you&rsquo;ve got your domain correctly set up in your Hugo config.</li>
+</ul>
+
+<p>With this set up, your site should be available over HTTPS in a short time.</p>
+
+<h1 id="amazon-redirect">Amazon Redirect</h1>
+
+<p>In order to redirect the existing milkandtang.com, I used Amazon&rsquo;s Route 53 and
+S3 site hosting service to redirect all URLs to fardog.io; I won&rsquo;t go into
+detail here as it&rsquo;s not the primary interest; Amazon
+<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html">maintains a page</a> on how to set this up.</p>
+
+<p>There&rsquo;s a few things to note:</p>
+
+<h2 id="updating-yaml-frontmatter">Updating YAML Frontmatter</h2>
+
+<p>The frontmatter I was using for my Octopress posts needed some small updates. I
+changed it from:</p>
+
+<pre><code class="language-yaml">layout: post
+title: Fixing a Famicom Disk System
+author: Nate
+layout: post
+categories:
+  - Gaming
+tags:
+  - Famicom
+  - repair
+</code></pre>
+
+<p>…to:</p>
+
+<pre><code class="language-yaml">title: Fixing a Famicom Disk System
+date: 2010-03-21T12:00:00-07:00
+categories:
+  - Gaming
+tags:
+  - Famicom
+  - repair
+</code></pre>
+
+<p>Specifically, Hugo requires a strict ISO-8601 date, whereas Octopress was more
+permissive. URLs appear to be generated in the same manner between the two, so
+nothing was changed there.</p>
+
+<h2 id="matching-urls">Matching URLs</h2>
+
+<p>I needed to add the following to my Hugo <code>config.toml</code> to the permalinks matched
+the previous format:</p>
+
+<pre><code class="language-toml">[permalinks]
+blog = &quot;blog/:year/:month/:day/:title/&quot;
+</code></pre>
+
+<h1 id="other-reading">Other Reading</h1>
+
+<ul>
+<li><a href="https://docs.travis-ci.com/user/getting-started/">Getting started with Travis</a></li>
+<li><a href="https://gohugo.io/getting-started/quick-start/">Hugo Quick Start</a></li>
+</ul>
+
+                <br>
+		<p class="back-to-posts"><a href="/blog/">Back to posts</a></p>
+            </div>
+            <br>
+            <div class="disqus">
+                
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+  
+
+  <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+  </script>
+
+
+
+
+<section class="footer">
+    <div class="container">
+        <div class="content">
+            <p>&copy; 2020 Nathan Wittstock &mdash; Content: <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>, Code: <a href="https://github.com/fardog/fardog.io/blob/master/LICENSE">MIT</a>, unless otherwise noted.</p>
+            <p>
+                View the <a href="https://github.com/fardog/fardog.io">source</a> for this site.
+                
+                    <a href="/privacy/">Privacy</a>.
+                
+            </p>
+        </div>
+    </div>
+</section>
+</body>
+</html>
+
