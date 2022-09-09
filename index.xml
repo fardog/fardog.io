@@ -12,6 +12,16 @@
     
     
     <item>
+      <title>Fix Windows Security &#34;Actions Recommended&#34;</title>
+      <link>https://fardog.io/blog/2022/09/09/fix-windows-security-actions-recommended/</link>
+      <pubDate>Fri, 09 Sep 2022 15:01:54 -0700</pubDate>
+      
+      <guid>https://fardog.io/blog/2022/09/09/fix-windows-security-actions-recommended/</guid>
+      <description>I had an issue today with Windows Security dashboard on Windows 11, where it said there were &amp;ldquo;Actions Recommended&amp;rdquo; with an unnerving yellow warning icon, however opening it up showed all green:
+I looked at a lot of solutions which didn&amp;rsquo;t fix the issue, but then found a solution that I didn&amp;rsquo;t find listed elsewhere so I&amp;rsquo;m writing it down: there&amp;rsquo;s a (maybe hidden?) pane of the Windows Security dashboard that isn&amp;rsquo;t accessible from the menu in the screenshot above, but you can find it via the Windows &amp;ldquo;Settings&amp;rdquo; app:</description>
+    </item>
+    
+    <item>
       <title>Greek Yogurt Recipe</title>
       <link>https://fardog.io/blog/2022/09/09/greek-yogurt-recipe/</link>
       <pubDate>Fri, 09 Sep 2022 10:15:00 -0700</pubDate>
