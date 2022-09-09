@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://fardog.io/blog/2022/09/09/greek-yogurt-recipe/</loc>
+    <lastmod>2022-09-09T10:15:00-07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://fardog.io/blog/2020/11/08/centos-and-kvm-single-interface-multiple-vlans-for-guests/</loc>
     <lastmod>2020-11-08T01:55:00-08:00</lastmod>
   </url>
@@ -114,7 +119,7 @@
   
   <url>
     <loc>https://fardog.io/blog/</loc>
-    <lastmod>2020-11-08T01:55:00-08:00</lastmod>
+    <lastmod>2022-09-09T10:15:00-07:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -6,10 +6,20 @@
     <description>Recent content in Blogs on fardog.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 08 Nov 2020 01:55:00 -0800</lastBuildDate>
+    <lastBuildDate>Fri, 09 Sep 2022 10:15:00 -0700</lastBuildDate>
     
 	<atom:link href="https://fardog.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Greek Yogurt Recipe</title>
+      <link>https://fardog.io/blog/2022/09/09/greek-yogurt-recipe/</link>
+      <pubDate>Fri, 09 Sep 2022 10:15:00 -0700</pubDate>
+      
+      <guid>https://fardog.io/blog/2022/09/09/greek-yogurt-recipe/</guid>
+      <description>This is a recipe for making greek yogurt, although I hesitate to call it a &amp;ldquo;recipe&amp;rdquo; since it&amp;rsquo;s more like replicating existing yogurt. Still I&amp;rsquo;m writing this down because it&amp;rsquo;s the result of trial-and-error and has some differences with what I&amp;rsquo;ve read elsewhere, although minor. This makes a tangy and smooth yogurt that I&amp;rsquo;m really happy with.
+The goal here is to be low-waste: we make a smoothie every morning with yogurt as a component, and it creates a lot of plastic waste.</description>
+    </item>
     
     <item>
       <title>CentOS and KVM: Single interface, multiple VLANs for Guests</title>
