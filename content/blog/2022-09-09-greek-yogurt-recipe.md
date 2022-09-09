@@ -91,15 +91,15 @@ This is sort of a grab bag of things I've noted during this process which might
 help you.
 
 - The time of 12.5 hours is what works perfectly for me with our oven as the
-  incubator; at 12 hours I've found that it will sometimes still be a little too
-  thin to strain the first time, and at more than 12.5 hours it starts to
-  develop a flavor that's less tangy and a little more cheese-y.
+  incubator; with less time I've found that it will sometimes still be a little
+  too thin to strain the first time, and with more it starts to develop a flavor
+  that's less tangy and a little more cheese-y.
 - If your yogurt runs through the strainer, just leave it in the container and
   let it cool in the refrigerator; once cold try running it through the strainer
   again, placing it on top of whatever's still left in the strainer and leave
   for another 4 hours or so.
-- The constant whisking will avoid milk solids building up on the bottom of the
-  pan, which will make your yogurt grainy.
+- The constant whisking while heating will avoid milk solids building up on the
+  bottom of the pan, which will make your yogurt grainy.
 - When the milk cools down uncovered it'll form a skin, which I usually just
   skim off.
 - On immersion blending: this leads to far smoother yogurt in my experience. For
@@ -107,8 +107,8 @@ help you.
   first, then pour that into the rest of the milk, and then immersion blend
   _that_ again for a moment.
 - You can freeze your starter! When I need to re-up my starter I just buy some
-  from the store and freeze it into silicone ice cube trays. It keeps for
-  several weeks without issue.
+  from the store and freeze it into silicone ice cube trays, then bag those in
+  silicone freezer bags. It keeps for several weeks without issue.
 - I prefer to just use fresh starter instead of using the replicated yogurt as
   starter; this is mostly out of fear: I don't want to ruin a half-gallon of
   milk. I tried it once and it worked _fine_ but wasn't as good as with fresh
@@ -116,13 +116,6 @@ help you.
 - We haven't found many uses for the whey, but did find it works well in some
   types of bread in place of milk or water, usually using about half whey and
   half milk/water (depending on what the recipe calls for).
-  - I tried it in [this sandwich bread recipe][recipe] and it worked well, but
-    the recipe overall was underwhelming (or perhaps I'm crap at bread). My
-    partner now makes a far better sandwich bread from _The Tassajara Bread
-    Book_ but we haven't tried whey in that one.
-  - However she _does_ use it in sourdough bread and it's excellent, giving the
-    crust a nicer texture than without.
-  - It also works well in a fruit-plus-beet smoothie she makes.
 
 [recipe]: https://cairnspring.com/blogs/recipes/white-sandwich-bread
 
