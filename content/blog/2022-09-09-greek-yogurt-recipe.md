@@ -117,8 +117,6 @@ help you.
   types of bread in place of milk or water, usually using about half whey and
   half milk/water (depending on what the recipe calls for).
 
-[recipe]: https://cairnspring.com/blogs/recipes/white-sandwich-bread
-
 Anyhow I've never written a recipe before but there you have it; I'm compiling
 this because it took me a while to find a combination of quantities,
 temperatures, and tools that made a good result. Hopefully this works well for
