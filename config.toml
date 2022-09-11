@@ -33,7 +33,7 @@ dateform               = "Jan 2, 2006"
 dateformfull           = "Mon Jan 2 2006 15:04:05 MST"
 faviconfile            = "favicon.ico"
 github                 = "//github.com/fardog"
-highlightjs            = true
+highlightjs            = false
 lang                   = "en"
 noshowreadtime         = false
 twitter                = "//twitter.com/milkandtang"
@@ -41,3 +41,7 @@ mastodon               = "//mastodon.social/@fardog"
 
 avatar                 = "img/profile.jpg"
 privacy_link           = "/privacy/"
+
+[markup]
+  [markup.highlight]
+  style = "monokailight"
