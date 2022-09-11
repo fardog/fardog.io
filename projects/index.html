@@ -18,18 +18,6 @@
 
 
 
-<meta property="og:updated_time" content="2017-08-14T21:51:00-07:00"/>
-
-
-
-
-
-
-
-
-
-
-
 <title>
 
 
@@ -160,45 +148,34 @@
 </div>
 
             <div class="markdown">
-                
-
-<p>I&rsquo;ve written a lot of things—all can be found on my <a href="https://github.com/fardog">github</a>—however these
+                <p>I&rsquo;ve written a lot of things—all can be found on my <a href="https://github.com/fardog">github</a>—however these
 are the ones that are of particular interest, or that I&rsquo;m particularly proud
 of.</p>
-
 <h2 id="primes">primes</h2>
-
 <ul>
 <li><strong>What?</strong> A Twitter bot that tweets prime numbers, sequentially</li>
 <li><strong>Where?</strong> <a href="https://twitter.com/_primes_">twitter.com/_primes_</a> and
 <a href="https://botsin.space/@primes">botsin.space/@primes</a></li>
 <li><strong>Why?</strong> Art?</li>
 </ul>
-
 <p>The original <a href="https://github.com/fardog/_primes_">code</a> for <em>primes</em> is some of the worst I&rsquo;ve
 written; it&rsquo;s a CoffeeScript project, written before I decided to like
 Javascript. It was also the first-ish thing I wrote for Node.js. But: one of the
 most successful?</p>
-
 <p>I wrote <em>primes</em> when thinking of twitter-as-database, but where it landed
 isn&rsquo;t exactly that. Still; the bot itself is completely stateless; it only
 knows where it left off by retrieving its last tweeted prime number from
 Twitter. To start it, I manually tweeted <code>2</code> from the website, and started the
 bot.</p>
-
 <p>Since then, it&rsquo;s amassed over 13,000 followers. Neat.</p>
-
 <p>I later re-wrote it to run twitter and mastodon from the <a href="https://github.com/fardog/primebot">same
 codebase</a>.</p>
-
 <h2 id="frock">frock</h2>
-
 <ul>
 <li><strong>What?</strong> A developer&rsquo;s tool for writing fake/mock services</li>
 <li><strong>Where?</strong> <a href="https://github.com/urbanairship/frock">github.com/urbanairship/frock</a></li>
 <li><strong>Why?</strong> Development environments can be painful; let&rsquo;s make them easier</li>
 </ul>
-
 <p><em>frock</em> is one of the most useful things I&rsquo;ve ever written. Urban Airship is a
 microservice architecture, and the product I work on has the distinction of
 needing to talk to the most services. <em>frock</em> was written to keep my team&rsquo;s
@@ -206,15 +183,11 @@ development environment sane. Born out of previous tools that handled only
 small aspects of our requirements, I set out to design a plugin-based tool that
 was painless to write new fakes/mocks with, with <a href="https://github.com/urbanairship/frock-static">generic</a>
 <a href="https://github.com/urbanairship/frock-proxy">plugins</a> for common needs.</p>
-
 <p>It was written with Open Source in mind, so the
 <a href="https://github.com/urbanairship/frock/commits/master">full commit history</a> is available. I&rsquo;m also particularly proud
 of the <a href="https://github.com/urbanairship/frock/tree/master/docs">docs</a>.</p>
-
 <p>It&rsquo;s been a great help to my team, and I hope others find it useful.</p>
-
 <h2 id="secureoperator">secureoperator</h2>
-
 <ul>
 <li><strong>What?</strong> A DNS server for your local network which uses Google&rsquo;s
 <a href="https://developers.google.com/speed/public-dns/docs/dns-over-https">DNS-over-HTTPS</a> for lookups, masking DNS queries from your ISP</li>
@@ -222,17 +195,14 @@ of the <a href="https://github.com/urbanairship/frock/tree/master/docs">docs</a>
 <li><strong>Why?</strong> DNS is not a secure protocol, this is one possible solution to the
 problem</li>
 </ul>
-
 <p><em>secure-operator</em> is a DNS proxy server. What makes it different from usual DNS
 proxies is that it performs all its DNS lookups over HTTPS, meaning they cannot
 be snooped on by parties outside your local network. This is great if you don&rsquo;t
 like the idea of your ISP tracking the websites you visit.</p>
-
 <p>I mention it&rsquo;s one possible solution to the problem, <a href="https://www.dnscrypt.org/">others</a>
 <a href="https://www.openresolve.com/">exist</a> but suffer from a different issue: unreliable servers, and
 not necesarily in the &ldquo;uptime&rdquo; sense. You don&rsquo;t really know who&rsquo;s running these
 other services either, so why not trust Google?</p>
-
 <p><em>secure-operator</em> has been well received, made the rounds on a number of Golang
 newsletters, and has been running reliably in my home for months. The number of
 downloads it receives indicate it might be working well for others too.</p>

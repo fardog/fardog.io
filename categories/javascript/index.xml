@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Javascript on fardog.io</title>
@@ -6,11 +6,7 @@
     <description>Recent content in Javascript on fardog.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 26 Sep 2014 12:05:00 -0700</lastBuildDate>
-    
-	<atom:link href="https://fardog.io/categories/javascript/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 26 Sep 2014 12:05:00 -0700</lastBuildDate><atom:link href="https://fardog.io/categories/javascript/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mac OS X Audio in node.js, and a Chromecast</title>
       <link>https://fardog.io/blog/2014/09/26/mac-os-x-audio-in-node.js-and-a-chromecast/</link>
@@ -39,7 +35,7 @@ There are others available, but most don&amp;rsquo;t include a CLI, or easily co
       
       <guid>https://fardog.io/blog/2013/10/15/primes-a-twitter-backed-prime-number-generator/</guid>
       <description>A few weeks ago I started primes, a Twitter-backed prime number generator. When I say &amp;ldquo;Twitter-backed&amp;rdquo;, I mean the bot that updates the account has very little idea of state: it only knows the last number it calculated because Twitter provides it. The program flow is this:
- Start up Fetch the most recently calculated prime from the Twitter feed. Calculate the next prime. Post if an hour has passed since the last posting.</description>
+Start up Fetch the most recently calculated prime from the Twitter feed. Calculate the next prime. Post if an hour has passed since the last posting.</description>
     </item>
     
   </channel>

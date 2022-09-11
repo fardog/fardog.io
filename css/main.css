@@ -665,7 +665,7 @@ section.main .content .markdown p {
   margin-top: 0;
   margin-bottom: 1em;
 }
-section.main .content .markdown ul,
+section.main .content .markdown > ul,
 section.main .content .markdown ol,
 section.main .content .markdown dl {
   margin-top: 1rem;
@@ -677,7 +677,7 @@ section.main .content .markdown dt {
 section.main .content .markdown dd {
   margin-bottom: .5rem;
 }
-section.main .content .markdown ul {
+section.main .content .markdown > ul {
   margin-bottom: 1.25rem;
 }
 section.main .content .markdown ul li {

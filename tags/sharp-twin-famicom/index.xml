@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sharp Twin Famicom on fardog.io</title>
@@ -6,11 +6,7 @@
     <description>Recent content in Sharp Twin Famicom on fardog.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 08 Oct 2013 09:25:00 -0700</lastBuildDate>
-    
-	<atom:link href="https://fardog.io/tags/sharp-twin-famicom/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 08 Oct 2013 09:25:00 -0700</lastBuildDate><atom:link href="https://fardog.io/tags/sharp-twin-famicom/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>An Addendum to &#34;Fixing a Famicom Disk System&#34;</title>
       <link>https://fardog.io/blog/2013/10/08/an-addendum-to-fixing-a-famicom-disk-system/</link>
@@ -27,7 +23,7 @@ First, there&amp;rsquo;s now a far better repair article available at the Famico
       <pubDate>Sun, 21 Mar 2010 12:00:00 -0700</pubDate>
       
       <guid>https://fardog.io/blog/2010/03/21/fixing-a-famicom-disk-system/</guid>
-      <description>*Update 2013-10-08: There is now a great article available at the Famicom Disk System site, which I&amp;rsquo;d highly recommend. See my addendum for more info.*
+      <description>Update 2013-10-08: There is now a great article available at the Famicom Disk System site, which I&amp;rsquo;d highly recommend. See my addendum for more info.
 This isn’t the usual fare from this blog, but this is good information that took me quite some time to find. I’m also an avid video game collector, and i recently picked up a Sharp Twin Famicom and a few Famicom Disk System games; notably Kid Icarus and the infamous Doki Doki Panic!</description>
     </item>
     

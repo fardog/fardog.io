@@ -1,16 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Projects on fardog.io</title>
+    <title>projects on fardog.io</title>
     <link>https://fardog.io/categories/projects/</link>
-    <description>Recent content in Projects on fardog.io</description>
+    <description>Recent content in projects on fardog.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 23 Oct 2014 14:15:00 -0700</lastBuildDate>
-    
-	<atom:link href="https://fardog.io/categories/projects/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 23 Oct 2014 14:15:00 -0700</lastBuildDate><atom:link href="https://fardog.io/categories/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Retiring some old projects</title>
       <link>https://fardog.io/blog/2014/10/23/retiring-some-old-projects/</link>
@@ -18,7 +14,7 @@
       
       <guid>https://fardog.io/blog/2014/10/23/retiring-some-old-projects/</guid>
       <description>Some changes are coming; they&amp;rsquo;re changes for me, but a secondary effect is that I no longer have free hosting for some projects that have been in unmaintained-but-still-running status for the last few years. I&amp;rsquo;m taking the following offline:
- Adventure: My &amp;ldquo;Choose your own adventure&amp;rdquo;-like story builder. This hasn&amp;rsquo;t seen an update since early 2012; very few people were using it. Re-launching this application would require a considerable effort, so I&amp;rsquo;m taking this offline for the foreseeable future.</description>
+Adventure: My &amp;ldquo;Choose your own adventure&amp;rdquo;-like story builder. This hasn&amp;rsquo;t seen an update since early 2012; very few people were using it. Re-launching this application would require a considerable effort, so I&amp;rsquo;m taking this offline for the foreseeable future.</description>
     </item>
     
     <item>
@@ -49,7 +45,7 @@ There are others available, but most don&amp;rsquo;t include a CLI, or easily co
       
       <guid>https://fardog.io/blog/2013/10/15/primes-a-twitter-backed-prime-number-generator/</guid>
       <description>A few weeks ago I started primes, a Twitter-backed prime number generator. When I say &amp;ldquo;Twitter-backed&amp;rdquo;, I mean the bot that updates the account has very little idea of state: it only knows the last number it calculated because Twitter provides it. The program flow is this:
- Start up Fetch the most recently calculated prime from the Twitter feed. Calculate the next prime. Post if an hour has passed since the last posting.</description>
+Start up Fetch the most recently calculated prime from the Twitter feed. Calculate the next prime. Post if an hour has passed since the last posting.</description>
     </item>
     
   </channel>

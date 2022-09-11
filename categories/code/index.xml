@@ -1,16 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Code on fardog.io</title>
+    <title>code on fardog.io</title>
     <link>https://fardog.io/categories/code/</link>
-    <description>Recent content in Code on fardog.io</description>
+    <description>Recent content in code on fardog.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 26 Aug 2017 10:30:00 -0700</lastBuildDate>
-    
-	<atom:link href="https://fardog.io/categories/code/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 26 Aug 2017 10:30:00 -0700</lastBuildDate><atom:link href="https://fardog.io/categories/code/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Automatically publishing websites with Hugo, Travis, and Github</title>
       <link>https://fardog.io/blog/2017/08/26/automatically-publishing-websites-with-hugo-travis-and-github/</link>
@@ -49,7 +45,7 @@ There are others available, but most don&amp;rsquo;t include a CLI, or easily co
       
       <guid>https://fardog.io/blog/2013/10/15/primes-a-twitter-backed-prime-number-generator/</guid>
       <description>A few weeks ago I started primes, a Twitter-backed prime number generator. When I say &amp;ldquo;Twitter-backed&amp;rdquo;, I mean the bot that updates the account has very little idea of state: it only knows the last number it calculated because Twitter provides it. The program flow is this:
- Start up Fetch the most recently calculated prime from the Twitter feed. Calculate the next prime. Post if an hour has passed since the last posting.</description>
+Start up Fetch the most recently calculated prime from the Twitter feed. Calculate the next prime. Post if an hour has passed since the last posting.</description>
     </item>
     
     <item>
@@ -70,7 +66,7 @@ import math import numpy import pyaudio def sine(frequency, length, rate): lengt
       <guid>https://fardog.io/blog/2013/02/15/simple-workon-command-for-fish-shell/</guid>
       <description>I put together a quick workon clone for the fish&amp;rsquo;s fish shell. Definitely nothing as complete or useful as virtualenvwrapper, but it fixes my need: switching simply between virtualenv&amp;rsquo;s and projects.
 Installation First, create a function file ~/.config/fish/functions/workon.fish with this defintion:
-function workon -d &amp;quot;Activate virtual environment in $WORKON_HOME&amp;quot; set tgt {$WORKON_HOME}/$argv[1] if [ -d $tgt ] cd $tgt # deactivate any active venv, and activate the target # this needs to be rewritten with the `type` fish command if test -n &amp;quot;$VIRTUAL_ENV&amp;quot; deactivate end .</description>
+function workon -d &amp;#34;Activate virtual environment in $WORKON_HOME&amp;#34; set tgt {$WORKON_HOME}/$argv[1] if [ -d $tgt ] cd $tgt # deactivate any active venv, and activate the target # this needs to be rewritten with the `type` fish command if test -n &amp;#34;$VIRTUAL_ENV&amp;#34; deactivate end .</description>
     </item>
     
   </channel>

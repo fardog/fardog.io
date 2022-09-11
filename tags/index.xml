@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on fardog.io</title>
@@ -6,11 +6,7 @@
     <description>Recent content in Tags on fardog.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 08 Oct 2013 09:25:00 -0700</lastBuildDate>
-    
-	<atom:link href="https://fardog.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 08 Oct 2013 09:25:00 -0700</lastBuildDate><atom:link href="https://fardog.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Famicom</title>
       <link>https://fardog.io/tags/famicom/</link>
@@ -30,7 +26,7 @@
     </item>
     
     <item>
-      <title>Fds</title>
+      <title>FDS</title>
       <link>https://fardog.io/tags/fds/</link>
       <pubDate>Tue, 08 Oct 2013 09:25:00 -0700</pubDate>
       
@@ -48,7 +44,7 @@
     </item>
     
     <item>
-      <title>Nes</title>
+      <title>NES</title>
       <link>https://fardog.io/tags/nes/</link>
       <pubDate>Tue, 08 Oct 2013 09:25:00 -0700</pubDate>
       
@@ -66,7 +62,7 @@
     </item>
     
     <item>
-      <title>Repair</title>
+      <title>repair</title>
       <link>https://fardog.io/tags/repair/</link>
       <pubDate>Tue, 08 Oct 2013 09:25:00 -0700</pubDate>
       

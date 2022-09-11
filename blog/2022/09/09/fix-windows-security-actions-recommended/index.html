@@ -16,22 +16,9 @@
 <meta property="og:description" content="Fix Windows Security &#34;Actions Recommended&#34; on Windows 11, when the dashboard shows all green checkboxes.
 " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://fardog.io/blog/2022/09/09/fix-windows-security-actions-recommended/" />
-
-
-
-<meta property="article:published_time" content="2022-09-09T15:01:54-07:00"/>
-
-<meta property="article:modified_time" content="2022-09-09T15:01:54-07:00"/>
-
-
-
-
-
-
-
-
-
+<meta property="og:url" content="https://fardog.io/blog/2022/09/09/fix-windows-security-actions-recommended/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2022-09-09T15:01:54-07:00" />
+<meta property="article:modified_time" content="2022-09-09T15:01:54-07:00" />
 
 
 
@@ -182,22 +169,17 @@
                 <p>I had an issue today with Windows Security dashboard on Windows 11, where it
 said there were &ldquo;Actions Recommended&rdquo; with an unnerving yellow warning icon,
 however opening it up showed all green:</p>
-
-<p><img src="/img/blog/20220909-defender_green.png" alt="Dashboard shows all green…" /></p>
-
+<p><img src="/img/blog/20220909-defender_green.png" alt="Dashboard shows all green…"></p>
 <p>I looked at a lot of solutions which didn&rsquo;t fix the issue, but then found a
 solution that I didn&rsquo;t find listed elsewhere so I&rsquo;m writing it down: there&rsquo;s a
 (maybe hidden?) pane of the Windows Security dashboard that isn&rsquo;t accessible
 from the menu in the screenshot above, but you can find it via the Windows
 &ldquo;Settings&rdquo; app:</p>
-
-<p><img src="/img/blog/20220909-defender_settings_privacy.png" alt="In Settings, click &quot;Privacy &amp; Security&quot; followed by &quot;Windows Security&quot;" />
-<img src="/img/blog/20220909-defender_settings_security.png" alt="In Windows Security, click &quot;App &amp; browser control&quot;" /></p>
-
+<p><img src="/img/blog/20220909-defender_settings_privacy.png" alt="In Settings, click &amp;ldquo;Privacy &amp; Security&amp;rdquo; followed by &amp;ldquo;Windows Security&amp;rdquo;">
+<img src="/img/blog/20220909-defender_settings_security.png" alt="In Windows Security, click &amp;ldquo;App &amp; browser control&amp;rdquo;"></p>
 <p>Maybe it&rsquo;s hidden somewhere, but that &ldquo;App &amp; browser control&rdquo; panel opens in the
 Windows Security dashboard, yet I can&rsquo;t find it linked from within it. In there
 I found the culprit: &ldquo;Reputation Based Protection&rdquo; was not turned on.</p>
-
 <p>Re-enabling that cleared all recommended actions. Hopefully this helps you
 because I just wasted an hour on it.</p>
 

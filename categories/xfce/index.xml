@@ -1,16 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Xfce on fardog.io</title>
+    <title>xfce on fardog.io</title>
     <link>https://fardog.io/categories/xfce/</link>
-    <description>Recent content in Xfce on fardog.io</description>
+    <description>Recent content in xfce on fardog.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 22 Feb 2013 14:03:00 -0700</lastBuildDate>
-    
-	<atom:link href="https://fardog.io/categories/xfce/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 22 Feb 2013 14:03:00 -0700</lastBuildDate><atom:link href="https://fardog.io/categories/xfce/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Using Caps-Lock as a Compose key in XFCE4</title>
       <link>https://fardog.io/blog/2013/02/22/using-caps-lock-as-a-compose-key-in-xfce4/</link>
@@ -19,7 +15,7 @@
       <guid>https://fardog.io/blog/2013/02/22/using-caps-lock-as-a-compose-key-in-xfce4/</guid>
       <description>Why not take that useless key, and make it useful? The Compose Key—formerly present on many Unix keyboards of old—isn&amp;rsquo;t present on most modern laptops.
 In XFCE, this is a little more cumbersome than Gnome, since there isn&amp;rsquo;t a graphical interface for setxkbmap, but these two commands will swap the Caps lock for a compose key:
-setxkbmap -option ctrl:nocaps # disables caps lock setxkbmap -option compose:caps # sets caps key to compose  To make this active at login, you can add two entries to your &amp;ldquo;Session and Startup&amp;rdquo; -&amp;gt; &amp;ldquo;Application Autostart&amp;rdquo; available under the Settings Manager.</description>
+setxkbmap -option ctrl:nocaps # disables caps lock setxkbmap -option compose:caps # sets caps key to compose To make this active at login, you can add two entries to your &amp;ldquo;Session and Startup&amp;rdquo; -&amp;gt; &amp;ldquo;Application Autostart&amp;rdquo; available under the Settings Manager.</description>
     </item>
     
   </channel>

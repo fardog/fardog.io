@@ -16,22 +16,9 @@ Still, there will be bugs. Which is what I think every time I see a login page o
 <meta property="og:description" content="Authentication in applications is tough. If you decide to roll your own, security issues are nearly guaranteed. Most anyone who writes software for a living will tell you to use something you didn&rsquo;t write; that&rsquo;s battle-tested and in wide use. Open source is even better; hopefully that many eyes and that many users will suss out the bugs.
 Still, there will be bugs. Which is what I think every time I see a login page on some device in my home." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://fardog.io/blog/2017/12/30/client-side-certificate-authentication-with-nginx/" />
-
-
-
-<meta property="article:published_time" content="2017-12-30T17:20:00-07:00"/>
-
-<meta property="article:modified_time" content="2017-12-30T17:20:00-07:00"/>
-
-
-
-
-
-
-
-
-
+<meta property="og:url" content="https://fardog.io/blog/2017/12/30/client-side-certificate-authentication-with-nginx/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2017-12-30T17:20:00-07:00" />
+<meta property="article:modified_time" content="2017-12-30T17:20:00-07:00" />
 
 
 
@@ -179,79 +166,57 @@ Still, there will be bugs. Which is what I think every time I see a login page o
                 </div>
             </div>
             <div class="markdown">
-                
-
-<p>Authentication in applications is tough. If you decide to roll your own,
+                <p>Authentication in applications is tough. If you decide to roll your own,
 security issues are nearly guaranteed. Most anyone who writes software for a
 living will tell you to use something you <em>didn&rsquo;t</em> write; that&rsquo;s battle-tested
 and in wide use. Open source is even better; hopefully that many eyes and that
 many users will suss out the bugs.</p>
-
 <p>Still, there <em>will be bugs</em>. Which is what I think every time I see a
 login page on some device in my home. Who wrote this? Is it even remotely
 secure? I definitely don&rsquo;t want to expose this to the internet.</p>
-
 <p>So: let&rsquo;s put something in front of it that can handle authentication for us!
 In this case, it&rsquo;s a system which is unauthenticated, but that we want to expose
 with auth that says: this person&rsquo;s allowed. The upstream application doesn&rsquo;t
 care who they are, just that they&rsquo;re allowed in.</p>
-
 <p>In fact: I don&rsquo;t even want to deal with passwords. I&rsquo;d prefer to authenticate
 devices instead.</p>
-
 <p>These are some notes on configuring client-side certificate authentication with
 <a href="https://nginx.org/">nginx</a>, which reverse proxies to an application server.</p>
-
 <p><em>I don&rsquo;t expect that I&rsquo;ve got everything right here;</em> please <a href="https://github.com/fardog/fardog.io/issues">file an issue</a>
 against this repository if you see anything troubling here. Consider this my
 notes so that I remember how to do things again.</p>
-
 <h1 id="what-is-a-client-side-certificate">What is a Client-Side Certificate?</h1>
-
 <p>A client-side certificate is a transport-layer authentication mechanism; it can
 be used to verify a user <em>before</em> the application layer. In terms of a web app,
 it happens at the &ldquo;S&rdquo; of &ldquo;HTTPS&rdquo;: the client is authenticated when the TLS
 handshake occurrs, and <em>not</em> at the HTTP layer that is tunneled over the secure
 connection.</p>
-
 <p>The <a href="https://en.wikipedia.org/wiki/Transport_Layer_Security#Client-authenticated_TLS_handshake">Wikipedia article on TLS</a> explains it better than I ever could. But
 the important thing to understand is that when done right, your application can
 assume that the information it&rsquo;s receiving is coming from someone who&rsquo;s already
 authenticated. In my case, the application doesn&rsquo;t care about that: we&rsquo;re just
 using it to ensure only devices I allow may access the application.</p>
-
 <p>For that reason, this article only covers the &ldquo;device may access application&rdquo;
 portion; using this method to do full authentication may be covered in a later
 article.</p>
-
 <h1 id="creating-the-certificate-authority">Creating the Certificate Authority</h1>
-
 <p>First, you must create a key for your Certificate Authority (CA); this key will
 be used to create the server-side certificate, and will sign all client
 certificate requests. That&rsquo;s to say: it&rsquo;s the master &ldquo;password&rdquo; for the whole
 system. Generate one, and keep it safe.</p>
-
-<pre><code class="language-bash">openssl genrsa -des3 -out ca.key 4096
-</code></pre>
-
-<p>You&rsquo;ll be asked to encrypt the key with a passphrase. Be sure to note it, as
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>openssl genrsa -des3 -out ca.key <span style="color:#ae81ff">4096</span>
+</span></span></code></pre></div><p>You&rsquo;ll be asked to encrypt the key with a passphrase. Be sure to note it, as
 you&rsquo;ll be asked for it every time you create a new certificate or sign a
 client certificate request.</p>
-
 <h2 id="create-a-ca-certificate">Create a CA Certificate</h2>
-
 <p>Next create a CA Certificate; this is the server-side certificate that will be
 sent via the TLS server to the client. Note this certificate is specific to the
 client-side certs, and is not a replacement for your typical certificate needed
 for HTTPS authentication; we&rsquo;ll get to that later.</p>
-
-<pre><code class="language-bash"># sign a certificate for 365 days; replace that number with whatever's
-# suitable for your application
-openssl req -new -x509 -days 365 -key ca.key -out ca.crt
-</code></pre>
-
-<p>You&rsquo;ll be asked a number of questions; here&rsquo;s what I&rsquo;ve found:</p>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># sign a certificate for 365 days; replace that number with whatever&#39;s</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># suitable for your application</span>
+</span></span><span style="display:flex;"><span>openssl req -new -x509 -days <span style="color:#ae81ff">365</span> -key ca.key -out ca.crt
+</span></span></code></pre></div><p>You&rsquo;ll be asked a number of questions; here&rsquo;s what I&rsquo;ve found:</p>
 <ul>
 <li>Note what you&rsquo;ve entered for Country, State, Locality, and Organization;
 you&rsquo;ll want these to match later when you renew the certificate.</li>
@@ -259,93 +224,61 @@ you&rsquo;ll want these to match later when you renew the certificate.</li>
 had problems when I entered one.</li>
 <li>Email can be omitted.</li>
 </ul>
-
 <p>Renewing a certificate just requires running the same command; to generate a
 new certificate. If you need to see what you entered in the old certificate, you
 can run:</p>
-
-<pre><code class="language-bash">openssl x509 -in ca.crt -noout -text
-</code></pre>
-
-<p>This will list all information about the certificate, including the values
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>openssl x509 -in ca.crt -noout -text
+</span></span></code></pre></div><p>This will list all information about the certificate, including the values
 mentioned above.</p>
-
 <h1 id="creating-a-client-certificate">Creating a Client Certificate</h1>
-
 <p>Next, a client certificate will be created; it&rsquo;s up to you how you want to
 handle these, but remember this is effectively a password, and if you want to
 &ldquo;change&rdquo; it, you must revoke the certificate. So, think about how you&rsquo;d like to
 handle your authentication: per user, per device?</p>
-
 <p>You&rsquo;ll want a client key first; this is generated in the same manner as the
 certificate key; you could even use that one (but don&rsquo;t). Typically, if you had
 a number of users, the next two steps would be the ones you&rsquo;d ask them to do,
 to create a certificate signing requests for you do sign.</p>
-
 <h2 id="users-create-a-key-and-a-certificate-signing-request">Users: Create a Key, and a Certificate Signing Request</h2>
-
 <p>Create an RSA key, if you don&rsquo;t have one already:</p>
-
-<pre><code class="language-bash">openssl genrsa -des3 -out user.key 4096
-</code></pre>
-
-<p>Then, create a Certificate Signing Request (CSR)</p>
-
-<pre><code class="language-bash">openssl req -new -key user.key -out user.csr
-</code></pre>
-
-<p>A number of questions will be asked; answer each one, including the
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>openssl genrsa -des3 -out user.key <span style="color:#ae81ff">4096</span>
+</span></span></code></pre></div><p>Then, create a Certificate Signing Request (CSR)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>openssl req -new -key user.key -out user.csr
+</span></span></code></pre></div><p>A number of questions will be asked; answer each one, including the
 Common Name (CN) and email address. The CSR that&rsquo;s created would be sent to the
 CA (an administrator, but in this case probably also yourself) to be signed.</p>
-
 <h1 id="signing-a-csr">Signing a CSR</h1>
-
 <p>A CSR must now be signed by the CA; this is the CA saying &ldquo;I know this person
 or device: they are who they say they are.&rdquo;</p>
-
-<pre><code class="language-bash"># sign the csr to a certificate valid for 365 days
-openssl x509 -req -days 365 -in user.csr -CA ca.crt -CAkey ca.key -set_serial 01 -out user.crt
-</code></pre>
-
-<p>You&rsquo;ll typically want to increment the serial number with each signing. Once the
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># sign the csr to a certificate valid for 365 days</span>
+</span></span><span style="display:flex;"><span>openssl x509 -req -days <span style="color:#ae81ff">365</span> -in user.csr -CA ca.crt -CAkey ca.key -set_serial <span style="color:#ae81ff">01</span> -out user.crt
+</span></span></code></pre></div><p>You&rsquo;ll typically want to increment the serial number with each signing. Once the
 certificate expires, a new CSR doesn&rsquo;t need to be recreated; the same one can
 be signed, which will create a new certificate tied to that public key.</p>
-
 <p>The signed certificate would be sent back to the user along with the CA cert
 (not private key!), for installation on their device.</p>
-
 <h1 id="creating-a-pkcs-12-pfx">Creating a PKCS #12 (PFX)</h1>
-
 <p>Now the signed certifcate must be made installable on a device in a way that
 bundles the client keys and certificate. The resultant archive is effectively
 a password, so it must be kept as safe as the other private keys.</p>
-
 <p>To create the pfx:</p>
-
-<pre><code class="language-bash">openssl pkcs12 -export -out user.pfx -inkey user.key -in user.crt -certfile ca.crt
-</code></pre>
-
-<p>You will be asked to supply an &ldquo;export password&rdquo;, and it&rsquo;s very recommended that
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>openssl pkcs12 -export -out user.pfx -inkey user.key -in user.crt -certfile ca.crt
+</span></span></code></pre></div><p>You will be asked to supply an &ldquo;export password&rdquo;, and it&rsquo;s very recommended that
 one is set, since often you&rsquo;ll need to transfer the PFX archive to a device such
 as your phone; you don&rsquo;t want this sitting in your email without a password on
 it.</p>
-
 <p>The PFX archive can now be imported into your web browser. This is pretty neat!
 You can see how a process like this can be used to prove identity and create
 valid access for a user, without either the administrator (CA) or the user
 revealing their private key to one another.</p>
-
 <p>Now, lets look at setting up nginx for certificate auth, with a reverse proxy
 to our unauthenticated application.</p>
-
 <h1 id="nginx-setup">nginx Setup</h1>
-
 <p>A minimal <code>nginx.conf</code> that supports certificate auth, http redirected to https
 and a reverse proxy would look as follows for a domain <code>example.com</code>. Note that
 the HTTPS certificate in this example is provided by <a href="https://letsencrypt.org/">letsencrypt</a>. That&rsquo;s not
 covered here, but may be in some future post.</p>
-
-<pre><code>user www-data;
+<pre tabindex="0"><code>user www-data;
 worker_processes auto;
 pid /run/nginx.pid;
 
@@ -372,11 +305,11 @@ http {
   error_log /var/log/nginx/error.log;
 
   gzip on;
-  gzip_disable &quot;msie6&quot;;
+  gzip_disable &#34;msie6&#34;;
 
   map $http_upgrade $connection_upgrade {
     default upgrade;
-    '' close;
+    &#39;&#39; close;
   }
 
   # server on port 80 for HTTP -&gt; HTTPS redirect
@@ -416,7 +349,7 @@ http {
       proxy_set_header        X-Forwarded-For $proxy_add_x_forwarded_for;
       proxy_set_header        X-Forwarded-Proto $scheme;
 
-      # Fix the &quot;It appears that your reverse proxy set up is broken&quot; error.
+      # Fix the &#34;It appears that your reverse proxy set up is broken&#34; error.
       proxy_pass          http://localhost:8080;
       proxy_read_timeout  90;
 
@@ -429,30 +362,22 @@ http {
     }
   }
 }
-</code></pre>
-
-<p>Of course, in this example the server running on <code>localhost:8080</code> would <em>not</em>
+</code></pre><p>Of course, in this example the server running on <code>localhost:8080</code> would <em>not</em>
 be exposed to the world; either it&rsquo;d be running on a protected box inside a
 local network, or firewalled off from the outside.</p>
-
 <p>Now, when you visit the nginx server, your browser will be prompted for its
 client certificate; select the certificate that you installed, and you should
 be proxied through to the upstream server. If you visit from a browser without
 client certificates installed, you should see a 403 without any sort of prompt.</p>
-
 <h1 id="misc">Misc</h1>
-
 <p>A few additional thoughts:</p>
-
 <p>I documented this process because it&rsquo;s easily forgettable, and a hassle to
 re-figure when you forget and it&rsquo;s time to renew your certs. A thing I&rsquo;d like
 to spend more time on in the future is a tool to make this process easier for
 folks.</p>
-
 <p>This document assumes a lot, and also assumes that you know <em>something</em> before
 coming in; don&rsquo;t assume that following this document will give you a secure
 setup! I might not even be correct in what I&rsquo;m doing!</p>
-
 <p>Have fun, stay safe.</p>
 
                 <br>

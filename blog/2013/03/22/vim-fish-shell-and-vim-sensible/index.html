@@ -10,28 +10,15 @@
 <meta name="referrer" content="no-referrer">
 <meta name="author" content="Nathan Wittstock">
 <meta name="description" content="Part of this evening was spent making vim workable for me, the first step was getting some sane defaults. vim-sensible was recommended in several places (as was Tim Pope&rsquo;s also excellent pathogen), but immediately after installation I was getting an error:
-Error detected while processing ~/.vim/bundle/vim-sensible/plugin/sensible.vim: line 75: E484: Can&#39;t open file /tmp/v1NmKg8/0 Press ENTER or type command to continue  Frustratingly, line 75 held no obvious suggestions. After some time troubleshooting, I found it worked fine if I wasn&rsquo;t using fish shell.">
+Error detected while processing ~/.vim/bundle/vim-sensible/plugin/sensible.vim: line 75: E484: Can&#39;t open file /tmp/v1NmKg8/0 Press ENTER or type command to continue Frustratingly, line 75 held no obvious suggestions. After some time troubleshooting, I found it worked fine if I wasn&rsquo;t using fish shell.">
 
 <meta property="og:title" content="vim, fish shell, and vim-sensible" />
 <meta property="og:description" content="Part of this evening was spent making vim workable for me, the first step was getting some sane defaults. vim-sensible was recommended in several places (as was Tim Pope&rsquo;s also excellent pathogen), but immediately after installation I was getting an error:
-Error detected while processing ~/.vim/bundle/vim-sensible/plugin/sensible.vim: line 75: E484: Can&#39;t open file /tmp/v1NmKg8/0 Press ENTER or type command to continue  Frustratingly, line 75 held no obvious suggestions. After some time troubleshooting, I found it worked fine if I wasn&rsquo;t using fish shell." />
+Error detected while processing ~/.vim/bundle/vim-sensible/plugin/sensible.vim: line 75: E484: Can&#39;t open file /tmp/v1NmKg8/0 Press ENTER or type command to continue Frustratingly, line 75 held no obvious suggestions. After some time troubleshooting, I found it worked fine if I wasn&rsquo;t using fish shell." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://fardog.io/blog/2013/03/22/vim-fish-shell-and-vim-sensible/" />
-
-
-
-<meta property="article:published_time" content="2013-03-22T00:07:00-07:00"/>
-
-<meta property="article:modified_time" content="2013-03-22T00:07:00-07:00"/>
-
-
-
-
-
-
-
-
-
+<meta property="og:url" content="https://fardog.io/blog/2013/03/22/vim-fish-shell-and-vim-sensible/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2013-03-22T00:07:00-07:00" />
+<meta property="article:modified_time" content="2013-03-22T00:07:00-07:00" />
 
 
 
@@ -180,21 +167,14 @@ Error detected while processing ~/.vim/bundle/vim-sensible/plugin/sensible.vim: 
             </div>
             <div class="markdown">
                 <p>Part of this evening was spent making <code>vim</code> workable for me, the first step was getting some sane defaults. <a href="https://github.com/tpope/vim-sensible">vim-sensible</a> was recommended in several places (as was Tim Pope&rsquo;s also excellent <a href="https://github.com/tpope/vim-pathogen">pathogen</a>), but immediately after installation I was getting an error:</p>
-
-<pre><code>Error detected while processing ~/.vim/bundle/vim-sensible/plugin/sensible.vim:
+<pre tabindex="0"><code>Error detected while processing ~/.vim/bundle/vim-sensible/plugin/sensible.vim:
 line   75:
-E484: Can't open file /tmp/v1NmKg8/0
+E484: Can&#39;t open file /tmp/v1NmKg8/0
 Press ENTER or type command to continue
-</code></pre>
-
-<p>Frustratingly, line 75 held no obvious suggestions. After some time troubleshooting, I found it worked fine if I wasn&rsquo;t using <a href="http://www.ridiculousfish.com/shell/"><code>fish</code> shell</a>.</p>
-
+</code></pre><p>Frustratingly, line 75 held no obvious suggestions. After some time troubleshooting, I found it worked fine if I wasn&rsquo;t using <a href="http://www.ridiculousfish.com/shell/"><code>fish</code> shell</a>.</p>
 <p>I&rsquo;m not positive why this is the case, but you can fix the error by adding the following line to your <code>.vimrc</code>.</p>
-
-<pre><code>set shell=/bin/sh
-</code></pre>
-
-<p>On next launch of <code>vim</code>, all is resolved.</p>
+<pre tabindex="0"><code>set shell=/bin/sh
+</code></pre><p>On next launch of <code>vim</code>, all is resolved.</p>
 
                 <br>
 		<p class="back-to-posts"><a href="/blog/">Back to posts</a></p>
