@@ -36,8 +36,6 @@ Note: This article is out of date, as Travis-CI retired their open-source servic
 
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
-
 
 
 
@@ -233,7 +231,7 @@ want to generate one specificaly for this purpose. The
 <a href="https://docs.travis-ci.com/user/deployment/pages/">Travis docs</a> cover what access this token needs to your
 account. Once you have that, it just needs to be encrypted and stored in your
 <code>.travis.yml</code>, which is done with Travis&rsquo; CLI tools, run in your repository:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>travis encrypt GITHUB_TOKEN<span style="color:#f92672">=</span>&lt;your_token&gt; --add env.matrix
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>travis encrypt <span style="color:#111">GITHUB_TOKEN</span><span style="color:#f92672">=</span>&lt;your_token&gt; --add env.matrix
 </span></span></code></pre></div><p>This will encrypt the token, and insert it into your <code>.travis.yml</code>.</p>
 <h1 id="custom-domain-setup">Custom Domain Setup</h1>
 <p>At this point, you should have Travis set up and auto-building your static
@@ -270,21 +268,21 @@ detail here as it&rsquo;s not the primary interest; Amazon
 <h2 id="updating-yaml-frontmatter">Updating YAML Frontmatter</h2>
 <p>The frontmatter I was using for my Octopress posts needed some small updates. I
 changed it from:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">layout</span>: <span style="color:#ae81ff">post</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#ae81ff">Fixing a Famicom Disk System</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">author</span>: <span style="color:#ae81ff">Nate</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">layout</span>: <span style="color:#ae81ff">post</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">categories</span>:
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">layout</span><span style="color:#111">:</span> <span style="color:#ae81ff">post</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span><span style="color:#111">:</span> <span style="color:#ae81ff">Fixing a Famicom Disk System</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">author</span><span style="color:#111">:</span> <span style="color:#ae81ff">Nate</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">layout</span><span style="color:#111">:</span> <span style="color:#ae81ff">post</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">categories</span><span style="color:#111">:</span>
 </span></span><span style="display:flex;"><span>  - <span style="color:#ae81ff">Gaming</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>:
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span><span style="color:#111">:</span>
 </span></span><span style="display:flex;"><span>  - <span style="color:#ae81ff">Famicom</span>
 </span></span><span style="display:flex;"><span>  - <span style="color:#ae81ff">repair</span>
 </span></span></code></pre></div><p>…to:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#ae81ff">Fixing a Famicom Disk System</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">2010-03-21T12:00:00</span><span style="color:#ae81ff">-07</span>:<span style="color:#ae81ff">00</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">categories</span>:
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">title</span><span style="color:#111">:</span> <span style="color:#ae81ff">Fixing a Famicom Disk System</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span><span style="color:#111">:</span> <span style="color:#d88200">2010-03-21T12:00:00</span><span style="color:#ae81ff">-07</span><span style="color:#111">:</span><span style="color:#ae81ff">00</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">categories</span><span style="color:#111">:</span>
 </span></span><span style="display:flex;"><span>  - <span style="color:#ae81ff">Gaming</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>:
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span><span style="color:#111">:</span>
 </span></span><span style="display:flex;"><span>  - <span style="color:#ae81ff">Famicom</span>
 </span></span><span style="display:flex;"><span>  - <span style="color:#ae81ff">repair</span>
 </span></span></code></pre></div><p>Specifically, Hugo requires a strict ISO-8601 date, whereas Octopress was more
@@ -293,8 +291,8 @@ nothing was changed there.</p>
 <h2 id="matching-urls">Matching URLs</h2>
 <p>I needed to add the following to my Hugo <code>config.toml</code> to the permalinks matched
 the previous format:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[<span style="color:#a6e22e">permalinks</span>]
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">blog</span> = <span style="color:#e6db74">&#34;blog/:year/:month/:day/:title/&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#111">[</span><span style="color:#75af00">permalinks</span><span style="color:#111">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#75af00">blog</span> <span style="color:#111">=</span> <span style="color:#d88200">&#34;blog/:year/:month/:day/:title/&#34;</span>
 </span></span></code></pre></div><h1 id="other-reading">Other Reading</h1>
 <ul>
 <li><a href="https://docs.travis-ci.com/user/getting-started/">Getting started with Travis</a></li>
@@ -316,13 +314,6 @@ the previous format:</p>
 
 
 
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
-  
-
-  <script type="text/javascript">
-    hljs.initHighlightingOnLoad();
-  </script>
 
 
 

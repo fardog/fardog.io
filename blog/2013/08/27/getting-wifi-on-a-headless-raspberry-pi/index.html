@@ -36,8 +36,6 @@ Below are my full configuration files that were required. The WiFi USB dongle it
 
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
-
 
 
 
@@ -169,7 +167,7 @@ Below are my full configuration files that were required. The WiFi USB dongle it
                 <p>One of the final steps in a to-be-announced project involved getting a headless <a href="http://www.raspberrypi.org/">Raspberry Pi</a> up on WiFi at boot time—which turned out to be a little more challenging that first expected. Not because it was particularly difficult, but because the documentation was poor.</p>
 <p>Below are my full configuration files that were required. The WiFi USB dongle itself was an <a href="https://www.adafruit.com/products/1030">Adafruit USB WiFi with Antenna</a> which is actually a B-LINK BBL-LW05-AR5; notable becuase of its sizeable antenna, and for working with the latest Raspbian Wheezy distribution.</p>
 <p>Prior to getting started, make sure your Raspbian is up to date by issuing:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt-get update
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt-get update
 </span></span><span style="display:flex;"><span>sudo apt-get upgrade
 </span></span></code></pre></div><p>At that point, reboot and connect your WiFi module to USB. Then, edit your config. It&rsquo;s worth noting that I have an interface <code>eth0</code> which is set to DHCP, and my <code>wlan0</code> interface which has a static IP. This allows me to use ethernet as a failsafe if something goes wrong.</p>
 <p>First, in the file <code>/etc/network/interfaces</code>:</p>
@@ -231,13 +229,6 @@ network={
 
 
 
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
-  
-
-  <script type="text/javascript">
-    hljs.initHighlightingOnLoad();
-  </script>
 
 
 

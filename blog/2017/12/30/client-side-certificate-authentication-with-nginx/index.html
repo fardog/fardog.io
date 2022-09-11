@@ -36,8 +36,6 @@ Still, there will be bugs. Which is what I think every time I see a login page o
 
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
-
 
 
 
@@ -204,7 +202,7 @@ article.</p>
 be used to create the server-side certificate, and will sign all client
 certificate requests. That&rsquo;s to say: it&rsquo;s the master &ldquo;password&rdquo; for the whole
 system. Generate one, and keep it safe.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>openssl genrsa -des3 -out ca.key <span style="color:#ae81ff">4096</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>openssl genrsa -des3 -out ca.key <span style="color:#ae81ff">4096</span>
 </span></span></code></pre></div><p>You&rsquo;ll be asked to encrypt the key with a passphrase. Be sure to note it, as
 you&rsquo;ll be asked for it every time you create a new certificate or sign a
 client certificate request.</p>
@@ -213,7 +211,7 @@ client certificate request.</p>
 sent via the TLS server to the client. Note this certificate is specific to the
 client-side certs, and is not a replacement for your typical certificate needed
 for HTTPS authentication; we&rsquo;ll get to that later.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># sign a certificate for 365 days; replace that number with whatever&#39;s</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># sign a certificate for 365 days; replace that number with whatever&#39;s</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># suitable for your application</span>
 </span></span><span style="display:flex;"><span>openssl req -new -x509 -days <span style="color:#ae81ff">365</span> -key ca.key -out ca.crt
 </span></span></code></pre></div><p>You&rsquo;ll be asked a number of questions; here&rsquo;s what I&rsquo;ve found:</p>
@@ -227,7 +225,7 @@ had problems when I entered one.</li>
 <p>Renewing a certificate just requires running the same command; to generate a
 new certificate. If you need to see what you entered in the old certificate, you
 can run:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>openssl x509 -in ca.crt -noout -text
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>openssl x509 -in ca.crt -noout -text
 </span></span></code></pre></div><p>This will list all information about the certificate, including the values
 mentioned above.</p>
 <h1 id="creating-a-client-certificate">Creating a Client Certificate</h1>
@@ -241,16 +239,16 @@ a number of users, the next two steps would be the ones you&rsquo;d ask them to 
 to create a certificate signing requests for you do sign.</p>
 <h2 id="users-create-a-key-and-a-certificate-signing-request">Users: Create a Key, and a Certificate Signing Request</h2>
 <p>Create an RSA key, if you don&rsquo;t have one already:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>openssl genrsa -des3 -out user.key <span style="color:#ae81ff">4096</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>openssl genrsa -des3 -out user.key <span style="color:#ae81ff">4096</span>
 </span></span></code></pre></div><p>Then, create a Certificate Signing Request (CSR)</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>openssl req -new -key user.key -out user.csr
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>openssl req -new -key user.key -out user.csr
 </span></span></code></pre></div><p>A number of questions will be asked; answer each one, including the
 Common Name (CN) and email address. The CSR that&rsquo;s created would be sent to the
 CA (an administrator, but in this case probably also yourself) to be signed.</p>
 <h1 id="signing-a-csr">Signing a CSR</h1>
 <p>A CSR must now be signed by the CA; this is the CA saying &ldquo;I know this person
 or device: they are who they say they are.&rdquo;</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># sign the csr to a certificate valid for 365 days</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># sign the csr to a certificate valid for 365 days</span>
 </span></span><span style="display:flex;"><span>openssl x509 -req -days <span style="color:#ae81ff">365</span> -in user.csr -CA ca.crt -CAkey ca.key -set_serial <span style="color:#ae81ff">01</span> -out user.crt
 </span></span></code></pre></div><p>You&rsquo;ll typically want to increment the serial number with each signing. Once the
 certificate expires, a new CSR doesn&rsquo;t need to be recreated; the same one can
@@ -262,7 +260,7 @@ be signed, which will create a new certificate tied to that public key.</p>
 bundles the client keys and certificate. The resultant archive is effectively
 a password, so it must be kept as safe as the other private keys.</p>
 <p>To create the pfx:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>openssl pkcs12 -export -out user.pfx -inkey user.key -in user.crt -certfile ca.crt
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>openssl pkcs12 -export -out user.pfx -inkey user.key -in user.crt -certfile ca.crt
 </span></span></code></pre></div><p>You will be asked to supply an &ldquo;export password&rdquo;, and it&rsquo;s very recommended that
 one is set, since often you&rsquo;ll need to transfer the PFX archive to a device such
 as your phone; you don&rsquo;t want this sitting in your email without a password on
@@ -395,13 +393,6 @@ setup! I might not even be correct in what I&rsquo;m doing!</p>
 
 
 
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
-  
-
-  <script type="text/javascript">
-    hljs.initHighlightingOnLoad();
-  </script>
 
 
 

@@ -38,8 +38,6 @@ This example is a container running nginx, which has access to letsencrypt certi
 
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
-
 
 
 
@@ -202,10 +200,10 @@ ExecStop=/usr/bin/docker stop nginx
 WantedBy=multi-user.target
 </code></pre><p>This file is saved as <code>/etc/systemd/system/docker.nginx.service</code>. You must make
 it executable (<code>chmod +x &lt;unit_file&gt;</code>) and then do a systemd reload:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>systemctl daemon-reload
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>systemctl daemon-reload
 </span></span><span style="display:flex;"><span>systemctl start &lt;unit_file&gt;
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># if everything works as expected, enable it</span>
-</span></span><span style="display:flex;"><span>systemctl enable &lt;unit_file&gt;
+</span></span><span style="display:flex;"><span>systemctl <span style="color:#111">enable</span> &lt;unit_file&gt;
 </span></span></code></pre></div><p>I&rsquo;m using this method to run several containers on a <a href="https://www.digitalocean.com/">Digital Ocean</a>
 instance, and it&rsquo;s worked as expected.</p>
 
@@ -224,13 +222,6 @@ instance, and it&rsquo;s worked as expected.</p>
 
 
 
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
-  
-
-  <script type="text/javascript">
-    hljs.initHighlightingOnLoad();
-  </script>
 
 
 
