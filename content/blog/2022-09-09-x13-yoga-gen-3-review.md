@@ -1,11 +1,11 @@
 ---
 title: "Lenovo X13 Yoga Gen 3 Review"
-date: 2022-10-07T22:52:00-07:00
+date: 2022-10-18T22:43:00-07:00
 ---
 
 I recently picked up an X13 Yoga Gen 3, which I'm happy to say is a great little
 convertible that retains the ThinkPad feel. I haven't found many in-depth
-reviews for this machine, and while this certainly won't be "in depth" it'll
+reviews for this machine, and while this certainly won't be "in-depth" it'll
 hopefully give some insights into how it handles for regular use if you're at
 all on the fence.
 
@@ -70,8 +70,8 @@ where you'd prefer to keep it a little bit nearer to you.
 
 The port selection isn't generous but it has what I need: two USB-C/Thunderbolt
 4, two USB Type-A (one on each side), HDMI, and a 3.5mm headphone jack. The
-headphone jack is slightly awkward on the right side, but there's worse things
-you could be subjected to.
+headphone jack is slightly awkward on the right side—all others in my memory
+were on the left—but there's worse things you could be subjected to.
 
 ## Keyboard
 
@@ -85,9 +85,10 @@ the button actuation is nearly flush with the frame. This was true on my X1 as
 well, and takes some adjustment to not miss hitting the keys square.
 
 Also after a week or so of use, the space bar developed a fairly obnoxious
-creak/click, and we'll see if that subsides over time; it's not at all
-noticeable in normal typing use, but in my news reader when I use the space bar
-to page to move to the next story.
+creak/click, just when you rest a finger on it but don't actually press the key.
+We'll see if that subsides over time; it's not at all noticeable in normal
+typing use, but in my news reader when I use the space bar to move to the next
+story, my finger resting on it will repeatedly make the sound: annoying.
 
 A quick online typing test shows my WPM about equal with my usual on a laptop
 keyboard, so I can't complain much. Also kudos to Lenovo for making a compact
@@ -126,9 +127,9 @@ and I don't feel like I've sacrificed something to have both.
 
 Well, maybe _one_ thing is sacrificed but it nearly doesn't matter: the
 "garaged" pen should be a lovely addition; having a pen available at all times
-with the laptop is, on paper, a great idea. However the garaged pens are far too
-small to be comfortable, and I've never used them for anything remotely serious.
-I'd love to see a more full-sized pen here and I'd be willing to trade some
+is, on paper, a great idea. However the garaged pens are far too small to be
+comfortable, and I've never used them for anything remotely serious. I'd love to
+see a more full-sized pen here and I'd be willing to trade some
 space/thickness/etc. on the machine for it. Instead I carry a full-sized pen,
 and the garaged pen is pretty much just a fidget toy on the side of the machine.
 
@@ -197,7 +198,7 @@ On graphics tasks, I need to preface this with a caveat that my needs are
 _extremely_ unsophisticated, but I've used Clip Studio, Affinity Design and
 Photo, and Blender for light tasks and they've all handled admirably. I've been
 particularly happy with Clip Studio's performance, and look forward to improving
-my skills on this machine.
+my skills here.
 
 # Wrap Up
 
@@ -209,7 +210,8 @@ with modern features but the ThinkPad materials and feel.
 
 - It's a ThinkPad, and it feels like one: durable and pleasant carbon fiber +
   magnesium chassis
-- Great performance, including on battery power
+- Great performance, including on battery power and in "balanced" mode in
+  Windows 11
 - The Yoga hinge makes for an excellent convertible experience, with
   little-to-no compromises; you can have a tablet, and a laptop
 - Good feeling keyboard which doesn't notably slow down my typing, despite its
