@@ -3,18 +3,24 @@ title: "Lenovo X13 Yoga Gen 3 Review"
 date: 2022-10-18T22:43:00-07:00
 ---
 
-I recently picked up an X13 Yoga Gen 3, which I'm happy to say is a great little
-convertible that retains the ThinkPad feel. I haven't found many in-depth
+I recently picked up an [X13 Yoga Gen 3][x13], which I'm happy to say is a great
+little convertible that retains the ThinkPad feel. I haven't found many in-depth
 reviews for this machine, and while this certainly won't be "in-depth" it'll
 hopefully give some insights into how it handles for regular use if you're at
 all on the fence.
 
-This was purchased to replace my old-ish X1 Yoga Gen 4; I had bought that
+[x13]:
+  https://www.lenovo.com/us/en/p/laptops/thinkpad/thinkpadx/thinkpad-x13-yoga-gen-3-(13-inch-intel)/len101t0028
+
+This was purchased to replace my old-ish [X1 Yoga Gen 4][x1]; I had bought that
 machine on a super sale, and while it wasn't a _bad_ device exactly it was
 severely underpowered for my needs—primarily due to the integrated graphics and
 4K display—and it rendered it useless for anything even remotely graphics
 intensive. For a machine that was intended to be convertible to a tablet, I
 found it lacking for a lot of artistic tasks.
+
+[x1]:
+  https://psref.lenovo.com/Detail/ThinkPad/ThinkPad_X1_Yoga_4th_Gen?M=20SA0004US
 
 For ThinkPad enthusiasts, the X1 doesn't feel very much like a ThinkPad either.
 Part of that is down to the aluminum chassis—it is sleek, but cold and not very
