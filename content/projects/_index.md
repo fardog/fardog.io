@@ -25,7 +25,7 @@ exactly that. Still; the bot itself is completely stateless; it only knows where
 it left off by retrieving its last tweeted prime number from Twitter. To start
 it, I manually tweeted `2` from the website, and started the bot.
 
-Since then, it's amassed over 13,000 followers. Neat.
+Since then, it's amassed over 26,000 followers. Neat.
 
 I later re-wrote it to run twitter and mastodon from the [same
 codebase][primes-github].
