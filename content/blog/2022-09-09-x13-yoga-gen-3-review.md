@@ -1,6 +1,6 @@
 ---
 title: "Lenovo X13 Yoga Gen 3 Review"
-date: 2022-10-18T22:43:00-07:00
+date: 2022-10-19T21:54:00-07:00
 ---
 
 I recently picked up an [X13 Yoga Gen 3][x13], which I'm happy to say is a great
