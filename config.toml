@@ -36,8 +36,6 @@ github                 = "//github.com/fardog"
 highlightjs            = false
 lang                   = "en"
 noshowreadtime         = false
-twitter                = "//twitter.com/milkandtang"
-mastodon               = "//mastodon.social/@fardog"
 
 avatar                 = "img/profile.jpg"
 privacy_link           = "/privacy/"

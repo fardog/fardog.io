@@ -3,30 +3,47 @@ title: Projects
 date: 2017-08-14T21:51:00-07:00
 ---
 
-I've written a lot of things—all can be found on my [github][]—however these
-are the ones that are of particular interest, or that I'm particularly proud
-of.
+I've written a lot of things—all can be found on my [github][]—however these are
+the ones that are of particular interest, or that I'm particularly proud of.
 
 [github]: https://github.com/fardog
 
+## Swapper
+
+- **What?** A Windows utility for swapping your mouse buttons with one click
+- **Where?** [github.com/fardog/Swapper][swapper-github]
+- **Why?** Swapping mouse buttons requires too many clicks
+
+Swapper is a small tray utility which swaps your primary mouse button when
+clicked, and gives a visual indication of the current primary button with the
+tray icon. I use a mouse both left and right handed—depending on the device and
+task—and having to open Windows Settings to switch was onerous.
+
+The code is open source, or you can download a pre-built release from the
+project's [releases page][swapper-releases]. It should work on any modern
+version of Windows.
+
+[swapper-github]: https://github.com/fardog/Swapper
+[swapper-releases]: https://github.com/fardog/Swapper/releases
+
 ## primes
-* **What?** A Twitter bot that tweets prime numbers, sequentially
-* **Where?** [twitter.com/\_primes\_][primes-twitter] and
+
+- **What?** A Twitter bot that tweets prime numbers, sequentially
+- **Where?** [twitter.com/\_primes\_][primes-twitter] and
   [botsin.space/@primes][primes-mastodon]
-* **Why?** Art?
+- **Why?** Art?
 
 The original [code][primes-original] for _primes_ is some of the worst I've
 written; it's a CoffeeScript project, written before I decided to like
 Javascript. It was also the first-ish thing I wrote for Node.js. But: one of the
 most successful?
 
-I wrote _primes_ when thinking of twitter-as-database, but where it landed
-isn't exactly that. Still; the bot itself is completely stateless; it only
-knows where it left off by retrieving its last tweeted prime number from
-Twitter. To start it, I manually tweeted `2` from the website, and started the
-bot.
+I wrote _primes_ when thinking of twitter-as-database, but where it landed isn't
+exactly that. Still; the bot itself is completely stateless; it only knows where
+it left off by retrieving its last tweeted prime number from Twitter. To start
+it, I manually tweeted `2` from the website, and started the bot.
 
-Since then, it's amassed over 13,000 followers. Neat.
+Since then, it's amassed over 26,000 followers. Neat.
 
 I later re-wrote it to run twitter and mastodon from the [same
 codebase][primes-github].
@@ -37,21 +54,22 @@ codebase][primes-github].
 [primes-github]: https://github.com/fardog/primebot
 
 ## frock
-* **What?** A developer's tool for writing fake/mock services
-* **Where?** [github.com/urbanairship/frock][frock-github]
-* **Why?** Development environments can be painful; let's make them easier
+
+- **What?** A developer's tool for writing fake/mock services
+- **Where?** [github.com/urbanairship/frock][frock-github]
+- **Why?** Development environments can be painful; let's make them easier
 
 _frock_ is one of the most useful things I've ever written. Urban Airship is a
 microservice architecture, and the product I work on has the distinction of
 needing to talk to the most services. _frock_ was written to keep my team's
-development environment sane. Born out of previous tools that handled only
-small aspects of our requirements, I set out to design a plugin-based tool that
-was painless to write new fakes/mocks with, with [generic][frock-static]
+development environment sane. Born out of previous tools that handled only small
+aspects of our requirements, I set out to design a plugin-based tool that was
+painless to write new fakes/mocks with, with [generic][frock-static]
 [plugins][frock-proxy] for common needs.
 
-It was written with Open Source in mind, so the
-[full commit history][frock-commits] is available. I'm also particularly proud
-of the [docs][frock-docs].
+It was written with Open Source in mind, so the [full commit
+history][frock-commits] is available. I'm also particularly proud of the
+[docs][frock-docs].
 
 It's been a great help to my team, and I hope others find it useful.
 
@@ -62,10 +80,11 @@ It's been a great help to my team, and I hope others find it useful.
 [frock-docs]: https://github.com/urbanairship/frock/tree/master/docs
 
 ## secureoperator
-* **What?** A DNS server for your local network which uses Google's
+
+- **What?** A DNS server for your local network which uses Google's
   [DNS-over-HTTPS][gdns] for lookups, masking DNS queries from your ISP
-* **Where?** [github.com/fardog/secureoperator][secop-github]
-* **Why?** DNS is not a secure protocol, this is one possible solution to the
+- **Where?** [github.com/fardog/secureoperator][secop-github]
+- **Why?** DNS is not a secure protocol, this is one possible solution to the
   problem
 
 _secure-operator_ is a DNS proxy server. What makes it different from usual DNS
