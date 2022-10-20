@@ -8,6 +8,24 @@ the ones that are of particular interest, or that I'm particularly proud of.
 
 [github]: https://github.com/fardog
 
+## Swapper
+
+- **What?** A Windows utility for swapping your mouse buttons with one click
+- **Where?** [github.com/fardog/Swapper][swapper-github]
+- **Why?** Swapping mouse buttons requires too many clicks
+
+Swapper is a small tray utility which swaps your primary mouse button when
+clicked, and gives a visual indication of the current primary button with the
+tray icon. I use a mouse both left and right handed—depending on the device and
+task—and having to open Windows Settings to switch was onerous.
+
+The code is open source, or you can download a pre-built release from the
+project's [releases page][swapper-releases]. It should work on any modern
+version of Windows.
+
+[swapper-github]: https://github.com/fardog/Swapper
+[swapper-releases]: https://github.com/fardog/Swapper/releases
+
 ## primes
 
 - **What?** A Twitter bot that tweets prime numbers, sequentially
