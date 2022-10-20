@@ -106,13 +106,9 @@
         
 
         
-            <a href="//twitter.com/milkandtang" target="_blank" rel="noopener"><img class="icon" src="/img/twitter.svg" alt="twitter" /></a>
-        
 
         
 
-        
-            <a href="//mastodon.social/@fardog" target="_blank" rel="noopener"><img class="icon" src="/img/mastodon.svg" alt="mastodon" /></a>
         
 
         
@@ -146,9 +142,21 @@
 </div>
 
             <div class="markdown">
-                <p>I&rsquo;ve written a lot of things—all can be found on my <a href="https://github.com/fardog">github</a>—however these
-are the ones that are of particular interest, or that I&rsquo;m particularly proud
-of.</p>
+                <p>I&rsquo;ve written a lot of things—all can be found on my <a href="https://github.com/fardog">github</a>—however these are
+the ones that are of particular interest, or that I&rsquo;m particularly proud of.</p>
+<h2 id="swapper">Swapper</h2>
+<ul>
+<li><strong>What?</strong> A Windows utility for swapping your mouse buttons with one click</li>
+<li><strong>Where?</strong> <a href="https://github.com/fardog/Swapper">github.com/fardog/Swapper</a></li>
+<li><strong>Why?</strong> Swapping mouse buttons requires too many clicks</li>
+</ul>
+<p>Swapper is a small tray utility which swaps your primary mouse button when
+clicked, and gives a visual indication of the current primary button with the
+tray icon. I use a mouse both left and right handed—depending on the device and
+task—and having to open Windows Settings to switch was onerous.</p>
+<p>The code is open source, or you can download a pre-built release from the
+project&rsquo;s <a href="https://github.com/fardog/Swapper/releases">releases page</a>. It should work on any modern
+version of Windows.</p>
 <h2 id="primes">primes</h2>
 <ul>
 <li><strong>What?</strong> A Twitter bot that tweets prime numbers, sequentially</li>
@@ -160,12 +168,11 @@ of.</p>
 written; it&rsquo;s a CoffeeScript project, written before I decided to like
 Javascript. It was also the first-ish thing I wrote for Node.js. But: one of the
 most successful?</p>
-<p>I wrote <em>primes</em> when thinking of twitter-as-database, but where it landed
-isn&rsquo;t exactly that. Still; the bot itself is completely stateless; it only
-knows where it left off by retrieving its last tweeted prime number from
-Twitter. To start it, I manually tweeted <code>2</code> from the website, and started the
-bot.</p>
-<p>Since then, it&rsquo;s amassed over 13,000 followers. Neat.</p>
+<p>I wrote <em>primes</em> when thinking of twitter-as-database, but where it landed isn&rsquo;t
+exactly that. Still; the bot itself is completely stateless; it only knows where
+it left off by retrieving its last tweeted prime number from Twitter. To start
+it, I manually tweeted <code>2</code> from the website, and started the bot.</p>
+<p>Since then, it&rsquo;s amassed over 26,000 followers. Neat.</p>
 <p>I later re-wrote it to run twitter and mastodon from the <a href="https://github.com/fardog/primebot">same
 codebase</a>.</p>
 <h2 id="frock">frock</h2>
@@ -177,13 +184,13 @@ codebase</a>.</p>
 <p><em>frock</em> is one of the most useful things I&rsquo;ve ever written. Urban Airship is a
 microservice architecture, and the product I work on has the distinction of
 needing to talk to the most services. <em>frock</em> was written to keep my team&rsquo;s
-development environment sane. Born out of previous tools that handled only
-small aspects of our requirements, I set out to design a plugin-based tool that
-was painless to write new fakes/mocks with, with <a href="https://github.com/urbanairship/frock-static">generic</a>
+development environment sane. Born out of previous tools that handled only small
+aspects of our requirements, I set out to design a plugin-based tool that was
+painless to write new fakes/mocks with, with <a href="https://github.com/urbanairship/frock-static">generic</a>
 <a href="https://github.com/urbanairship/frock-proxy">plugins</a> for common needs.</p>
-<p>It was written with Open Source in mind, so the
-<a href="https://github.com/urbanairship/frock/commits/master">full commit history</a> is available. I&rsquo;m also particularly proud
-of the <a href="https://github.com/urbanairship/frock/tree/master/docs">docs</a>.</p>
+<p>It was written with Open Source in mind, so the <a href="https://github.com/urbanairship/frock/commits/master">full commit
+history</a> is available. I&rsquo;m also particularly proud of the
+<a href="https://github.com/urbanairship/frock/tree/master/docs">docs</a>.</p>
 <p>It&rsquo;s been a great help to my team, and I hope others find it useful.</p>
 <h2 id="secureoperator">secureoperator</h2>
 <ul>
