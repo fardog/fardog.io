@@ -14,11 +14,12 @@ post][post], which details the setup.
 
 # Android Applications
 
-For Android applications, I don't collect anything. Google does collect some
-data automatically, such as the number of installations, and the countries,
-Android versions, and similar data about devices it is installed on.
+For Android applications, I don't collect any data.
 
-I don't share this data in any way, but I have no idea what Google does with it.
+For apps installed through the Google Play Store, Google does collect some data
+automatically, such as the number of installations, and the countries, Android
+versions, and similar data about devices it is installed on. I don't share this
+data in any way, but I have no idea what Google does with it.
 
 [cookies]: https://en.wikipedia.org/wiki/HTTP_cookie
 [github pages]: https://pages.github.com/
