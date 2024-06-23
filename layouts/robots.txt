@@ -1,0 +1,12 @@
+{{- $url := "https://raw.githubusercontent.com/ai-robots-txt/ai.robots.txt/main/robots.txt" -}}
+{{- with resources.GetRemote $url -}}
+  {{- with .Err -}}
+    {{- errorf "%s" . -}}
+  {{- else -}}
+    {{- .Content -}}
+  {{- end -}}
+{{- else -}}
+  {{- errorf "Unable to get remote resource %q" $url -}}
+{{- end }}
+User-agent: *
+Allow: /

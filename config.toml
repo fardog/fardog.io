@@ -2,6 +2,7 @@ baseURL = "https://fardog.io/"
 languageCode = "en-us"
 title = "fardog.io"
 theme = "cocoa"
+enableRobotsTXT = true
 
 [[menu.main]]
 name                   = "Projects"
