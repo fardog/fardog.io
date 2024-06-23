@@ -1,4 +1,4 @@
-{{- $url := "https://raw.githubusercontent.com/ai-robots-txt/ai.robots.txt/main/robots.txt" -}}
+{{- $url :=  .Site.Params.robotsBlockSourceUrl -}}
 {{- with resources.GetRemote $url -}}
   {{- with .Err -}}
     {{- errorf "%s" . -}}
