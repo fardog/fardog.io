@@ -1,0 +1,12 @@
+{{- $url :=  .Site.Params.robotsBlockSourceUrl -}}
+{{- with resources.GetRemote $url -}}
+  {{- with .Err -}}
+    {{- errorf "%s" . -}}
+  {{- else -}}
+    {{- .Content -}}
+  {{- end -}}
+{{- else -}}
+  {{- errorf "Unable to get remote resource %q" $url -}}
+{{- end }}
+User-agent: *
+Allow: /

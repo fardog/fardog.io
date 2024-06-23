@@ -2,6 +2,7 @@ baseURL = "https://fardog.io/"
 languageCode = "en-us"
 title = "fardog.io"
 theme = "cocoa"
+enableRobotsTXT = true
 
 [[menu.main]]
 name                   = "Projects"
@@ -39,6 +40,8 @@ noshowreadtime         = false
 
 avatar                 = "img/profile.jpg"
 privacy_link           = "/privacy/"
+
+robotsBlockSourceUrl   = "https://raw.githubusercontent.com/ai-robots-txt/ai.robots.txt/main/robots.txt"
 
 [markup]
   [markup.highlight]
