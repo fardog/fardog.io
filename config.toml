@@ -32,20 +32,13 @@ url                    = "/contact/"
 blog = "blog/:year/:month/:day/:title/"
 
 [params]
-latestpostscount       = 5
-i18n_flags             = false
-author                 = "Nathan Wittstock"
-cachebuster            = false
-dateform               = "Jan 2, 2006"
-dateformfull           = "Mon Jan 2 2006 15:04:05 MST"
-faviconfile            = "favicon.ico"
-github                 = "//github.com/fardog"
-highlightjs            = false
-lang                   = "en"
-noshowreadtime         = false
+latestPostsCount       = 5
 
-avatar                 = "img/profile.jpg"
-privacy_link           = "/privacy/"
+dateFormatShort        = "Jan 2, 2006"
+dateFormatLong         = "Mon Jan 2 2006 15:04:05 MST"
+dateFormatISO          = "2006-01-02T15:04:05-0700"
+
+faviconPath            = "/favicon.ico"
 
 robotsBlockSourceUrl   = "https://raw.githubusercontent.com/ai-robots-txt/ai.robots.txt/main/robots.txt"
 

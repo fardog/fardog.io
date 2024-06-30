@@ -1,7 +1,4 @@
 <header>
   <h1>{{ .Title }}</h1>
-  {{ with .Site.Params.subtitle }}
-  {{ . }}
-  {{ end }}
   {{ partial "nav.html" . }}
 </header>
