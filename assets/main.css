@@ -1,6 +1,6 @@
 /* note: this main entry point must use imports that are relative
    to the root, not this file. this appears to be a hugo bug. */
-@import 'assets/_water.css';
+@import 'assets/_site.css';
 
 :root {
   --background: rgba(255,255,255, 1); 

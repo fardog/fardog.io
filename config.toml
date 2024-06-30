@@ -49,4 +49,7 @@ robotsBlockSourceUrl   = "https://raw.githubusercontent.com/ai-robots-txt/ai.rob
 
 [markup]
   [markup.highlight]
-  style = "monokailight"
+    hl_Lines = ''
+    hl_inline = false
+    lineAnchors = ''
+    noClasses = false
