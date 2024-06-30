@@ -25,13 +25,13 @@ jobs:
         run: npm ci
 
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
+        uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: '0.128.0'
           extended: true
 
       - name: Build
-        run: hugo
+        run: hugo --minify
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3

@@ -14,7 +14,7 @@ If you need to reach me, you can [try these methods][contact].
 
 The name "fardog" comes from a friend of a friend who did an impression of a
 "far dog", making tiny "haroo" noises. I liked how it implied [space dogs][],
-and adopted the name for my (long defunct) web design company, and the username
+and adopted the name for my (long defunct) web design company; the username
 stuck around.
 
 [ua]: https://www.airship.com

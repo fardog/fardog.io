@@ -17,14 +17,18 @@
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
 
   <meta name="referrer" content="no-referrer">
-  {{ if not (eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")) }}
+  {{ if not hugo.IsProduction }}
   <meta name="robots" content="noindex, nofollow">
   {{ end }}
 
   <link rel="canonical" href="{{ .Permalink }}">
   <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="{{ .Site.Params.faviconPath }}">
 
-  {{ with resources.Get "main.css" | postCSS | resources.Fingerprint "sha512" }}
+  {{ $css := resources.Get "main.css" | postCSS }}
+  {{ if hugo.IsProduction }}
+  {{ $css = $css | minify | resources.Fingerprint "sha512" }}
+  {{ end }}
+  {{ with $css }}
   <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}">
   {{ end }}
 
