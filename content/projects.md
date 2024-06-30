@@ -30,29 +30,34 @@ version of Windows.
 
 ## primes
 
-- **What?** A Twitter bot that tweets prime numbers, sequentially
-- **Where?** [twitter.com/\_primes\_][primes-twitter] and
-  [botsin.space/@primes][primes-mastodon]
+- **What?** A bot that posts prime numbers, sequentially; originally a Twitter
+  bot, now elsewhere
+- **Where?** [primes.today][] and [botsin.space/@primes][primes-mastodon]
 - **Why?** Art?
 
-The original [code][primes-original] for _primes_ is some of the worst I've
-written; it's a CoffeeScript project, written before I decided to like
+The [original code][primes-original] for _primes_ is some of the worst I've
+written; it was a CoffeeScript project, written before I decided to like
 Javascript. It was also the first-ish thing I wrote for Node.js. But: one of the
-most successful?
+most successful? 
 
-I wrote _primes_ when thinking of twitter-as-database, but where it landed isn't
-exactly that. Still; the bot itself is completely stateless; it only knows where
-it left off by retrieving its last tweeted prime number from Twitter. To start
-it, I manually tweeted `2` from the website, and started the bot.
+(I later re-wrote it to run all bots from the [same codebase][primes-github].)
 
-Since then, it's amassed over 26,000 followers. Neat.
+The idea behind primes was "twitter-as-database", but where it landed isn't
+exactly that. Still; the social bots are completely stateless; it only knows
+where it left off by retrieving its last posted prime number. To seed it, I
+manually sent `2` from the respective platforms, and started the bot.
 
-I later re-wrote it to run twitter and mastodon from the [same
-codebase][primes-github].
+Before Twitter shut down API access, [the bot][primes-twitter] had amassed over
+26,000 followers. Neat.
 
+In advance of the inevitable shutdown, the bot was ported to a website:
+[primes.today][].
+
+
+[primes.today]: https://primes.today
 [primes-twitter]: https://twitter.com/_primes_
 [primes-mastodon]: https://botsin.space/@primes
-[primes-original]: https://github.com/fardog/_primes_
+[primes-original]: https://github.com/primes-today/primebot
 [primes-github]: https://github.com/fardog/primebot
 
 ## frock

@@ -9,8 +9,8 @@
   <ul>
     {{ range (first $latestpostscount (where .Site.Pages.ByPublishDate.Reverse "Section" "blog")) }}
     <li>
-        <a href="{{ .Permalink }}">{{ .Title }}</a>
-        <time datetime='{{ .Date.Format .Site.Params.dateFormatISO }}'>{{ .Date.Format .Site.Params.dateFormatShort }}</time>
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+      <time datetime='{{ .Date.Format .Site.Params.dateFormatISO }}'>{{ .Date.Format .Site.Params.dateFormatShort }}</time>
     </li>
     {{ end }}
     {{ if gt $totalpostscount $latestpostscount }}

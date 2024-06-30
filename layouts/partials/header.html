@@ -1,4 +1,9 @@
 <header>
+  {{ if not .IsHome }}
+  <nav><a title="Return to the home page" href="{{ ref . "/" }}">&larr; Home</a></nav>
+  {{ end }}
   <h1>{{ .Title }}</h1>
+  {{ if .IsHome }}
   {{ partial "nav.html" . }}
+  {{ end }}
 </header>

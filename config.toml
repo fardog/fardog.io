@@ -5,12 +5,6 @@ copyright = "Nathan Wittstock"
 enableRobotsTXT = true
 
 [[menu.main]]
-name                   = "Home"
-weight                 = -120
-identifier             = "home"
-url                    = "/"
-
-[[menu.main]]
 name                   = "Projects"
 weight                 = -110
 identifier             = "projects"

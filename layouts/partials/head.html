@@ -1,8 +1,8 @@
 <head>
   <title>
     {{- block "title" . -}}
-      {{- if eq .Params.Title .Site.Title -}}
-        {{ .Params.Title }}
+      {{- if .IsHome -}}
+        {{ .Site.Title }}
       {{- else -}}
         {{ with .Params.Title }}{{ . }} | {{ end }}{{ .Site.Title }}
       {{- end -}}
@@ -10,9 +10,8 @@
   </title>
 
   {{ hugo.Generator }}
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark light">
 
   <meta name="author" content="{{ .Site.Copyright }}">
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
@@ -23,7 +22,7 @@
   {{ end }}
 
   <link rel="canonical" href="{{ .Permalink }}">
-  <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="{{ .Site.Params.faviconPath | safeURL }}">
+  <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="{{ .Site.Params.faviconPath }}">
 
   {{ with resources.Get "main.css" | postCSS | resources.Fingerprint "sha512" }}
   <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}">
