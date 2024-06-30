@@ -1,0 +1,9 @@
+{{ define "main" }}
+
+{{ range .Pages }}
+<h2><a href="{{ .RelPermalink }}">{{ .Title }} {{ if .Draft }}:: DRAFT{{end}}</a></h2>
+<p>{{ .Summary }}</p>
+<a href="{{ .RelPermalink }}"><button>Read More</button></a>
+{{ end }}
+
+{{ end }}

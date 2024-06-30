@@ -7,3 +7,8 @@ Copyright 2017 Nathan Wittstock
 
 * Code is licensed under the [MIT License](./LICENSE)
 * Content is licensed under the [Creative Commons Attribution 3.0 Unported](./static/LICENSE)
+
+The site theme uses a modified version of [hugo-water][] by [megrxu][] under the MIT license.
+
+[hugo-water]: https://github.com/megrxu/hugo-water
+[megrxu]: https://github.com/megrxu

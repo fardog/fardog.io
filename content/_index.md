@@ -1,20 +1,23 @@
 ---
 title: fardog.io
 date: 2017-08-14T21:29:24-07:00
-lastmod: 2022-08-13T14:54:00-07:00
+lastmod: 2024-06-30T09:24:00Z
+description: The website of Nathan Wittstock.
 ---
 
-Hi. I'm Nathan Wittstock, a software developer from Portland, Oregon. You've
-found my little web page. I spend my days at [Airship][ua], working on our
-customer dashboard. In my spare time, some [projects][] have happened. I write
-Typescript/Javascript, Go, and Python, typically.
+Hi. I'm Nathan Wittstock, and you've found my little web page. I'm a software
+engineer. I spend my days at [Airship][ua], working wherever I'm needed. In my
+spare time, some [projects][] have happened. I write Typescript, Go, and Python,
+typically.
 
 If you need to reach me, you can [try these methods][contact].
 
-I didn't invent the name "fardog"; it comes from a friend of a friend who did an
-impression of a "far dog", making tiny "haroo" noises. I adopted it for the name
-of my web design company (now defunct) but the username stuck around.
+The name "fardog" comes from a friend of a friend who did an impression of a
+"far dog", making tiny "haroo" noises. I liked how it implied [space dogs][],
+and adopted the name for my (long defunct) web design company, and the username
+stuck around.
 
 [ua]: https://www.airship.com
-[projects]: ./projects/
-[contact]: ./contact/
+[space dogs]: https://en.wikipedia.org/wiki/Soviet_space_dogs
+[projects]: {{< ref "projects" >}}
+[contact]: {{< ref "contact" >}}

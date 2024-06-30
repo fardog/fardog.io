@@ -1,8 +1,14 @@
 baseURL = "https://fardog.io/"
 languageCode = "en-us"
 title = "fardog.io"
-theme = "cocoa"
+copyright = "Nathan Wittstock"
 enableRobotsTXT = true
+
+[[menu.main]]
+name                   = "Home"
+weight                 = -120
+identifier             = "home"
+url                    = "/"
 
 [[menu.main]]
 name                   = "Projects"
@@ -42,6 +48,18 @@ avatar                 = "img/profile.jpg"
 privacy_link           = "/privacy/"
 
 robotsBlockSourceUrl   = "https://raw.githubusercontent.com/ai-robots-txt/ai.robots.txt/main/robots.txt"
+
+  [params.contentLicense]
+  text = "CC BY 4.0"
+  url = "https://creativecommons.org/licenses/by/4.0/"
+
+  [params.codeLicense]
+  text = "MIT"
+  url = "https://github.com/fardog/fardog.io/blob/master/LICENSE"
+
+  [params.repository]
+  text = "source"
+  url = "https://github.com/fardog/fardog.io/"
 
 [markup]
   [markup.highlight]

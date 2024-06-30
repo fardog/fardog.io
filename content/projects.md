@@ -1,6 +1,8 @@
 ---
 title: Projects
 date: 2017-08-14T21:51:00-07:00
+lastmod: 2024-06-30T09:24:00Z
+description: A small list of noteworthy projects.
 ---
 
 I've written a lot of things—all can be found on my [github][]—however these are

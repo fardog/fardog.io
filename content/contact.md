@@ -1,7 +1,8 @@
 ---
 title: Contact
 date: 2018-01-27T12:57:00-08:00
-lastmod: 2023-06-15T20:36:00-07:00
+lastmod: 2024-06-30T09:24:00Z
+description: Methods for contacting me, should you need them.
 ---
 
 Here's some ways to reach me:
