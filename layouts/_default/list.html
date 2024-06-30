@@ -2,7 +2,7 @@
 
 {{ range .Pages }}
 <h2><a href="{{ .RelPermalink }}">{{ .Title }} {{ if .Draft }}:: DRAFT{{end}}</a></h2>
-<time datetime='{{ .Date.Format .Site.Params.dateFormatISO }}'>{{ .Date.Format .Site.Params.dateFormatLong }}</time>
+<time datetime='{{ .Date.Format .Site.Params.dateFormatISO }}'>{{ .Date.Format .Site.Params.dateFormatShort }}</time>
 <p>{{ .Summary }}</p>
 <a href="{{ .RelPermalink }}"><button>Read More</button></a>
 {{ end }}

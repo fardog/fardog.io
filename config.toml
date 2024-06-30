@@ -29,7 +29,6 @@ blog = "blog/:year/:month/:day/:title/"
 latestPostsCount       = 5
 
 dateFormatShort        = "Jan 2, 2006"
-dateFormatLong         = "Mon Jan 2 2006 15:04:05 MST"
 dateFormatISO          = "2006-01-02T15:04:05-0700"
 
 faviconPath            = "/favicon.ico"
