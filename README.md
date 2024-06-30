@@ -29,3 +29,6 @@ themes, all under MIT License:
 This site uses [Water.css][] under MIT License.
 
 [water.css]: https://watercss.kognise.dev/
+
+The site color theme was generated using the [Numl.Design Color Theme
+Generator](https://theme.tenphi.me/).

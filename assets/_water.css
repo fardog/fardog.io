@@ -1,4 +1,1 @@
-@import 'water.css/src/variables-light.css';
-@import 'water.css/src/variables-dark.css' (prefers-color-scheme: dark);
-
 @import 'water.css/src/parts/_core.css';
