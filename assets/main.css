@@ -3,13 +3,13 @@
 @import 'assets/_site.css';
 
 :root {
-  --background: rgba(255,255,255, 1); 
-  --background-body: rgba(255,255,255, 1);
+  --background: rgba(255,255,255, 1);
+  --background-body: rgba(253,248,246, 1);
   --text-main: rgba(43,29,21, 1);
   --text-muted: rgba(38,31,27, 1);
   --selection: rgba(38,31,27, 0.5);
   --text-bright: rgba(74,74,74, 1);
-  --background-alt: rgba(253,248,246, 1);
+  --background-alt: rgba(255,255,255, 1);
   --border: rgba(207,175,159, 1);
   --input-color: rgba(255,255,255, 1);
   --outline-color: rgba(243,156,83, 1);
@@ -30,7 +30,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: rgba(32,32,32, 1); 
+    --background: rgba(0,0,0, 1);
     --background-body: rgba(32,32,32, 1);
     --text-main: rgba(242,238,237, 1);
     --text-muted: rgba(241,239,238, 1);
