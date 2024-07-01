@@ -1,32 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>fish on fardog.io</title>
-    <link>https://fardog.io/categories/fish/</link>
-    <description>Recent content in fish on fardog.io</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 22 Mar 2013 00:07:00 -0700</lastBuildDate><atom:link href="https://fardog.io/categories/fish/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>vim, fish shell, and vim-sensible</title>
-      <link>https://fardog.io/blog/2013/03/22/vim-fish-shell-and-vim-sensible/</link>
-      <pubDate>Fri, 22 Mar 2013 00:07:00 -0700</pubDate>
-      
-      <guid>https://fardog.io/blog/2013/03/22/vim-fish-shell-and-vim-sensible/</guid>
-      <description>Part of this evening was spent making vim workable for me, the first step was getting some sane defaults. vim-sensible was recommended in several places (as was Tim Pope&amp;rsquo;s also excellent pathogen), but immediately after installation I was getting an error:
-Error detected while processing ~/.vim/bundle/vim-sensible/plugin/sensible.vim: line 75: E484: Can&amp;#39;t open file /tmp/v1NmKg8/0 Press ENTER or type command to continue Frustratingly, line 75 held no obvious suggestions. After some time troubleshooting, I found it worked fine if I wasn&amp;rsquo;t using fish shell.</description>
-    </item>
-    
-    <item>
-      <title>Simple &#39;workon&#39; Command for fish shell</title>
-      <link>https://fardog.io/blog/2013/02/15/simple-workon-command-for-fish-shell/</link>
-      <pubDate>Fri, 15 Feb 2013 00:15:00 -0700</pubDate>
-      
-      <guid>https://fardog.io/blog/2013/02/15/simple-workon-command-for-fish-shell/</guid>
-      <description>I put together a quick workon clone for the fish&amp;rsquo;s fish shell. Definitely nothing as complete or useful as virtualenvwrapper, but it fixes my need: switching simply between virtualenv&amp;rsquo;s and projects.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Fish on fardog.io</title><link>https://fardog.io/categories/fish/</link><description>Recent content in Fish on fardog.io</description><generator>Hugo</generator><language>en-us</language><copyright>Nathan Wittstock</copyright><lastBuildDate>Fri, 22 Mar 2013 00:07:00 -0700</lastBuildDate><atom:link href="https://fardog.io/categories/fish/index.xml" rel="self" type="application/rss+xml"/><item><title>vim, fish shell, and vim-sensible</title><link>https://fardog.io/blog/2013/03/22/vim-fish-shell-and-vim-sensible/</link><pubDate>Fri, 22 Mar 2013 00:07:00 -0700</pubDate><guid>https://fardog.io/blog/2013/03/22/vim-fish-shell-and-vim-sensible/</guid><description>Part of this evening was spent making vim workable for me, the first step was getting some sane defaults. vim-sensible was recommended in several places (as was Tim Pope&amp;rsquo;s also excellent pathogen), but immediately after installation I was getting an error:
+Error detected while processing ~/.vim/bundle/vim-sensible/plugin/sensible.vim: line 75: E484: Can&amp;#39;t open file /tmp/v1NmKg8/0 Press ENTER or type command to continue Frustratingly, line 75 held no obvious suggestions. After some time troubleshooting, I found it worked fine if I wasn&amp;rsquo;t using fish shell.</description></item><item><title>Simple 'workon' Command for fish shell</title><link>https://fardog.io/blog/2013/02/15/simple-workon-command-for-fish-shell/</link><pubDate>Fri, 15 Feb 2013 00:15:00 -0700</pubDate><guid>https://fardog.io/blog/2013/02/15/simple-workon-command-for-fish-shell/</guid><description>I put together a quick workon clone for the fish&amp;rsquo;s fish shell. Definitely nothing as complete or useful as virtualenvwrapper, but it fixes my need: switching simply between virtualenv&amp;rsquo;s and projects.
 Installation First, create a function file ~/.config/fish/functions/workon.fish with this defintion:
-function workon -d &amp;#34;Activate virtual environment in $WORKON_HOME&amp;#34; set tgt {$WORKON_HOME}/$argv[1] if [ -d $tgt ] cd $tgt # deactivate any active venv, and activate the target # this needs to be rewritten with the `type` fish command if test -n &amp;#34;$VIRTUAL_ENV&amp;#34; deactivate end .</description>
-    </item>
-    
-  </channel>
-</rss>
+function workon -d &amp;#34;Activate virtual environment in $WORKON_HOME&amp;#34; set tgt {$WORKON_HOME}/$argv[1] if [ -d $tgt ] cd $tgt # deactivate any active venv, and activate the target # this needs to be rewritten with the `type` fish command if test -n &amp;#34;$VIRTUAL_ENV&amp;#34; deactivate end .</description></item></channel></rss>

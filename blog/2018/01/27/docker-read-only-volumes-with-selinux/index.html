@@ -1,208 +1,22 @@
-<!DOCTYPE html>
-<html lang="en-us">
-
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="chrome=1">
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="referrer" content="no-referrer">
-<meta name="author" content="Nathan Wittstock">
-<meta name="description" content="If you use Docker on an SELinux-enabled Linux distribution like Fedora, you may have run into issues mounting host volumes, and are probably aware of the z flag to modify the SELinux label:
+<!doctype html><html lang=en-us><head><title>Docker Read-Only Volumes with SELinux | fardog.io</title>
+<meta name=generator content="Hugo 0.128.0"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=color-scheme content="dark light"><meta name=author content="Nathan Wittstock"><meta name=description content="If you use Docker on an SELinux-enabled Linux distribution like Fedora, you may have run into issues mounting host volumes, and are probably aware of the z flag to modify the SELinux label:
 docker run --rm -v /var/www/letsencrypt:/var/www/letsencrypt:z nginx What isn&rsquo;t made very clear from the Docker docs is that you can specify multiple flags separated with commas, say ro,z to specify SELinux labeling and read-only:
-docker run --rm -v /var/www/letsencrypt:/var/www/letsencrypt:ro,z nginx ">
-
-<meta property="og:title" content="Docker Read-Only Volumes with SELinux" />
-<meta property="og:description" content="If you use Docker on an SELinux-enabled Linux distribution like Fedora, you may have run into issues mounting host volumes, and are probably aware of the z flag to modify the SELinux label:
-docker run --rm -v /var/www/letsencrypt:/var/www/letsencrypt:z nginx What isn&rsquo;t made very clear from the Docker docs is that you can specify multiple flags separated with commas, say ro,z to specify SELinux labeling and read-only:
-docker run --rm -v /var/www/letsencrypt:/var/www/letsencrypt:ro,z nginx " />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://fardog.io/blog/2018/01/27/docker-read-only-volumes-with-selinux/" /><meta property="article:section" content="blog" />
-<meta property="article:published_time" content="2018-01-27T15:12:15-08:00" />
-<meta property="article:modified_time" content="2018-01-27T15:12:15-08:00" />
-
-
-
-<title>
-
-
-     Docker Read-Only Volumes with SELinux 
-
-</title>
-<link rel="canonical" href="https://fardog.io/blog/2018/01/27/docker-read-only-volumes-with-selinux/">
-
-
-
-
-
-
-
-
-
-
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500">
-
-
-
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/pygments.css">
-    <link rel="stylesheet" href="/css/main.css">
-    
-
-
-
-
-<link rel="shortcut icon"
-
-    href="/favicon.ico"
-
->
-
-
-
-
-
-
-
-
-</head>
-
-
-<body lang="en">
-
-<section class="header">
-    <div class="container">
-        <div class="content">
-            
-                
-                
-                
-                
-                
-                    
-                
-                    
-                
-                
-                <a href="/"><img class="avatar" src="/img/profile.jpg" srcset="https://fardog.io/img/profile.jpg 1x"></a>
-            
-            <a href="/"><div class="name">Nathan Wittstock</div></a>
-            
-            <nav>
-                <ul>
-                    
-                        <li class="nav-projects"><a href="https://fardog.io/projects/"><span>Projects</span></a></li>
-                    
-                        <li class="nav-blog"><a href="https://fardog.io/blog/"><span>Blog</span></a></li>
-                    
-                        <li class="nav-contact"><a href="https://fardog.io/contact/"><span>Contact</span></a></li>
-                    
-                </ul>
-            </nav>
-        </div>
-    </div>
-</section>
-
-<section class="icons">
-    <div class="container">
-        <div class="content">
-        
-            <a href="//github.com/fardog" target="_blank" rel="noopener"><img class="icon" src="/img/github.svg" alt="github" /></a>
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-        </div>
-    </div>
-</section>
-
-
-<section class="main post non-narrow zero-top-spacing">
-    <div class="container">
-        <div class="content">
-            <div class="front-matter">
-                <div class="title-container">
-                    <div class="page-heading">
-
-    Docker Read-Only Volumes with SELinux
-
-</div>
-
-                    <div class="initials"><a href="https://fardog.io/"></a></div>
-                </div>
-                <div class="meta">
-                    
-                    <div class="date" title='Sat Jan 27 2018 15:12:15 -0800'>Jan 27, 2018</div>
-                    
-                    
-		    <div class="reading-time"><div class="middot"></div>One minute read</div>
-                    
-                </div>
-            </div>
-            <div class="markdown">
-                <p>If you use Docker on an <a href="https://en.wikipedia.org/wiki/Security-Enhanced_Linux">SELinux</a>-enabled Linux distribution like <a href="https://getfedora.org/">Fedora</a>,
+docker run --rm -v /var/www/letsencrypt:/var/www/letsencrypt:ro,z nginx "><meta name=referrer content="no-referrer"><link rel=canonical href=https://fardog.io/blog/2018/01/27/docker-read-only-volumes-with-selinux/><link rel="shortcut icon" type=image/vnd.microsoft.icon href=/favicon.ico><link rel=stylesheet href=/main.min.9637009c6b01416517e2b0e76a0530c7038e1c72499cd53ae621955c3631a6f5a07d4c5b7de66c4c27dfa27d92de278cc57ac5e5994409027ddc733b09dec622.css integrity="sha512-ljcAnGsBQWUX4rDnagUwxwOOHHJJnNU65iGVXDYxpvWgfUxbfeZsTCffon2S3ieMxXrF5ZlECQJ93HM7Cd7GIg=="><meta itemprop=name content="Docker Read-Only Volumes with SELinux"><meta itemprop=description content="If you use Docker on an SELinux-enabled Linux distribution like Fedora, you may have run into issues mounting host volumes, and are probably aware of the z flag to modify the SELinux label:
+docker run --rm -v /var/www/letsencrypt:/var/www/letsencrypt:z nginx What isn’t made very clear from the Docker docs is that you can specify multiple flags separated with commas, say ro,z to specify SELinux labeling and read-only:
+docker run --rm -v /var/www/letsencrypt:/var/www/letsencrypt:ro,z nginx "><meta itemprop=datePublished content="2018-01-27T15:12:15-08:00"><meta itemprop=dateModified content="2018-01-27T15:12:15-08:00"><meta itemprop=wordCount content="72"><meta property="og:url" content="https://fardog.io/blog/2018/01/27/docker-read-only-volumes-with-selinux/"><meta property="og:site_name" content="fardog.io"><meta property="og:title" content="Docker Read-Only Volumes with SELinux"><meta property="og:description" content="If you use Docker on an SELinux-enabled Linux distribution like Fedora, you may have run into issues mounting host volumes, and are probably aware of the z flag to modify the SELinux label:
+docker run --rm -v /var/www/letsencrypt:/var/www/letsencrypt:z nginx What isn’t made very clear from the Docker docs is that you can specify multiple flags separated with commas, say ro,z to specify SELinux labeling and read-only:
+docker run --rm -v /var/www/letsencrypt:/var/www/letsencrypt:ro,z nginx "><meta property="og:locale" content="en_us"><meta property="og:type" content="article"><meta property="article:section" content="blog"><meta property="article:published_time" content="2018-01-27T15:12:15-08:00"><meta property="article:modified_time" content="2018-01-27T15:12:15-08:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="Docker Read-Only Volumes with SELinux"><meta name=twitter:description content="If you use Docker on an SELinux-enabled Linux distribution like Fedora, you may have run into issues mounting host volumes, and are probably aware of the z flag to modify the SELinux label:
+docker run --rm -v /var/www/letsencrypt:/var/www/letsencrypt:z nginx What isn’t made very clear from the Docker docs is that you can specify multiple flags separated with commas, say ro,z to specify SELinux labeling and read-only:
+docker run --rm -v /var/www/letsencrypt:/var/www/letsencrypt:ro,z nginx "></head><body><header><nav><a title="Return to the home page" href=https://fardog.io/>&larr; Home</a></nav><h1>Docker Read-Only Volumes with SELinux</h1></header><main><p>If you use Docker on an <a href=https://en.wikipedia.org/wiki/Security-Enhanced_Linux>SELinux</a>-enabled Linux distribution like <a href=https://getfedora.org/>Fedora</a>,
 you may have run into issues mounting host volumes, and are probably aware of
-the <code>z</code> flag to modify the SELinux label:</p>
-<pre tabindex="0"><code>docker run --rm -v /var/www/letsencrypt:/var/www/letsencrypt:z nginx
-</code></pre><p>What isn&rsquo;t made very clear from the <a href="https://docs.docker.com/engine/admin/volumes/volumes/">Docker docs</a> is that you can specify
+the <code>z</code> flag to modify the SELinux label:</p><pre tabindex=0><code>docker run --rm -v /var/www/letsencrypt:/var/www/letsencrypt:z nginx
+</code></pre><p>What isn&rsquo;t made very clear from the <a href=https://docs.docker.com/engine/admin/volumes/volumes/>Docker docs</a> is that you can specify
 multiple flags separated with commas, say <code>ro,z</code> to specify SELinux labeling
-<em>and</em> read-only:</p>
-<pre tabindex="0"><code>docker run --rm -v /var/www/letsencrypt:/var/www/letsencrypt:ro,z nginx
-</code></pre>
-                <br>
-		<p class="back-to-posts"><a href="/blog/">Back to posts</a></p>
-            </div>
-            <br>
-            <div class="disqus">
-                
-            </div>
-            
-        </div>
-    </div>
-</section>
-
-
-
-
-
-
-
-
-<section class="footer">
-    <div class="container">
-        <div class="content">
-            <p>&copy; 2024 Nathan Wittstock &mdash; Content: <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>, Code: <a href="https://github.com/fardog/fardog.io/blob/master/LICENSE">MIT</a>, unless otherwise noted.</p>
-            <p>
-                View the <a href="https://github.com/fardog/fardog.io">source</a> for this site.
-                
-                    <a href="/privacy/">Privacy</a>.
-                
-            </p>
-        </div>
-    </div>
-</section>
-</body>
-</html>
-
+<em>and</em> read-only:</p><pre tabindex=0><code>docker run --rm -v /var/www/letsencrypt:/var/www/letsencrypt:ro,z nginx
+</code></pre></main><footer role=contentinfo>&copy; 2024 Nathan Wittstock
+—
+Content: <a href=https://creativecommons.org/licenses/by/4.0/ target=_blank>CC BY 4.0</a>,
+Code: <a href=https://github.com/fardog/fardog.io/blob/master/LICENSE target=_blank>MIT</a>, unless otherwise noted.<p class="f6 fw6 pv0 mv2">View the
+<a href=https://github.com/fardog/fardog.io/ target=_blank>source</a>
+for this site.
+<a href=https://fardog.io/privacy/>Privacy</a>.</p></footer></body></html>

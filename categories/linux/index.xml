@@ -1,42 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>linux on fardog.io</title>
-    <link>https://fardog.io/categories/linux/</link>
-    <description>Recent content in linux on fardog.io</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 27 Aug 2013 11:38:00 -0700</lastBuildDate><atom:link href="https://fardog.io/categories/linux/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Getting WiFi on a Headless Raspberry Pi</title>
-      <link>https://fardog.io/blog/2013/08/27/getting-wifi-on-a-headless-raspberry-pi/</link>
-      <pubDate>Tue, 27 Aug 2013 11:38:00 -0700</pubDate>
-      
-      <guid>https://fardog.io/blog/2013/08/27/getting-wifi-on-a-headless-raspberry-pi/</guid>
-      <description>One of the final steps in a to-be-announced project involved getting a headless Raspberry Pi up on WiFi at boot time—which turned out to be a little more challenging that first expected. Not because it was particularly difficult, but because the documentation was poor.
-Below are my full configuration files that were required. The WiFi USB dongle itself was an Adafruit USB WiFi with Antenna which is actually a B-LINK BBL-LW05-AR5; notable becuase of its sizeable antenna, and for working with the latest Raspbian Wheezy distribution.</description>
-    </item>
-    
-    <item>
-      <title>vim, fish shell, and vim-sensible</title>
-      <link>https://fardog.io/blog/2013/03/22/vim-fish-shell-and-vim-sensible/</link>
-      <pubDate>Fri, 22 Mar 2013 00:07:00 -0700</pubDate>
-      
-      <guid>https://fardog.io/blog/2013/03/22/vim-fish-shell-and-vim-sensible/</guid>
-      <description>Part of this evening was spent making vim workable for me, the first step was getting some sane defaults. vim-sensible was recommended in several places (as was Tim Pope&amp;rsquo;s also excellent pathogen), but immediately after installation I was getting an error:
-Error detected while processing ~/.vim/bundle/vim-sensible/plugin/sensible.vim: line 75: E484: Can&amp;#39;t open file /tmp/v1NmKg8/0 Press ENTER or type command to continue Frustratingly, line 75 held no obvious suggestions. After some time troubleshooting, I found it worked fine if I wasn&amp;rsquo;t using fish shell.</description>
-    </item>
-    
-    <item>
-      <title>Using Caps-Lock as a Compose key in XFCE4</title>
-      <link>https://fardog.io/blog/2013/02/22/using-caps-lock-as-a-compose-key-in-xfce4/</link>
-      <pubDate>Fri, 22 Feb 2013 14:03:00 -0700</pubDate>
-      
-      <guid>https://fardog.io/blog/2013/02/22/using-caps-lock-as-a-compose-key-in-xfce4/</guid>
-      <description>Why not take that useless key, and make it useful? The Compose Key—formerly present on many Unix keyboards of old—isn&amp;rsquo;t present on most modern laptops.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Linux on fardog.io</title><link>https://fardog.io/categories/linux/</link><description>Recent content in Linux on fardog.io</description><generator>Hugo</generator><language>en-us</language><copyright>Nathan Wittstock</copyright><lastBuildDate>Tue, 27 Aug 2013 11:38:00 -0700</lastBuildDate><atom:link href="https://fardog.io/categories/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>Getting WiFi on a Headless Raspberry Pi</title><link>https://fardog.io/blog/2013/08/27/getting-wifi-on-a-headless-raspberry-pi/</link><pubDate>Tue, 27 Aug 2013 11:38:00 -0700</pubDate><guid>https://fardog.io/blog/2013/08/27/getting-wifi-on-a-headless-raspberry-pi/</guid><description>One of the final steps in a to-be-announced project involved getting a headless Raspberry Pi up on WiFi at boot time—which turned out to be a little more challenging that first expected. Not because it was particularly difficult, but because the documentation was poor.
+Below are my full configuration files that were required. The WiFi USB dongle itself was an Adafruit USB WiFi with Antenna which is actually a B-LINK BBL-LW05-AR5; notable becuase of its sizeable antenna, and for working with the latest Raspbian Wheezy distribution.</description></item><item><title>vim, fish shell, and vim-sensible</title><link>https://fardog.io/blog/2013/03/22/vim-fish-shell-and-vim-sensible/</link><pubDate>Fri, 22 Mar 2013 00:07:00 -0700</pubDate><guid>https://fardog.io/blog/2013/03/22/vim-fish-shell-and-vim-sensible/</guid><description>Part of this evening was spent making vim workable for me, the first step was getting some sane defaults. vim-sensible was recommended in several places (as was Tim Pope&amp;rsquo;s also excellent pathogen), but immediately after installation I was getting an error:
+Error detected while processing ~/.vim/bundle/vim-sensible/plugin/sensible.vim: line 75: E484: Can&amp;#39;t open file /tmp/v1NmKg8/0 Press ENTER or type command to continue Frustratingly, line 75 held no obvious suggestions. After some time troubleshooting, I found it worked fine if I wasn&amp;rsquo;t using fish shell.</description></item><item><title>Using Caps-Lock as a Compose key in XFCE4</title><link>https://fardog.io/blog/2013/02/22/using-caps-lock-as-a-compose-key-in-xfce4/</link><pubDate>Fri, 22 Feb 2013 14:03:00 -0700</pubDate><guid>https://fardog.io/blog/2013/02/22/using-caps-lock-as-a-compose-key-in-xfce4/</guid><description>Why not take that useless key, and make it useful? The Compose Key—formerly present on many Unix keyboards of old—isn&amp;rsquo;t present on most modern laptops.
 In XFCE, this is a little more cumbersome than Gnome, since there isn&amp;rsquo;t a graphical interface for setxkbmap, but these two commands will swap the Caps lock for a compose key:
-setxkbmap -option ctrl:nocaps # disables caps lock setxkbmap -option compose:caps # sets caps key to compose To make this active at login, you can add two entries to your &amp;ldquo;Session and Startup&amp;rdquo; -&amp;gt; &amp;ldquo;Application Autostart&amp;rdquo; available under the Settings Manager.</description>
-    </item>
-    
-  </channel>
-</rss>
+setxkbmap -option ctrl:nocaps # disables caps lock setxkbmap -option compose:caps # sets caps key to compose To make this active at login, you can add two entries to your &amp;ldquo;Session and Startup&amp;rdquo; -&amp;gt; &amp;ldquo;Application Autostart&amp;rdquo; available under the Settings Manager.</description></item></channel></rss>

@@ -1,21 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>raspberry pi on fardog.io</title>
-    <link>https://fardog.io/categories/raspberry-pi/</link>
-    <description>Recent content in raspberry pi on fardog.io</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 27 Aug 2013 11:38:00 -0700</lastBuildDate><atom:link href="https://fardog.io/categories/raspberry-pi/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Getting WiFi on a Headless Raspberry Pi</title>
-      <link>https://fardog.io/blog/2013/08/27/getting-wifi-on-a-headless-raspberry-pi/</link>
-      <pubDate>Tue, 27 Aug 2013 11:38:00 -0700</pubDate>
-      
-      <guid>https://fardog.io/blog/2013/08/27/getting-wifi-on-a-headless-raspberry-pi/</guid>
-      <description>One of the final steps in a to-be-announced project involved getting a headless Raspberry Pi up on WiFi at boot time—which turned out to be a little more challenging that first expected. Not because it was particularly difficult, but because the documentation was poor.
-Below are my full configuration files that were required. The WiFi USB dongle itself was an Adafruit USB WiFi with Antenna which is actually a B-LINK BBL-LW05-AR5; notable becuase of its sizeable antenna, and for working with the latest Raspbian Wheezy distribution.</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Raspberry Pi on fardog.io</title><link>https://fardog.io/categories/raspberry-pi/</link><description>Recent content in Raspberry Pi on fardog.io</description><generator>Hugo</generator><language>en-us</language><copyright>Nathan Wittstock</copyright><lastBuildDate>Tue, 27 Aug 2013 11:38:00 -0700</lastBuildDate><atom:link href="https://fardog.io/categories/raspberry-pi/index.xml" rel="self" type="application/rss+xml"/><item><title>Getting WiFi on a Headless Raspberry Pi</title><link>https://fardog.io/blog/2013/08/27/getting-wifi-on-a-headless-raspberry-pi/</link><pubDate>Tue, 27 Aug 2013 11:38:00 -0700</pubDate><guid>https://fardog.io/blog/2013/08/27/getting-wifi-on-a-headless-raspberry-pi/</guid><description>One of the final steps in a to-be-announced project involved getting a headless Raspberry Pi up on WiFi at boot time—which turned out to be a little more challenging that first expected. Not because it was particularly difficult, but because the documentation was poor.
+Below are my full configuration files that were required. The WiFi USB dongle itself was an Adafruit USB WiFi with Antenna which is actually a B-LINK BBL-LW05-AR5; notable becuase of its sizeable antenna, and for working with the latest Raspbian Wheezy distribution.</description></item></channel></rss>

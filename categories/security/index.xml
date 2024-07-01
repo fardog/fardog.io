@@ -1,21 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>security on fardog.io</title>
-    <link>https://fardog.io/categories/security/</link>
-    <description>Recent content in security on fardog.io</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 30 Dec 2017 17:20:00 -0700</lastBuildDate><atom:link href="https://fardog.io/categories/security/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Client-Side Certificate Authentication with nginx</title>
-      <link>https://fardog.io/blog/2017/12/30/client-side-certificate-authentication-with-nginx/</link>
-      <pubDate>Sat, 30 Dec 2017 17:20:00 -0700</pubDate>
-      
-      <guid>https://fardog.io/blog/2017/12/30/client-side-certificate-authentication-with-nginx/</guid>
-      <description>Authentication in applications is tough. If you decide to roll your own, security issues are nearly guaranteed. Most anyone who writes software for a living will tell you to use something you didn&amp;rsquo;t write; that&amp;rsquo;s battle-tested and in wide use. Open source is even better; hopefully that many eyes and that many users will suss out the bugs.
-Still, there will be bugs. Which is what I think every time I see a login page on some device in my home.</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Security on fardog.io</title><link>https://fardog.io/categories/security/</link><description>Recent content in Security on fardog.io</description><generator>Hugo</generator><language>en-us</language><copyright>Nathan Wittstock</copyright><lastBuildDate>Sat, 30 Dec 2017 17:20:00 -0700</lastBuildDate><atom:link href="https://fardog.io/categories/security/index.xml" rel="self" type="application/rss+xml"/><item><title>Client-Side Certificate Authentication with nginx</title><link>https://fardog.io/blog/2017/12/30/client-side-certificate-authentication-with-nginx/</link><pubDate>Sat, 30 Dec 2017 17:20:00 -0700</pubDate><guid>https://fardog.io/blog/2017/12/30/client-side-certificate-authentication-with-nginx/</guid><description>Authentication in applications is tough. If you decide to roll your own, security issues are nearly guaranteed. Most anyone who writes software for a living will tell you to use something you didn&amp;rsquo;t write; that&amp;rsquo;s battle-tested and in wide use. Open source is even better; hopefully that many eyes and that many users will suss out the bugs.
+Still, there will be bugs. Which is what I think every time I see a login page on some device in my home.</description></item></channel></rss>
