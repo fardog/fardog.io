@@ -1,0 +1,46 @@
+<head>
+  <title>
+    {{- block "title" . -}}
+      {{- if .IsHome -}}
+        {{ .Site.Title }}
+      {{- else -}}
+        {{ with .Params.Title }}{{ . }} | {{ end }}{{ .Site.Title }}
+      {{- end -}}
+    {{- end -}}
+  </title>
+
+  {{ hugo.Generator }}
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark light">
+
+  <meta name="author" content="{{ .Site.Copyright }}">
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
+
+  <meta name="referrer" content="no-referrer">
+  {{ if not hugo.IsProduction }}
+  <meta name="robots" content="noindex, nofollow">
+  {{ end }}
+
+  <link rel="canonical" href="{{ .Permalink }}">
+  <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="{{ .Site.Params.faviconPath }}">
+
+  {{ $css := resources.Get "main.css" | postCSS }}
+  {{ if hugo.IsProduction }}
+  {{ $css = $css | minify | resources.Fingerprint "sha512" }}
+  {{ end }}
+  {{ with $css }}
+  <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}">
+  {{ end }}
+
+  {{ if .OutputFormats.Get "RSS" }}
+  {{ with .OutputFormats.Get "RSS" }}
+  <link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}">
+  <link href="{{ .RelPermalink }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}">
+  {{ end }}
+  {{ end }}
+
+  {{/* NOTE: These Hugo Internal Templates can be found starting at https://github.com/gohugoio/hugo/tree/master/tpl/tplimpl/embedded/templates */}}
+  {{- template "_internal/schema.html" . -}}
+  {{- template "_internal/opengraph.html" . -}}
+  {{- template "_internal/twitter_cards.html" . -}}
+</head>

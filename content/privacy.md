@@ -1,8 +1,11 @@
 ---
 title: Privacy
 date: 2018-01-01T14:16:00-08:00
-lastmod: 2022-12-14T20:55:00-08:00
+lastmod: 2024-06-30T09:24:00Z
+description: The privacy policy for this site, and other projects.
 ---
+
+# This Website
 
 This site does not use [cookies][] directly, however Cloudflare may set some.
 

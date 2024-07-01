@@ -1,3 +1,6 @@
 [submodule "themes/cocoa"]
 	path = themes/cocoa
 	url = https://github.com/fardog/cocoa-hugo-theme.git
+[submodule "assets/water.css"]
+	path = assets/water.css
+	url = git@github.com:kognise/water.css.git

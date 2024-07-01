@@ -1,0 +1,55 @@
+/* note: this main entry point must use imports that are relative
+   to the root, not this file. this appears to be a hugo bug. */
+@import 'assets/_site.css';
+
+:root {
+  --background-body: rgba(255,255,255, 1);
+  --background: rgba(253,248,246, 1);
+  --text-main: rgba(43,29,21, 1);
+  --text-muted: rgba(38,31,27, 1);
+  --selection: rgba(38,31,27, 0.5);
+  --text-bright: rgba(74,74,74, 1);
+  --background-alt: rgba(255,255,255, 1);
+  --border: rgba(207,175,159, 1);
+  --input-color: rgba(255,255,255, 1);
+  --outline-color: rgba(243,156,83, 1);
+  --mark-color: rgba(145,86,26, 0.16);
+  --links: rgba(145,86,26, 1);
+  --focus: rgba(150,89,27, 1);
+  --special-text-color: rgba(255,255,255, 1);
+  --form-text: rgba(48,33,24, 1);
+  --form-placeholder: color-mod(var(--form-text) lightness(+6%));
+  /* --highlight: rgba(91,65,50, 1); */
+  /* --selection: rgba(255,255,255, 0.16); */
+  --code: rgba(74,74,74, 1);
+  --button-base: rgba(254,241,235, 1);
+  --button-hover: rgba(184,149,129, 1);
+  --scrollbar-thumb: color-mod(var(--button-hover) lightness(+6%));
+  --scrollbar-thumb-hover: var(--button-hover);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: rgba(0,0,0, 1);
+    --background-body: rgba(32,32,32, 1);
+    --text-main: rgba(242,238,237, 1);
+    --text-muted: rgba(241,239,238, 1);
+    --text-bright: rgba(187,187,187, 1);
+    --background-alt: rgba(42,35,31, 1);
+    --border: rgba(92,78,71, 1);
+    --input-color: rgba(28,28,28, 1);
+    --outline-color: rgba(210,139,85, 1);
+    --mark-color: rgba(243,154,78, 0.16);
+    --links: rgba(243,154,78, 1);
+    --focus: rgba(113,69,31, 1);
+    --form-text: rgba(242,238,237, 1);
+    --form-placeholder: color-mod(var(--form-text) lightness(-30%));
+    /* --highlight: rgba(0,0,0, 1); */
+    --selection: rgba(242,238,237, 0.16);
+    --code: rgba(250,222,209, 1);
+    --button-base: rgba(69,48,35, 1);
+    --button-hover: rgba(0,0,0, 1);
+    --scrollbar-thumb: var(--button-hover);
+    --scrollbar-thumb-hover: color-mod(var(--scrollbar-thumb) lightness(-30%));
+  }
+}

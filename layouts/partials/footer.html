@@ -1,0 +1,19 @@
+<footer role="contentinfo">
+  &copy; {{ now.Format "2006"}} {{ with .Site.Copyright | default .Site.Title }} {{ . | safeHTML }} {{ end }}
+  —
+  {{ with .Site.Params.contentLicense }}
+  Content: <a href="{{ .url }}" target="_blank">{{ .text }}</a>,
+  {{ end }}
+  {{ with .Site.Params.codeLicense }}
+  Code: <a href="{{ .url }}" target="_blank">{{ .text }}</a>, unless otherwise noted.
+  {{ end }}
+
+  <p class="f6 fw6 pv0 mv2">
+    View the
+    {{ with .Site.Params.repository }}
+    <a href="{{ .url }}" target="_blank">source</a>
+    {{ end }}
+    for this site.
+    <a href="{{ref . "privacy"}}">Privacy</a>.
+  </p>
+</footer>

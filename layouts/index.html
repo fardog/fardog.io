@@ -1,0 +1,27 @@
+{{ define "main" }}
+{{ .Content }}
+
+{{ $totalpostscount := len (where .Site.Pages "Section" "blog") }}
+{{ $latestpostscount := .Site.Params.latestPostsCount | default $totalpostscount }}
+{{ if gt $latestpostscount 0 }}
+<section>
+  <h2>Latest Posts</h2>
+  <ul>
+    {{ range (first $latestpostscount (where .Site.Pages.ByPublishDate.Reverse "Section" "blog")) }}
+    <li>
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+      <time datetime='{{ .Date.Format .Site.Params.dateFormatISO }}'>{{ .Date.Format .Site.Params.dateFormatShort }}</time>
+    </li>
+    {{ end }}
+    {{ if gt $totalpostscount $latestpostscount }}
+      {{ range where .Site.Menus.main "Identifier" "blog" }}
+      <li>
+        <a {{ printf "href=%q " .URL | safeHTMLAttr }}>See more&hellip;</a>
+      </li>
+      {{ end }}
+    {{ end }}
+  </ul>
+</section>
+{{ end }}
+
+{{ end }}
