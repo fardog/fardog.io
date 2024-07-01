@@ -1,4 +1,4 @@
 @import 'water.css/src/parts/_core.css';
 
-@import '_monokai-dark.css' (prefers-color-scheme: light);
+@import '_monokai-light.css' (prefers-color-scheme: light);
 @import '_monokai-dark.css' (prefers-color-scheme: dark);

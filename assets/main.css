@@ -3,8 +3,8 @@
 @import 'assets/_site.css';
 
 :root {
-  --background: rgba(255,255,255, 1);
-  --background-body: rgba(253,248,246, 1);
+  --background-body: rgba(255,255,255, 1);
+  --background: rgba(253,248,246, 1);
   --text-main: rgba(43,29,21, 1);
   --text-muted: rgba(38,31,27, 1);
   --selection: rgba(38,31,27, 0.5);
