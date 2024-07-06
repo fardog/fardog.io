@@ -1,3 +1,8 @@
+{{/*
+  from hugo internal, with modifications
+  source: https://github.com/gohugoio/hugo/blob/fb8909d5b0ed01e6d12e0c5c5bd679cbc80159ed/tpl/tplimpl/embedded/templates/_default/rss.xml
+  license: https://github.com/gohugoio/hugo/blob/fb8909d5b0ed01e6d12e0c5c5bd679cbc80159ed/LICENSE
+*/}}
 {{- $authorEmail := site.Params.author.email }}
 {{- $authorName := site.Params.author.name }}
 {{- $pctx := . }}
