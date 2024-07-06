@@ -1,10 +1,10 @@
 {{ define "main" }}
-
+{{ .Content }}
 {{ range .Pages }}
 <h2><a href="{{ .RelPermalink }}">{{ .Title }} {{ if .Draft }}:: DRAFT{{end}}</a></h2>
 <time datetime='{{ .Date.Format .Site.Params.dateFormatISO }}'>{{ .Date.Format .Site.Params.dateFormatShort }}</time>
 <p>
-  {{ .Summary }} <a title="Read full article" href="{{ .RelPermalink }}">&rarr;</a>
+  {{ .Description | default .Summary }} <a title="Read full article" href="{{ .RelPermalink }}">&rarr;</a>
 </p>
 
 {{ end }}
