@@ -13,7 +13,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="color-scheme" content="dark light">
 
-  <meta name="author" content="{{ .Site.Copyright }}">
+  <meta name="author" content="{{ .Site.Params.author.name }}">
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
 
   <meta name="referrer" content="no-referrer">
@@ -32,12 +32,22 @@
   <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}">
   {{ end }}
 
-  {{ if .OutputFormats.Get "RSS" }}
-  {{ with .OutputFormats.Get "RSS" }}
-  <link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}">
-  <link href="{{ .RelPermalink }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}">
-  {{ end }}
-  {{ end }}
+  {{- if .OutputFormats.Get "RSS" }}
+  {{- with .OutputFormats.Get "RSS" }}
+  <link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}, all updates">
+  {{ end -}}
+  {{ end -}}
+
+  {{- if .IsHome }}
+  {{- with .Site.GetPage "blog" }}
+  {{- if .OutputFormats.Get "RSS" }}
+  {{- $title := .Title }}
+  {{- with .OutputFormats.Get "RSS" }}
+  <link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }} {{ $title }}, full post content">
+  {{ end -}}
+  {{ end -}}
+  {{ end -}}
+  {{ end -}}
 
   {{/* NOTE: These Hugo Internal Templates can be found starting at https://github.com/gohugoio/hugo/tree/master/tpl/tplimpl/embedded/templates */}}
   {{- template "_internal/schema.html" . -}}

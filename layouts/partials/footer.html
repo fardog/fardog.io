@@ -1,5 +1,5 @@
 <footer role="contentinfo">
-  &copy; {{ now.Format "2006"}} {{ with .Site.Copyright | default .Site.Title }} {{ . | safeHTML }} {{ end }}
+  {{ .Site.Copyright | safeHTML }}
   —
   {{ with .Site.Params.contentLicense }}
   Content: <a href="{{ .url }}" target="_blank">{{ .text }}</a>,

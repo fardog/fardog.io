@@ -1,7 +1,7 @@
 baseURL = "https://fardog.io/"
 languageCode = "en-us"
 title = "fardog.io"
-copyright = "Nathan Wittstock"
+copyright = "© 2024 Nathan Wittstock"
 enableRobotsTXT = true
 
 [[menu.main]]
@@ -34,6 +34,9 @@ dateFormatISO          = "2006-01-02T15:04:05-0700"
 faviconPath            = "/favicon.ico"
 
 robotsBlockSourceUrl   = "https://raw.githubusercontent.com/ai-robots-txt/ai.robots.txt/main/robots.txt"
+
+  [params.author]
+  name = "Nathan Wittstock"
 
   [params.contentLicense]
   text = "CC BY 4.0"
