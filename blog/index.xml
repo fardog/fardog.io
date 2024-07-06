@@ -1,26 +1,1159 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blogs on fardog.io</title><link>https://fardog.io/blog/</link><description>Recent content in Blogs on fardog.io</description><generator>Hugo</generator><language>en-us</language><copyright>Nathan Wittstock</copyright><lastBuildDate>Tue, 02 Jul 2024 21:32:00 +0000</lastBuildDate><atom:link href="https://fardog.io/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>Chai Tea Blend</title><link>https://fardog.io/blog/2024/07/02/chai-tea-blend/</link><pubDate>Tue, 02 Jul 2024 21:32:00 +0000</pubDate><guid>https://fardog.io/blog/2024/07/02/chai-tea-blend/</guid><description>Here&amp;rsquo;s a blend of chai black tea I&amp;rsquo;ve been messing with:
-100g Darjeeling tea 70g whole cloves, lightly pulverized to create a mix of fines and pieces 40g dried ginger, ground coarsely to 1–2mm pieces 32g cinnamon sticks, chipped into 5–7mm length pieces 35g black peppercorns 18g mixed peppercorns (black, red, green, white) This makes for a nice clove-heavy blend but it doesn&amp;rsquo;t overpower the tea flavor. For grinding the spices, I use an attachment for my immersion blender but it&amp;rsquo;s essentially the same setup as a coffee grinder: spinning blades in a container.</description></item><item><title>Lenovo X13 Yoga Gen 3 Review</title><link>https://fardog.io/blog/2022/10/19/lenovo-x13-yoga-gen-3-review/</link><pubDate>Wed, 19 Oct 2022 21:54:00 -0700</pubDate><guid>https://fardog.io/blog/2022/10/19/lenovo-x13-yoga-gen-3-review/</guid><description>I recently picked up an X13 Yoga Gen 3, which I&amp;rsquo;m happy to say is a great little convertible that retains the ThinkPad feel. I haven&amp;rsquo;t found many in-depth reviews for this machine, and while this certainly won&amp;rsquo;t be &amp;ldquo;in-depth&amp;rdquo; it&amp;rsquo;ll hopefully give some insights into how it handles for regular use if you&amp;rsquo;re at all on the fence.
-This was purchased to replace my old-ish X1 Yoga Gen 4; I had bought that machine on a super sale, and while it wasn&amp;rsquo;t a bad device exactly it was severely underpowered for my needs—primarily due to the integrated graphics and 4K display—and it rendered it useless for anything even remotely graphics intensive.</description></item><item><title>Fix Windows Security "Actions Recommended"</title><link>https://fardog.io/blog/2022/09/09/fix-windows-security-actions-recommended/</link><pubDate>Fri, 09 Sep 2022 15:01:54 -0700</pubDate><guid>https://fardog.io/blog/2022/09/09/fix-windows-security-actions-recommended/</guid><description>I had an issue today with Windows Security dashboard on Windows 11, where it said there were &amp;ldquo;Actions Recommended&amp;rdquo; with an unnerving yellow warning icon, however opening it up showed all green:
-I looked at a lot of solutions which didn&amp;rsquo;t fix the issue, but then found a solution that I didn&amp;rsquo;t find listed elsewhere so I&amp;rsquo;m writing it down: there&amp;rsquo;s a (maybe hidden?) pane of the Windows Security dashboard that isn&amp;rsquo;t accessible from the menu in the screenshot above, but you can find it via the Windows &amp;ldquo;Settings&amp;rdquo; app:</description></item><item><title>Greek Yogurt Recipe</title><link>https://fardog.io/blog/2022/09/09/greek-yogurt-recipe/</link><pubDate>Fri, 09 Sep 2022 10:15:00 -0700</pubDate><guid>https://fardog.io/blog/2022/09/09/greek-yogurt-recipe/</guid><description>This is a recipe for making greek yogurt, although I hesitate to call it a &amp;ldquo;recipe&amp;rdquo; since it&amp;rsquo;s more like replicating existing yogurt. Still I&amp;rsquo;m writing this down because it&amp;rsquo;s the result of trial-and-error and has some differences with what I&amp;rsquo;ve read elsewhere, although minor. This makes a tangy and smooth yogurt that I&amp;rsquo;m really happy with.
-The goal here is to be low-waste: we make a smoothie every morning with yogurt as a component, and it creates a lot of plastic waste.</description></item><item><title>CentOS and KVM: Single interface, multiple VLANs for Guests</title><link>https://fardog.io/blog/2020/11/08/centos-and-kvm-single-interface-multiple-vlans-for-guests/</link><pubDate>Sun, 08 Nov 2020 01:55:00 -0800</pubDate><guid>https://fardog.io/blog/2020/11/08/centos-and-kvm-single-interface-multiple-vlans-for-guests/</guid><description>KVM on Linux is a nice way to run isolated services on your home network; in my case: MySQl, a Unifi controller, various Docker containers, etc. However: if you want to run these services on different VLANs so they can be in isolated networks, the process is less straightforward. This document covers how to get CentOS network interfaces set up so multiple VLANs can co-exist on a single interface in a way that&amp;rsquo;s transparent to KVM guests.</description></item><item><title>Docker Hub Tag Builds</title><link>https://fardog.io/blog/2019/01/01/docker-hub-tag-builds/</link><pubDate>Tue, 01 Jan 2019 12:59:11 -0800</pubDate><guid>https://fardog.io/blog/2019/01/01/docker-hub-tag-builds/</guid><description>Docker Hub automatic builds are a great way to keep your Docker images up to date with a git repository, but building sensibly tagged releases isn&amp;rsquo;t very straightforward. It&amp;rsquo;s easy to create ones for a tag (like v4.1.1) but less so to create versioned images, such as:
-myimage:4 myimage:4.1 myimage:4.1.1 This means that when you release a v4.1.2, it becomes the new 4 and 4.1. It turns out that you can do this with docker automatic builds.</description></item><item><title>Docker Read-Only Volumes with SELinux</title><link>https://fardog.io/blog/2018/01/27/docker-read-only-volumes-with-selinux/</link><pubDate>Sat, 27 Jan 2018 15:12:15 -0800</pubDate><guid>https://fardog.io/blog/2018/01/27/docker-read-only-volumes-with-selinux/</guid><description>If you use Docker on an SELinux-enabled Linux distribution like Fedora, you may have run into issues mounting host volumes, and are probably aware of the z flag to modify the SELinux label:
-docker run --rm -v /var/www/letsencrypt:/var/www/letsencrypt:z nginx What isn&amp;rsquo;t made very clear from the Docker docs is that you can specify multiple flags separated with commas, say ro,z to specify SELinux labeling and read-only:
-docker run --rm -v /var/www/letsencrypt:/var/www/letsencrypt:ro,z nginx</description></item><item><title>Running Docker containers with systemd</title><link>https://fardog.io/blog/2017/12/30/running-docker-containers-with-systemd/</link><pubDate>Sat, 30 Dec 2017 18:10:00 -0800</pubDate><guid>https://fardog.io/blog/2017/12/30/running-docker-containers-with-systemd/</guid><description>Services in Docker containers can easily be run under systemd, but I had some difficulty finding good examples of how to do so. Here&amp;rsquo;s what I came up with.
-This example is a container running nginx, which has access to letsencrypt certificates, but could be adapted to any service. I&amp;rsquo;ve annotated lines below:
-[Unit] Description=nginx (Docker) # start this unit only after docker has started After=docker.service Requires=docker.service [Service] TimeoutStartSec=0 Restart=always # The following lines start with &amp;#39;-&amp;#39; because they are allowed to fail without # causing startup to fail.</description></item><item><title>Client-Side Certificate Authentication with nginx</title><link>https://fardog.io/blog/2017/12/30/client-side-certificate-authentication-with-nginx/</link><pubDate>Sat, 30 Dec 2017 17:20:00 -0700</pubDate><guid>https://fardog.io/blog/2017/12/30/client-side-certificate-authentication-with-nginx/</guid><description>Authentication in applications is tough. If you decide to roll your own, security issues are nearly guaranteed. Most anyone who writes software for a living will tell you to use something you didn&amp;rsquo;t write; that&amp;rsquo;s battle-tested and in wide use. Open source is even better; hopefully that many eyes and that many users will suss out the bugs.
-Still, there will be bugs. Which is what I think every time I see a login page on some device in my home.</description></item><item><title>Removing old posts</title><link>https://fardog.io/blog/2017/12/30/removing-old-posts/</link><pubDate>Sat, 30 Dec 2017 17:10:00 -0700</pubDate><guid>https://fardog.io/blog/2017/12/30/removing-old-posts/</guid><description>This site has a few old posts that are of dubious value and are never read; I&amp;rsquo;m removing them as part of a clean-up effort. For transparency&amp;rsquo;s sake, you can check this PR if you care about what was removed.</description></item><item><title>Automatically publishing websites with Hugo, Travis, and Github</title><link>https://fardog.io/blog/2017/08/26/automatically-publishing-websites-with-hugo-travis-and-github/</link><pubDate>Sat, 26 Aug 2017 10:30:00 -0700</pubDate><guid>https://fardog.io/blog/2017/08/26/automatically-publishing-websites-with-hugo-travis-and-github/</guid><description>Welcome to the new fardog.io: an HTTPS website which is hosted for free, easy to maintain, and automatically built when I push updates to a git repository. It&amp;rsquo;s backed by Hugo, Travis-CI, GitHub, and Cloudflare.
-Note: This article is out of date, as Travis-CI retired their open-source service and I moved the build to Github Actions. I&amp;rsquo;ll publish an update to this article in due time but until then, this pull request will explain the change.</description></item><item><title>Retiring some old projects</title><link>https://fardog.io/blog/2014/10/23/retiring-some-old-projects/</link><pubDate>Thu, 23 Oct 2014 14:15:00 -0700</pubDate><guid>https://fardog.io/blog/2014/10/23/retiring-some-old-projects/</guid><description>Some changes are coming; they&amp;rsquo;re changes for me, but a secondary effect is that I no longer have free hosting for some projects that have been in unmaintained-but-still-running status for the last few years. I&amp;rsquo;m taking the following offline:
-Adventure: My &amp;ldquo;Choose your own adventure&amp;rdquo;-like story builder. This hasn&amp;rsquo;t seen an update since early 2012; very few people were using it. Re-launching this application would require a considerable effort, so I&amp;rsquo;m taking this offline for the foreseeable future.</description></item><item><title>Mac OS X Audio in node.js, and a Chromecast</title><link>https://fardog.io/blog/2014/09/26/mac-os-x-audio-in-node.js-and-a-chromecast/</link><pubDate>Fri, 26 Sep 2014 12:05:00 -0700</pubDate><guid>https://fardog.io/blog/2014/09/26/mac-os-x-audio-in-node.js-and-a-chromecast/</guid><description>A few weeks ago, a simple idea formed: why can&amp;rsquo;t you easily stream system audio to a Chromecast? Sure, if your chosen listening application already supports it, you&amp;rsquo;re set. Otherwise you&amp;rsquo;re left out.
-A solution seemed simple: node.js has streams, and they&amp;rsquo;re awesome! Take system audio, pipe it to an encoder, pipe that to an HTTP response, and tell the Chromecast where to look. Easy!
-Except, there&amp;rsquo;s no node.js package that supports OS X audio input, except via bindings to another library.</description></item><item><title>XKCD Password Generation for Node.js</title><link>https://fardog.io/blog/2014/04/07/xkcd-password-generation-for-node.js/</link><pubDate>Mon, 07 Apr 2014 17:30:00 -0700</pubDate><guid>https://fardog.io/blog/2014/04/07/xkcd-password-generation-for-node.js/</guid><description>I created an XKCD-style password generator for Node.js (see this comic for reference). You can find it on my github or do an npm install -g xkcd-password to get it on your path.
-There are others available, but most don&amp;rsquo;t include a CLI, or easily configurable options. Many use small word lists. So I made one that uses a sufficiently large list—113,809 words provided by the Moby Project—and both a simple commandline utility and a module that you can use in your Node.</description></item><item><title>primes, A Twitter-backed prime number generator</title><link>https://fardog.io/blog/2013/10/15/primes-a-twitter-backed-prime-number-generator/</link><pubDate>Tue, 15 Oct 2013 15:44:00 -0700</pubDate><guid>https://fardog.io/blog/2013/10/15/primes-a-twitter-backed-prime-number-generator/</guid><description>A few weeks ago I started primes, a Twitter-backed prime number generator. When I say &amp;ldquo;Twitter-backed&amp;rdquo;, I mean the bot that updates the account has very little idea of state: it only knows the last number it calculated because Twitter provides it. The program flow is this:
-Start up Fetch the most recently calculated prime from the Twitter feed. Calculate the next prime. Post if an hour has passed since the last posting.</description></item><item><title>An Addendum to "Fixing a Famicom Disk System"</title><link>https://fardog.io/blog/2013/10/08/an-addendum-to-fixing-a-famicom-disk-system/</link><pubDate>Tue, 08 Oct 2013 09:25:00 -0700</pubDate><guid>https://fardog.io/blog/2013/10/08/an-addendum-to-fixing-a-famicom-disk-system/</guid><description>My old Sharp Twin Famicom threw the belt again, as they do. While replacing it, I wanted to make an update to my previous blog post about FDS belts, since my old article wasn&amp;rsquo;t as helpful as I&amp;rsquo;d have liked when I actually tried to use it.
-First, there&amp;rsquo;s now a far better repair article available at the Famicom Disk System website. This goes through the whole process of belt replacement as well as aligning the spindle hub, which I had a lot of problems with this time.</description></item><item><title>Getting WiFi on a Headless Raspberry Pi</title><link>https://fardog.io/blog/2013/08/27/getting-wifi-on-a-headless-raspberry-pi/</link><pubDate>Tue, 27 Aug 2013 11:38:00 -0700</pubDate><guid>https://fardog.io/blog/2013/08/27/getting-wifi-on-a-headless-raspberry-pi/</guid><description>One of the final steps in a to-be-announced project involved getting a headless Raspberry Pi up on WiFi at boot time—which turned out to be a little more challenging that first expected. Not because it was particularly difficult, but because the documentation was poor.
-Below are my full configuration files that were required. The WiFi USB dongle itself was an Adafruit USB WiFi with Antenna which is actually a B-LINK BBL-LW05-AR5; notable becuase of its sizeable antenna, and for working with the latest Raspbian Wheezy distribution.</description></item><item><title>vim, fish shell, and vim-sensible</title><link>https://fardog.io/blog/2013/03/22/vim-fish-shell-and-vim-sensible/</link><pubDate>Fri, 22 Mar 2013 00:07:00 -0700</pubDate><guid>https://fardog.io/blog/2013/03/22/vim-fish-shell-and-vim-sensible/</guid><description>Part of this evening was spent making vim workable for me, the first step was getting some sane defaults. vim-sensible was recommended in several places (as was Tim Pope&amp;rsquo;s also excellent pathogen), but immediately after installation I was getting an error:
-Error detected while processing ~/.vim/bundle/vim-sensible/plugin/sensible.vim: line 75: E484: Can&amp;#39;t open file /tmp/v1NmKg8/0 Press ENTER or type command to continue Frustratingly, line 75 held no obvious suggestions. After some time troubleshooting, I found it worked fine if I wasn&amp;rsquo;t using fish shell.</description></item><item><title>Using Caps-Lock as a Compose key in XFCE4</title><link>https://fardog.io/blog/2013/02/22/using-caps-lock-as-a-compose-key-in-xfce4/</link><pubDate>Fri, 22 Feb 2013 14:03:00 -0700</pubDate><guid>https://fardog.io/blog/2013/02/22/using-caps-lock-as-a-compose-key-in-xfce4/</guid><description>Why not take that useless key, and make it useful? The Compose Key—formerly present on many Unix keyboards of old—isn&amp;rsquo;t present on most modern laptops.
-In XFCE, this is a little more cumbersome than Gnome, since there isn&amp;rsquo;t a graphical interface for setxkbmap, but these two commands will swap the Caps lock for a compose key:
-setxkbmap -option ctrl:nocaps # disables caps lock setxkbmap -option compose:caps # sets caps key to compose To make this active at login, you can add two entries to your &amp;ldquo;Session and Startup&amp;rdquo; -&amp;gt; &amp;ldquo;Application Autostart&amp;rdquo; available under the Settings Manager.</description></item><item><title>Making noise in Python</title><link>https://fardog.io/blog/2013/02/16/making-noise-in-python/</link><pubDate>Sat, 16 Feb 2013 14:44:00 -0700</pubDate><guid>https://fardog.io/blog/2013/02/16/making-noise-in-python/</guid><description>I&amp;rsquo;ve been working with PyAudio lately, on a project to synchronize sound streams across multiple devices. Nothing to say on that front yet, but I do have a nice snippet for programatically generating a tone:
-import math import numpy import pyaudio def sine(frequency, length, rate): length = int(length * rate) factor = float(frequency) * (math.pi * 2) / rate return numpy.sin(numpy.arange(length) * factor) def play_tone(stream, frequency=440, length=1, rate=44100): chunks = [] chunks.</description></item><item><title>Simple 'workon' Command for fish shell</title><link>https://fardog.io/blog/2013/02/15/simple-workon-command-for-fish-shell/</link><pubDate>Fri, 15 Feb 2013 00:15:00 -0700</pubDate><guid>https://fardog.io/blog/2013/02/15/simple-workon-command-for-fish-shell/</guid><description>I put together a quick workon clone for the fish&amp;rsquo;s fish shell. Definitely nothing as complete or useful as virtualenvwrapper, but it fixes my need: switching simply between virtualenv&amp;rsquo;s and projects.
-Installation First, create a function file ~/.config/fish/functions/workon.fish with this defintion:
-function workon -d &amp;#34;Activate virtual environment in $WORKON_HOME&amp;#34; set tgt {$WORKON_HOME}/$argv[1] if [ -d $tgt ] cd $tgt # deactivate any active venv, and activate the target # this needs to be rewritten with the `type` fish command if test -n &amp;#34;$VIRTUAL_ENV&amp;#34; deactivate end .</description></item><item><title>Fixing a Famicom Disk System</title><link>https://fardog.io/blog/2010/03/21/fixing-a-famicom-disk-system/</link><pubDate>Sun, 21 Mar 2010 12:00:00 -0700</pubDate><guid>https://fardog.io/blog/2010/03/21/fixing-a-famicom-disk-system/</guid><description>Update 2013-10-08: There is now a great article available at the Famicom Disk System site, which I&amp;rsquo;d highly recommend. See my addendum for more info.
-This isn’t the usual fare from this blog, but this is good information that took me quite some time to find. I’m also an avid video game collector, and i recently picked up a Sharp Twin Famicom and a few Famicom Disk System games; notably Kid Icarus and the infamous Doki Doki Panic!</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on fardog.io</title><link>https://fardog.io/blog/</link><description>Recent content in Blog on fardog.io</description><generator>Hugo</generator><language>en-us</language><copyright>© 2024 Nathan Wittstock</copyright><lastBuildDate>Tue, 02 Jul 2024 21:32:00 +0000</lastBuildDate><atom:link href="https://fardog.io/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>Chai Tea Blend</title><link>https://fardog.io/blog/2024/07/02/chai-tea-blend/</link><pubDate>Tue, 02 Jul 2024 21:32:00 +0000</pubDate><guid>https://fardog.io/blog/2024/07/02/chai-tea-blend/</guid><content type="html">&lt;p>Here&amp;rsquo;s a blend of chai black tea I&amp;rsquo;ve been messing with:&lt;/p>
+&lt;ul>
+&lt;li>100g Darjeeling tea&lt;/li>
+&lt;li>70g whole cloves, lightly pulverized to create a mix of fines and pieces&lt;/li>
+&lt;li>40g dried ginger, ground coarsely to 1–2mm pieces&lt;/li>
+&lt;li>32g cinnamon sticks, chipped into 5–7mm length pieces&lt;/li>
+&lt;li>35g black peppercorns&lt;/li>
+&lt;li>18g mixed peppercorns (black, red, green, white)&lt;/li>
+&lt;/ul>
+&lt;p>This makes for a nice clove-heavy blend but it doesn&amp;rsquo;t overpower the tea flavor.
+For grinding the spices, I use an attachment for my immersion blender but it&amp;rsquo;s
+essentially the same setup as a coffee grinder: spinning blades in a container.
+I don&amp;rsquo;t get a very even grind out of it, but the mix of fine particles and
+larger pieces sort of works in this case.&lt;/p>
+&lt;p>For a rooibos blend, I use the same weights of ingredients but replace the 35g
+of black peppercorns with mixed peppercorns for a total of 53g.&lt;/p>
+&lt;p>I&amp;rsquo;d recommend trying your own blends: you can pick the quality of tea you want,
+try teas that are uncommonly used in blends, and tweak it to your tastes.&lt;/p></content:encoded></item><item><title>Lenovo X13 Yoga Gen 3 Review</title><link>https://fardog.io/blog/2022/10/19/lenovo-x13-yoga-gen-3-review/</link><pubDate>Wed, 19 Oct 2022 21:54:00 -0700</pubDate><guid>https://fardog.io/blog/2022/10/19/lenovo-x13-yoga-gen-3-review/</guid><content type="html">&lt;p>I recently picked up an &lt;a href="https://www.lenovo.com/us/en/p/laptops/thinkpad/thinkpadx/thinkpad-x13-yoga-gen-3-(13-inch-intel)/len101t0028">X13 Yoga Gen 3&lt;/a>, which I&amp;rsquo;m happy to say is a great
+little convertible that retains the ThinkPad feel. I haven&amp;rsquo;t found many in-depth
+reviews for this machine, and while this certainly won&amp;rsquo;t be &amp;ldquo;in-depth&amp;rdquo; it&amp;rsquo;ll
+hopefully give some insights into how it handles for regular use if you&amp;rsquo;re at
+all on the fence.&lt;/p>
+&lt;p>This was purchased to replace my old-ish &lt;a href="https://psref.lenovo.com/Detail/ThinkPad/ThinkPad_X1_Yoga_4th_Gen?M=20SA0004US">X1 Yoga Gen 4&lt;/a>; I had bought that
+machine on a super sale, and while it wasn&amp;rsquo;t a &lt;em>bad&lt;/em> device exactly it was
+severely underpowered for my needs—primarily due to the integrated graphics and
+4K display—and it rendered it useless for anything even remotely graphics
+intensive. For a machine that was intended to be convertible to a tablet, I
+found it lacking for a lot of artistic tasks.&lt;/p>
+&lt;p>For ThinkPad enthusiasts, the X1 doesn&amp;rsquo;t feel very much like a ThinkPad either.
+Part of that is down to the aluminum chassis—it is sleek, but cold and not very
+pleasant to the touch, including the uncomfortable edges—but it also lacks the
+rugged &amp;ldquo;this can take what I throw at it&amp;rdquo; feel of a more traditional ThinkPad.&lt;/p>
+&lt;p>The X13 by comparison feels right at home next to my more modern favorites. Yes
+it won&amp;rsquo;t hold up next to the &lt;em>really old&lt;/em> ones if that&amp;rsquo;s more your jam, but
+let&amp;rsquo;s all admit those times are gone (as is the 7-row keyboard).&lt;/p>
+&lt;h1 id="specs-and-usage">Specs and Usage&lt;/h1>
+&lt;p>This was configured as a mid-to-high-end model, with the following:&lt;/p>
+&lt;ul>
+&lt;li>12th Generation Intel® Core™ i7-1255U Processor&lt;/li>
+&lt;li>16 GB LPDDR4X 4266MHz&lt;/li>
+&lt;li>1 TB PCIe SSD Gen 4 Performance&lt;/li>
+&lt;li>13.3&amp;quot; WQXGA (2560 x 1600) IPS, anti-reflective, anti-smudge, touchscreen with
+Dolby Vision™, low power, 400 nits&lt;/li>
+&lt;li>Windows 11 Pro&lt;/li>
+&lt;/ul>
+&lt;p>I purchased this as my primary personal machine; it&amp;rsquo;s not workstation grade as I
+don&amp;rsquo;t do any &amp;ldquo;large&amp;rdquo; projects, but I have a varied workload for it. There&amp;rsquo;s the
+simple web browsing type cases, but I also use the following in a pretty light
+capacity:&lt;/p>
+&lt;ul>
+&lt;li>Coding: Visual Studio Code, JetBrains Rider/IntelliJ, WSL&lt;/li>
+&lt;li>3D Modeling: Fusion 360 and Blender&lt;/li>
+&lt;li>EDA: KiCad&lt;/li>
+&lt;li>Design/Photo: Affinity Designer and Photo&lt;/li>
+&lt;li>Drawing: Clip Studio&lt;/li>
+&lt;/ul>
+&lt;p>Aside from coding, I am not working on particularly complex projects in any of
+the above but I still expect them to be decently usable. My old X1 was not
+specced for this workload, which is what drove me to a new machine. Neither is
+this one &lt;em>exactly&lt;/em>, but so far it&amp;rsquo;s handled what I&amp;rsquo;ve thrown at it.&lt;/p>
+&lt;h1 id="build-quality-and-features">Build Quality and Features&lt;/h1>
+&lt;p>The X13&amp;rsquo;s carbon-fiber-and-magnesium frame is solid and pleasant, and it doesn&amp;rsquo;t
+attract a tremendous number of fingerprints. The 16:10 screen is a very welcome
+return of vertical real estate and sits nicely in the frame without the
+considerable &amp;ldquo;chin&amp;rdquo; some ThinkPads are known for. The machine has good
+proportions, and is nicely balanced using it on a desk or on the couch. Overall
+the build quality is high, with a good fit and finish and no noticeable creaks
+or flex in the frame.&lt;/p>
+&lt;p>It&amp;rsquo;s also nice to be on a smaller laptop; I&amp;rsquo;d always stuck with 14&amp;quot; models
+because they tended to have higher resolution screens available, but that wasn&amp;rsquo;t
+a necessary compromise on the X13. The smaller size is particularly appreciated
+when in tablet mode, where it&amp;rsquo;s far more comfortable for drawing or other tasks
+where you&amp;rsquo;d prefer to keep it a little bit nearer to you.&lt;/p>
+&lt;p>The port selection isn&amp;rsquo;t generous but it has what I need: two USB-C/Thunderbolt
+4, two USB Type-A (one on each side), HDMI, and a 3.5mm headphone jack. The
+headphone jack is slightly awkward on the right side—all others in my memory
+were on the left—but there&amp;rsquo;s worse things you could be subjected to.&lt;/p>
+&lt;h2 id="keyboard">Keyboard&lt;/h2>
+&lt;p>The keyboard—while certainly sized down from a larger machine—isn&amp;rsquo;t cramped and
+retains a pleasant enough key travel. It also doesn&amp;rsquo;t have any notable flex. The
+keys do an alright job handling off-center presses, but not great; it&amp;rsquo;s possible
+to have a &amp;ldquo;press&amp;rdquo; without actually triggering input if you you hit the key and
+the frame at the same time, which continues to be an issue for me as I adjust to
+the smaller layout. The flaw here is that the key registers below the frame, but
+the button actuation is nearly flush with the frame. This was true on my X1 as
+well, and takes some adjustment to not miss hitting the keys square.&lt;/p>
+&lt;p>Also after a week or so of use, the space bar developed a fairly obnoxious
+creak/click, just when you rest a finger on it but don&amp;rsquo;t actually press the key.
+We&amp;rsquo;ll see if that subsides over time; it&amp;rsquo;s not at all noticeable in normal
+typing use, but in my news reader when I use the space bar to move to the next
+story, my finger resting on it will repeatedly make the sound: annoying.&lt;/p>
+&lt;p>A quick online typing test shows my WPM about equal with my usual on a laptop
+keyboard, so I can&amp;rsquo;t complain much. Also kudos to Lenovo for making a compact
+layout that retains the usual key locations, instead of opting for an
+uncomfortable rearrangement of the keys as other manufacturers have.&lt;/p>
+&lt;p>This is weird but I&amp;rsquo;m going to mention it: I keep having a bug, probably with
+Windows 11, where the key repeat keeps getting reset to an unbearably slow rate,
+and I prefer it on the fastest setting. When I go into the control panel, it&amp;rsquo;s
+still showing as being on that setting, but if I move the slider down then back
+up and apply, it goes back to the correct fast speed. This only happens on this
+laptop, and I&amp;rsquo;ve run Windows 11 elsewhere. It&amp;rsquo;s quick to fix but infuriating.&lt;/p>
+&lt;h2 id="trackpoint">TrackPoint&lt;/h2>
+&lt;p>The TrackPoint is solid, with satisfying physical buttons: they&amp;rsquo;re actually an
+improvement over both the last few ThinkPads I&amp;rsquo;ve owned, with a good amount of
+travel and a very positive click. I (unscientifically) feel these ELAN
+TrackPoints drift a bit more than the old Synaptics ones, but it&amp;rsquo;s not common
+enough to get in my way. I don&amp;rsquo;t use the trackpad and can&amp;rsquo;t speak to it, but it
+is quite large and I guess that&amp;rsquo;s popular these days. Back to those buttons
+though: notably because the trackpad is larger the buttons are &lt;em>also&lt;/em>
+considerably larger, but they have a very even press all the way across, and
+I&amp;rsquo;ve had no issues with clicking and holding as I&amp;rsquo;ve had on some other machines.&lt;/p>
+&lt;h2 id="miscellaneous">Miscellaneous&lt;/h2>
+&lt;p>Any complaints aside, this does feel like a ThinkPad—something that couldn&amp;rsquo;t be
+said of the X1—and it&amp;rsquo;s so nice to be back on a non-aluminum chassis again.&lt;/p>
+&lt;p>The Yoga hinge is an engineering achievement as always; I loved it on my X1 and
+it&amp;rsquo;s just as good here: impressively smooth to move from laptop to tablet, and
+incredibly stable when being used in laptop mode. The Yoga series really doesn&amp;rsquo;t
+have a lot of compromises: they are just as capable tablets as they are laptops,
+and I don&amp;rsquo;t feel like I&amp;rsquo;ve sacrificed something to have both.&lt;/p>
+&lt;p>Well, maybe &lt;em>one&lt;/em> thing is sacrificed but it nearly doesn&amp;rsquo;t matter: the
+&amp;ldquo;garaged&amp;rdquo; pen should be a lovely addition; having a pen available at all times
+is, on paper, a great idea. However the garaged pens are far too small to be
+comfortable, and I&amp;rsquo;ve never used them for anything remotely serious. I&amp;rsquo;d love to
+see a more full-sized pen here and I&amp;rsquo;d be willing to trade some
+space/thickness/etc. on the machine for it. Instead I carry a full-sized pen,
+and the garaged pen is pretty much just a fidget toy on the side of the machine.&lt;/p>
+&lt;p>The integrated fingerprint reader on the power button is—while a little weird
+looking—a clever way to get it off of the palm rest. I don&amp;rsquo;t use fingerprint
+sign-in though so I&amp;rsquo;m not sure how well it actually works, but I like the
+location. I imagine it&amp;rsquo;d be easy to find and press in tablet mode as well.&lt;/p>
+&lt;p>Another nit though is the exhaust location: when under load the laptop itself
+stays reasonably cool on its surfaces, but the fan exhaust can get quite hot.
+When using it on your lap—like the couch as I am now—the rear-facing exhaust
+will blow right on your leg, and it&amp;rsquo;s actually uncomfortable. It&amp;rsquo;s easy to
+remedy by just adjusting my leg since the exhaust is only a few inches wide, but
+it does make me miss the side-facing exhaust of my X1. In practice this is only
+a problem when doing fairly significant workloads though, and the fan doesn&amp;rsquo;t
+spend much time running (nor is much heat generated at all) when doing basic
+things like web browsing, coding, or writing.&lt;/p>
+&lt;h1 id="av">A/V&lt;/h1>
+&lt;p>There&amp;rsquo;s good and bad news: the screen is excellent, the built-in speakers are
+subpar. This doesn&amp;rsquo;t hurt me any: I&amp;rsquo;m not doing any serious listening on here,
+and they aren&amp;rsquo;t &lt;em>horrible&lt;/em>, just a definite step down from my old X1. The sound
+is pretty thin and muffled, which is common with down-firing speakers but these
+don&amp;rsquo;t seem to improve much when placed on a desk either. They also aren&amp;rsquo;t
+particularly loud, if that&amp;rsquo;s something you cared about. When I do use it for
+some light video watching though, the audio isn&amp;rsquo;t a particular detriment: it&amp;rsquo;s
+fine.&lt;/p>
+&lt;p>The screen, again, is excellent. The 16:10 aspect ratio is great to see: the
+extra vertical space is super appreciated both for writing and internet
+browsing. The screen resolution is ideal—enough to be sharp without requiring
+the integrated graphics to push unnecessary pixels—and has a good range of
+brightness: I really appreciate how dim it can go and remain clear, and the full
+brightness is good for the occasional video.&lt;/p>
+&lt;p>The camera and microphone I haven&amp;rsquo;t given much of a test, although the camera
+seems serviceable but unremarkable. I&amp;rsquo;ve never been impressed with a ThinkPad&amp;rsquo;s
+camera, and this one is no exception: grainy video with pretty poor low-light
+performance, and fairly awful color reproduction. On the plus side it does have
+an integrated privacy shutter as is typical on a ThinkPad, and the design (same
+as the X1) stays out of the way when you&amp;rsquo;re using the laptop in tablet mode. On
+the microphone, I haven&amp;rsquo;t personally heard the output but have been told it&amp;rsquo;s
+thin but fine; pretty much exactly what I expected.&lt;/p>
+&lt;h1 id="performance">Performance&lt;/h1>
+&lt;p>All good news here, from a subjective point of view. I&amp;rsquo;ve done light workloads
+in vscode, Rider, Fusion 360 with no issues; it&amp;rsquo;s nice to see some decent
+integrated graphics performance out of an Intel laptop, and it seems like
+whatever they&amp;rsquo;ve done with Evo platform is an improvement over the 10th Gen
+processors, which they definitely shouldn&amp;rsquo;t have specced to run a 4K display.&lt;/p>
+&lt;p>I&amp;rsquo;ve been using WSL for some hobby development, and it doesn&amp;rsquo;t create a
+noticeable performance drain. If I was doing more serious development I
+certainly would&amp;rsquo;ve sprung for 32GB of RAM, but there&amp;rsquo;s no particular need here.
+Unfortunately as with many of Lenovo&amp;rsquo;s laptops these days, the RAM you buy is
+the RAM you&amp;rsquo;re stuck with: it&amp;rsquo;s soldered onto the board. I&amp;rsquo;d happily give up
+some thinness for upgradable RAM.&lt;/p>
+&lt;p>Fusion 360 does throw a graphics performance warning, but it&amp;rsquo;s opened the most
+complex (but admittedly still not all that complex) things that I&amp;rsquo;ve thrown at
+it, and handled it smoothly.&lt;/p>
+&lt;p>On graphics tasks, I need to preface this with a caveat that my needs are
+&lt;em>extremely&lt;/em> unsophisticated, but I&amp;rsquo;ve used Clip Studio, Affinity Design and
+Photo, and Blender for light tasks and they&amp;rsquo;ve all handled admirably. I&amp;rsquo;ve been
+particularly happy with Clip Studio&amp;rsquo;s performance, and look forward to improving
+my skills here.&lt;/p>
+&lt;h1 id="wrap-up">Wrap Up&lt;/h1>
+&lt;p>This is a good machine; I&amp;rsquo;m really happy with its form factor and performance,
+and works great in both tablet and laptop modes. It&amp;rsquo;s nice to have something
+with modern features but the ThinkPad materials and feel.&lt;/p>
+&lt;h2 id="pros">Pros&lt;/h2>
+&lt;ul>
+&lt;li>It&amp;rsquo;s a ThinkPad, and it feels like one: durable and pleasant carbon fiber +
+magnesium chassis&lt;/li>
+&lt;li>Great performance, including on battery power and in &amp;ldquo;balanced&amp;rdquo; mode in
+Windows 11&lt;/li>
+&lt;li>The Yoga hinge makes for an excellent convertible experience, with
+little-to-no compromises; you can have a tablet, and a laptop&lt;/li>
+&lt;li>Good feeling keyboard which doesn&amp;rsquo;t notably slow down my typing, despite its
+compact layout&lt;/li>
+&lt;li>Very little software bloat out of the box; pre-installed software is minimal&lt;/li>
+&lt;li>Subjectively great battery life&lt;/li>
+&lt;li>Nice physical mouse buttons with good travel&lt;/li>
+&lt;li>Overall good layout and industrial design; it&amp;rsquo;s nice to interact with&lt;/li>
+&lt;li>Reasonable selection of ports&lt;/li>
+&lt;/ul>
+&lt;h2 id="cons">Cons&lt;/h2>
+&lt;ul>
+&lt;li>Keyboard&amp;rsquo;s space bar stabilizers creak; usually not noticeable during regular
+typing, but annoying when it is&lt;/li>
+&lt;li>Keys could do a better job of handling off-center key presses, but on par with
+other ThinkPads&lt;/li>
+&lt;li>&amp;ldquo;Garaged&amp;rdquo; pen is too small to be really useful&lt;/li>
+&lt;li>Exhaust can get uncomfortably hot&lt;/li>
+&lt;li>Non-upgradeable RAM&lt;/li>
+&lt;/ul>
+&lt;h2 id="miscellaneous-1">Miscellaneous&lt;/h2>
+&lt;ul>
+&lt;li>Really wish they&amp;rsquo;d make an AMD version of the Yoga models&lt;/li>
+&lt;li>Pretty underwhelming camera and speakers&lt;/li>
+&lt;/ul></content:encoded></item><item><title>Fix Windows Security "Actions Recommended"</title><link>https://fardog.io/blog/2022/09/09/fix-windows-security-actions-recommended/</link><pubDate>Fri, 09 Sep 2022 15:01:54 -0700</pubDate><guid>https://fardog.io/blog/2022/09/09/fix-windows-security-actions-recommended/</guid><content type="html">&lt;p>I had an issue today with Windows Security dashboard on Windows 11, where it
+said there were &amp;ldquo;Actions Recommended&amp;rdquo; with an unnerving yellow warning icon,
+however opening it up showed all green:&lt;/p>
+&lt;p>&lt;img src="https://fardog.io/img/blog/20220909-defender_green.png" alt="Dashboard shows all green…">&lt;/p>
+&lt;p>I looked at a lot of solutions which didn&amp;rsquo;t fix the issue, but then found a
+solution that I didn&amp;rsquo;t find listed elsewhere so I&amp;rsquo;m writing it down: there&amp;rsquo;s a
+(maybe hidden?) pane of the Windows Security dashboard that isn&amp;rsquo;t accessible
+from the menu in the screenshot above, but you can find it via the Windows
+&amp;ldquo;Settings&amp;rdquo; app:&lt;/p>
+&lt;p>&lt;img src="https://fardog.io/img/blog/20220909-defender_settings_privacy.png" alt="In Settings, click &amp;ldquo;Privacy &amp;amp; Security&amp;rdquo; followed by &amp;ldquo;Windows Security&amp;rdquo;">
+&lt;img src="https://fardog.io/img/blog/20220909-defender_settings_security.png" alt="In Windows Security, click &amp;ldquo;App &amp;amp; browser control&amp;rdquo;">&lt;/p>
+&lt;p>Maybe it&amp;rsquo;s hidden somewhere, but that &amp;ldquo;App &amp;amp; browser control&amp;rdquo; panel opens in the
+Windows Security dashboard, yet I can&amp;rsquo;t find it linked from within it. In there
+I found the culprit: &amp;ldquo;Reputation Based Protection&amp;rdquo; was not turned on.&lt;/p>
+&lt;p>Re-enabling that cleared all recommended actions. Hopefully this helps you
+because I just wasted an hour on it.&lt;/p></content:encoded></item><item><title>Greek Yogurt Recipe</title><link>https://fardog.io/blog/2022/09/09/greek-yogurt-recipe/</link><pubDate>Fri, 09 Sep 2022 10:15:00 -0700</pubDate><guid>https://fardog.io/blog/2022/09/09/greek-yogurt-recipe/</guid><content type="html">&lt;p>This is a recipe for making greek yogurt, although I hesitate to call it a
+&amp;ldquo;recipe&amp;rdquo; since it&amp;rsquo;s more like replicating existing yogurt. Still I&amp;rsquo;m writing
+this down because it&amp;rsquo;s the result of trial-and-error and has some differences
+with what I&amp;rsquo;ve read elsewhere, although minor. This makes a tangy and smooth
+yogurt that I&amp;rsquo;m really happy with.&lt;/p>
+&lt;p>The goal here is to be low-waste: we make a smoothie every morning with yogurt
+as a component, and it creates a lot of plastic waste. If you make this a
+half-gallon at a time, the only waste should be the paperboard milk carton, and
+the occasional re-buy of fresh starter.&lt;/p>
+&lt;p>&lt;em>For the starter&lt;/em> I use &lt;a href="https://usa.fage/products/yogurt/fage-total-5">Fage Total Plain 5%&lt;/a>; why this recipe differs
+from others might be due to that starter. It works really well and is super
+smooth when it&amp;rsquo;s done though!&lt;/p>
+&lt;p>Unfortunately where I found any of the info I used to &amp;ldquo;create&amp;rdquo; this recipe is
+lost to time; I&amp;rsquo;ve looked at numerous sources and then refined this over the
+last two years, and no longer have any idea where I found things.&lt;/p>
+&lt;h1 id="tools">Tools&lt;/h1>
+&lt;p>You&amp;rsquo;ll need the following tools; I&amp;rsquo;ll go into some detail because I&amp;rsquo;ve found
+some items that work well.&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Whisk&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>3 qt. sauce pan/pot:&lt;/strong> anything big enough to handle the amount of milk you
+want to use, with a little bit of space to allow for whisking and blending.&lt;/li>
+&lt;li>&lt;strong>Thermometer:&lt;/strong> you&amp;rsquo;ll appreciate something that can alarm when the milk
+cools down, so you don&amp;rsquo;t have to watch it the entire time. I use a
+&lt;a href="https://www.thermoworks.com/chefalarm/">ThermoWorks ChefAlarm&lt;/a>, which can warn on high and low
+temperatures.&lt;/li>
+&lt;li>&lt;strong>Immersion Blender:&lt;/strong> the yogurt turns out far smoother when your starter is
+very well blended into the heated milk; I&amp;rsquo;ve found an immersion blender
+handles this best.&lt;/li>
+&lt;li>&lt;strong>Incubator:&lt;/strong> you&amp;rsquo;ll need somewhere to keep the yogurt during incubation that
+can hold about 90–100°F for 12+ hours. Our oven&amp;rsquo;s &amp;ldquo;warm&amp;rdquo; function luckily
+keeps to this temperature.&lt;/li>
+&lt;li>&lt;strong>Strainer:&lt;/strong> a lot of recipes use cloth or plastic strainers but I&amp;rsquo;ve found a
+&lt;a href="https://www.webstaurantstore.com/choice-8-stainless-steel-reinforced-bouillon-chinois-strainer/4078RSTRNR.html">Bullion Strainer&lt;/a> works well and is dishwasher safe. The one I
+linked will hold a half gallon of yogurt.&lt;/li>
+&lt;li>&lt;strong>Straining Container:&lt;/strong> this &lt;a href="https://www.webstaurantstore.com/cambro-rfs6pp190-6-qt-translucent-round-storage-container/214RFS6PP.html">Cambro 6qt. Container&lt;/a> fits the
+strainer perfectly and isn&amp;rsquo;t too large to put in our refrigerator.&lt;/li>
+&lt;li>&lt;strong>Storage:&lt;/strong> you&amp;rsquo;ll need some jars to hold the finished yogurt and separated
+whey if you intend to reuse it; &lt;a href="https://weckjars.com/">Weck Jars&lt;/a> are awesome, easy to clean,
+and their US distributor ships them in fully cardboard packaging.
+&lt;ul>
+&lt;li>A half-gallon of finished strained yogurt fits perfectly in their &lt;a href="https://weckjars.com/product/745-tulip-jar/">1L Tulip
+Jar&lt;/a>&lt;/li>
+&lt;li>The leftover whey fits in their &lt;a href="https://weckjars.com/product/743-mold-jar/">3/4L Mold Jar&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h1 id="ingredients">Ingredients&lt;/h1>
+&lt;ul>
+&lt;li>&lt;em>1/2 Gallon Whole Milk&lt;/em>&lt;/li>
+&lt;li>&lt;em>1/4 Cup Starter Yogurt;&lt;/em> more on this later&lt;/li>
+&lt;/ul>
+&lt;h1 id="instructions">Instructions&lt;/h1>
+&lt;ul>
+&lt;li>Remove your starter from the freezer (if frozen) so it can thaw&lt;/li>
+&lt;li>Heat milk, whisking briskly the whole time&lt;/li>
+&lt;li>Once the milk reaches 185°F, remove from heat and allow to cool&lt;/li>
+&lt;li>Once the milk cools to 120°F, immersion blend your starter into it&lt;/li>
+&lt;li>Cover the pan&lt;/li>
+&lt;li>Hold temperature of the incubating yogurt at 90–100°F for 12.5 hours&lt;/li>
+&lt;li>Place your strainer inside of the straining container&lt;/li>
+&lt;li>Transfer the finished yogurt from the pan to the strainer&lt;/li>
+&lt;li>Place the straining yogurt in the refrigerator for about 4 hours&lt;/li>
+&lt;li>Transfer the strained yogurt and whey into jars for storage
+&lt;ul>
+&lt;li>If yogurt has strained too much, mix a small amount of whey back into it&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h1 id="notes">Notes&lt;/h1>
+&lt;p>This is sort of a grab bag of things I&amp;rsquo;ve noted during this process which might
+help you.&lt;/p>
+&lt;ul>
+&lt;li>The time of 12.5 hours is what works perfectly for me with our oven as the
+incubator; with less time I&amp;rsquo;ve found that it will sometimes still be a little
+too thin to strain the first time, and with more it starts to develop a flavor
+that&amp;rsquo;s less tangy and a little more cheese-y.&lt;/li>
+&lt;li>If your yogurt runs through the strainer, just leave it in the container and
+let it cool in the refrigerator; once cold try running it through the strainer
+again, placing it on top of whatever&amp;rsquo;s still left in the strainer and leave
+for another 4 hours or so.&lt;/li>
+&lt;li>The constant whisking while heating will avoid milk solids building up on the
+bottom of the pan, which will make your yogurt grainy.&lt;/li>
+&lt;li>When the milk cools down uncovered it&amp;rsquo;ll form a skin, which I usually just
+skim off.&lt;/li>
+&lt;li>On immersion blending: this leads to far smoother yogurt in my experience. For
+ease, I actually immersion blend about 2-1/2 cups of milk into the starter
+first, then pour that into the rest of the milk, and then immersion blend
+&lt;em>that&lt;/em> again for a moment.&lt;/li>
+&lt;li>You can freeze your starter! When I need to re-up my starter I just buy some
+from the store and freeze it into silicone ice cube trays, then bag those in
+silicone freezer bags. It keeps for several weeks without issue.&lt;/li>
+&lt;li>I prefer to just use fresh starter instead of using the replicated yogurt as
+starter; this is mostly out of fear: I don&amp;rsquo;t want to ruin a half-gallon of
+milk. I tried it once and it worked &lt;em>fine&lt;/em> but wasn&amp;rsquo;t as good as with fresh
+starter, and kept running through the strainer.&lt;/li>
+&lt;li>We haven&amp;rsquo;t found many uses for the whey, but did find it works well in some
+types of bread in place of milk or water, usually using about half whey and
+half milk/water (depending on what the recipe calls for).&lt;/li>
+&lt;/ul>
+&lt;p>Anyhow I&amp;rsquo;ve never written a recipe before but there you have it; I&amp;rsquo;m compiling
+this because it took me a while to find a combination of quantities,
+temperatures, and tools that made a good result. Hopefully this works well for
+you also!&lt;/p></content:encoded></item><item><title>CentOS and KVM: Single interface, multiple VLANs for Guests</title><link>https://fardog.io/blog/2020/11/08/centos-and-kvm-single-interface-multiple-vlans-for-guests/</link><pubDate>Sun, 08 Nov 2020 01:55:00 -0800</pubDate><guid>https://fardog.io/blog/2020/11/08/centos-and-kvm-single-interface-multiple-vlans-for-guests/</guid><content type="html">&lt;p>KVM on Linux is a nice way to run isolated services on your home network;
+in my case: MySQl, a Unifi controller, various Docker containers, etc.
+However: if you want to run these services on different VLANs so they can be
+in isolated networks, the process is less straightforward. This document covers
+how to get CentOS network interfaces set up so multiple VLANs can co-exist
+on a single interface in a way that&amp;rsquo;s transparent to KVM guests.&lt;/p>
+&lt;p>&lt;strong>Note:&lt;/strong> This is mostly notes for my own memory, I may come back later and
+clean this up into more of a &amp;ldquo;how-to&amp;rdquo; article. As it stands, this will probably
+get you going if you are as stuck as I was. This document covers CentOS 8.2 but
+should work on Red Hat, Fedora, etc.&lt;/p>
+&lt;h1 id="network-scripts">Network Scripts&lt;/h1>
+&lt;p>Create a network configuration definition for your primary interface; this will
+be named after the interface name, which you can retrieve with an
+&lt;code>ip link show&lt;/code>; in my case, it&amp;rsquo;s &lt;code>enp0s25&lt;/code>. Replace those file and interface
+names with whatever interface you&amp;rsquo;ll be using.&lt;/p>
+&lt;p>Configure the bridge interface; use your own network information as appropriate.
+This will be the primary IP address of your CentOS server:&lt;/p>
+&lt;pre tabindex="0">&lt;code># /etc/sysconfig/network-scripts/ifcfg-br0
+DEVICE=br0
+TYPE=Bridge
+IPADDR=172.16.18.10
+NETMASK=255.255.255.0
+GATEWAY=172.16.18.254
+DNS1=172.168.18.1
+ONBOOT=yes
+DEFROUTE=yes
+BOOTPROTO=static
+DELAY=0
+DOMAIN=&amp;#34;lan.mydomain.example&amp;#34;
+&lt;/code>&lt;/pre>&lt;p>Configure your interface to use the newly created &lt;code>br0&lt;/code>:&lt;/p>
+&lt;pre tabindex="0">&lt;code># /etc/sysconfig/network-scripts/ifcfg-enp0s25
+DEVICE=&amp;#34;enp0s25&amp;#34; # replace with your interface name
+TYPE=Ethernet
+HWADDR=ff:ff:ff:ff:ff:ff # replace with your hardware address
+BOOTPROTO=none
+ONBOOT=yes
+BRIDGE=br0
+&lt;/code>&lt;/pre>&lt;p>Configure a bridge for each VLAN you wish to use; the &lt;code>127&lt;/code> you see here is an
+example and should be replaced with the number of your VLAN:&lt;/p>
+&lt;pre tabindex="0">&lt;code># /etc/sysconfig/network-scripts/ifcfg-br0.127
+DEVICE=br0.127
+TYPE=Bridge
+IPADDR=172.16.19.10
+NETMASK=255.255.255.0
+ONBOOT=yes
+BOOTPROTO=static
+DELAY=0
+VLAN=yes
+&lt;/code>&lt;/pre>&lt;p>Now create an interface for that VLAN and bridge:&lt;/p>
+&lt;pre tabindex="0">&lt;code># /etc/sysconfig/network-scripts/ifcfg-enp0s25.127
+DEVICE=&amp;#34;enp0s25.127&amp;#34;
+BOOTPROTO=none
+ONBOOT=yes
+BRIDGE=br0.127
+USERCTL=no
+VLAN=yes
+&lt;/code>&lt;/pre>&lt;p>Now reboot your system; when it comes back up, you should have the new
+interfaces you configured available, and it should be pingable at the primary
+and VLAN addresses. Do this for as many VLANs as you need to cover.&lt;/p>
+&lt;p>When configuring new guests via the CentOS &amp;ldquo;Virtual Machine&amp;rdquo; manager, you should
+be able to select the VLAN bridge as the host interface. When your guest boots,
+it will now be on that selected VLAN without any additional configuration
+necessary—and will support DHCP and all expected network features.&lt;/p></content:encoded></item><item><title>Docker Hub Tag Builds</title><link>https://fardog.io/blog/2019/01/01/docker-hub-tag-builds/</link><pubDate>Tue, 01 Jan 2019 12:59:11 -0800</pubDate><guid>https://fardog.io/blog/2019/01/01/docker-hub-tag-builds/</guid><content type="html">&lt;p>&lt;a href="https://hub.docker.com/">Docker Hub&lt;/a> automatic builds are a great way to keep your Docker images
+up to date with a &lt;code>git&lt;/code> repository, but building sensibly tagged releases isn&amp;rsquo;t
+very straightforward. It&amp;rsquo;s easy to create ones for a tag (like &lt;code>v4.1.1&lt;/code>) but
+less so to create versioned images, such as:&lt;/p>
+&lt;pre tabindex="0">&lt;code>myimage:4
+myimage:4.1
+myimage:4.1.1
+&lt;/code>&lt;/pre>&lt;p>This means that when you release a &lt;code>v4.1.2&lt;/code>, it becomes the new &lt;code>4&lt;/code> and &lt;code>4.1&lt;/code>.
+It turns out that you can do this with docker automatic builds. At the time I
+got this working it wasn&amp;rsquo;t well documented, but these days it has &lt;a href="https://docs.docker.com/docker-hub/builds/#regexes-and-automated-builds">docs&lt;/a>.&lt;/p>
+&lt;blockquote>
+&lt;p>Note: This information was adapted from something I found in a Google search,
+but I&amp;rsquo;ve since lost the source. I&amp;rsquo;ll update here if I find it again.&lt;/p>
+&lt;/blockquote>
+&lt;p>To achieve this, set up your build rules as follows:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Type&lt;/th>
+&lt;th>Name&lt;/th>
+&lt;th>Docker Tag Name&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Branch&lt;/td>
+&lt;td>&lt;code>master&lt;/code>&lt;/td>
+&lt;td>&lt;code>latest&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Tag&lt;/td>
+&lt;td>&lt;code>/^v([0-9.]+)$/&lt;/code>&lt;/td>
+&lt;td>&lt;code>{\1}&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Tag&lt;/td>
+&lt;td>&lt;code>/^v([0-9]+)\.([0-9]+)\.([0-9]+)$/&lt;/code>&lt;/td>
+&lt;td>&lt;code>{\1}&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Tag&lt;/td>
+&lt;td>&lt;code>/^v([0-9]+)\.([0-9]+)\.([0-9]+)$/&lt;/code>&lt;/td>
+&lt;td>&lt;code>{\1}.{\2}&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Now, tag your versions in &lt;code>git&lt;/code> as full semver specifiers, with a &lt;code>v&lt;/code> in front,
+e.g.:&lt;/p>
+&lt;pre tabindex="0">&lt;code>git tag -a v4.1.2 -m 4.1.2
+&lt;/code>&lt;/pre>&lt;p>When your docker image is auto-built from git, it will now have tags which
+match the example at the beginning of this post.&lt;/p>
+&lt;p>Eventually I&amp;rsquo;ll write up a more thorough post on how you can perform
+auto-builds and releases with github, docker hub, and travis. For now you can
+learn a lot from this post, and by looking at the &lt;a href="https://github.com/fardog/secureoperator/blob/master/.travis.yml">travis config&lt;/a> for
+&lt;a href="https://github.com/fardog/secureoperator/">secureoperator&lt;/a>.&lt;/p></content:encoded></item><item><title>Docker Read-Only Volumes with SELinux</title><link>https://fardog.io/blog/2018/01/27/docker-read-only-volumes-with-selinux/</link><pubDate>Sat, 27 Jan 2018 15:12:15 -0800</pubDate><guid>https://fardog.io/blog/2018/01/27/docker-read-only-volumes-with-selinux/</guid><content type="html">&lt;p>If you use Docker on an &lt;a href="https://en.wikipedia.org/wiki/Security-Enhanced_Linux">SELinux&lt;/a>-enabled Linux distribution like &lt;a href="https://getfedora.org/">Fedora&lt;/a>,
+you may have run into issues mounting host volumes, and are probably aware of
+the &lt;code>z&lt;/code> flag to modify the SELinux label:&lt;/p>
+&lt;pre tabindex="0">&lt;code>docker run --rm -v /var/www/letsencrypt:/var/www/letsencrypt:z nginx
+&lt;/code>&lt;/pre>&lt;p>What isn&amp;rsquo;t made very clear from the &lt;a href="https://docs.docker.com/engine/admin/volumes/volumes/">Docker docs&lt;/a> is that you can specify
+multiple flags separated with commas, say &lt;code>ro,z&lt;/code> to specify SELinux labeling
+&lt;em>and&lt;/em> read-only:&lt;/p>
+&lt;pre tabindex="0">&lt;code>docker run --rm -v /var/www/letsencrypt:/var/www/letsencrypt:ro,z nginx
+&lt;/code>&lt;/pre></content:encoded></item><item><title>Running Docker containers with systemd</title><link>https://fardog.io/blog/2017/12/30/running-docker-containers-with-systemd/</link><pubDate>Sat, 30 Dec 2017 18:10:00 -0800</pubDate><guid>https://fardog.io/blog/2017/12/30/running-docker-containers-with-systemd/</guid><content type="html">&lt;p>Services in &lt;a href="https://www.docker.com/">Docker&lt;/a> containers can easily be run under &lt;a href="https://freedesktop.org/wiki/Software/systemd/">systemd&lt;/a>, but I
+had some difficulty finding good examples of how to do so. Here&amp;rsquo;s what I came
+up with.&lt;/p>
+&lt;p>This example is a container running nginx, which has access to &lt;a href="https://letsencrypt.org">letsencrypt&lt;/a>
+certificates, but could be adapted to any service. I&amp;rsquo;ve annotated lines below:&lt;/p>
+&lt;pre tabindex="0">&lt;code>[Unit]
+Description=nginx (Docker)
+# start this unit only after docker has started
+After=docker.service
+Requires=docker.service
+ 
+[Service]
+TimeoutStartSec=0
+Restart=always
+# The following lines start with &amp;#39;-&amp;#39; because they are allowed to fail without
+# causing startup to fail.
+#
+# Kill the old instance, if it&amp;#39;s still running for some reason
+ExecStartPre=-/usr/bin/docker kill nginx
+# Remove the old instance, if it stuck around
+ExecStartPre=-/usr/bin/docker rm nginx
+# Pull the latest version of the container; NOTE you should be careful to
+# pull a tagged version, that way you won&amp;#39;t accidentially pull a major-version
+# upgrade and break your service!
+ExecStartPre=-/usr/bin/docker pull &amp;#34;nginx:1.13&amp;#34;
+# Start the actual service; note we remove the instance after it exits
+ExecStart=/usr/bin/docker run --rm --name nginx -p 80:80 -p 443:443 -v /etc/service-configs/nginx/nginx.conf:/etc/nginx/nginx.conf:ro -v /var/www/letsencrypt:/var/www/letsencrypt:z -v /etc/letsencrypt:/etc/letsencrypt:ro nginx:1.13
+# On exit, stop the container
+ExecStop=/usr/bin/docker stop nginx
+ 
+[Install]
+WantedBy=multi-user.target
+&lt;/code>&lt;/pre>&lt;p>This file is saved as &lt;code>/etc/systemd/system/docker.nginx.service&lt;/code>. You must make
+it executable (&lt;code>chmod +x &amp;lt;unit_file&amp;gt;&lt;/code>) and then do a systemd reload:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">systemctl daemon-reload
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">systemctl start &amp;lt;unit_file&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># if everything works as expected, enable it&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">systemctl &lt;span class="nb">enable&lt;/span> &amp;lt;unit_file&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>I&amp;rsquo;m using this method to run several containers on a &lt;a href="https://www.digitalocean.com/">Digital Ocean&lt;/a>
+instance, and it&amp;rsquo;s worked as expected.&lt;/p></content:encoded></item><item><title>Client-Side Certificate Authentication with nginx</title><link>https://fardog.io/blog/2017/12/30/client-side-certificate-authentication-with-nginx/</link><pubDate>Sat, 30 Dec 2017 17:20:00 -0700</pubDate><guid>https://fardog.io/blog/2017/12/30/client-side-certificate-authentication-with-nginx/</guid><content type="html">&lt;p>Authentication in applications is tough. If you decide to roll your own,
+security issues are nearly guaranteed. Most anyone who writes software for a
+living will tell you to use something you &lt;em>didn&amp;rsquo;t&lt;/em> write; that&amp;rsquo;s battle-tested
+and in wide use. Open source is even better; hopefully that many eyes and that
+many users will suss out the bugs.&lt;/p>
+&lt;p>Still, there &lt;em>will be bugs&lt;/em>. Which is what I think every time I see a
+login page on some device in my home. Who wrote this? Is it even remotely
+secure? I definitely don&amp;rsquo;t want to expose this to the internet.&lt;/p>
+&lt;p>So: let&amp;rsquo;s put something in front of it that can handle authentication for us!
+In this case, it&amp;rsquo;s a system which is unauthenticated, but that we want to expose
+with auth that says: this person&amp;rsquo;s allowed. The upstream application doesn&amp;rsquo;t
+care who they are, just that they&amp;rsquo;re allowed in.&lt;/p>
+&lt;p>In fact: I don&amp;rsquo;t even want to deal with passwords. I&amp;rsquo;d prefer to authenticate
+devices instead.&lt;/p>
+&lt;p>These are some notes on configuring client-side certificate authentication with
+&lt;a href="https://nginx.org/">nginx&lt;/a>, which reverse proxies to an application server.&lt;/p>
+&lt;p>&lt;em>I don&amp;rsquo;t expect that I&amp;rsquo;ve got everything right here;&lt;/em> please &lt;a href="https://github.com/fardog/fardog.io/issues">file an issue&lt;/a>
+against this repository if you see anything troubling here. Consider this my
+notes so that I remember how to do things again.&lt;/p>
+&lt;h1 id="what-is-a-client-side-certificate">What is a Client-Side Certificate?&lt;/h1>
+&lt;p>A client-side certificate is a transport-layer authentication mechanism; it can
+be used to verify a user &lt;em>before&lt;/em> the application layer. In terms of a web app,
+it happens at the &amp;ldquo;S&amp;rdquo; of &amp;ldquo;HTTPS&amp;rdquo;: the client is authenticated when the TLS
+handshake occurrs, and &lt;em>not&lt;/em> at the HTTP layer that is tunneled over the secure
+connection.&lt;/p>
+&lt;p>The &lt;a href="https://en.wikipedia.org/wiki/Transport_Layer_Security#Client-authenticated_TLS_handshake">Wikipedia article on TLS&lt;/a> explains it better than I ever could. But
+the important thing to understand is that when done right, your application can
+assume that the information it&amp;rsquo;s receiving is coming from someone who&amp;rsquo;s already
+authenticated. In my case, the application doesn&amp;rsquo;t care about that: we&amp;rsquo;re just
+using it to ensure only devices I allow may access the application.&lt;/p>
+&lt;p>For that reason, this article only covers the &amp;ldquo;device may access application&amp;rdquo;
+portion; using this method to do full authentication may be covered in a later
+article.&lt;/p>
+&lt;h1 id="creating-the-certificate-authority">Creating the Certificate Authority&lt;/h1>
+&lt;p>First, you must create a key for your Certificate Authority (CA); this key will
+be used to create the server-side certificate, and will sign all client
+certificate requests. That&amp;rsquo;s to say: it&amp;rsquo;s the master &amp;ldquo;password&amp;rdquo; for the whole
+system. Generate one, and keep it safe.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">openssl genrsa -des3 -out ca.key &lt;span class="m">4096&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>You&amp;rsquo;ll be asked to encrypt the key with a passphrase. Be sure to note it, as
+you&amp;rsquo;ll be asked for it every time you create a new certificate or sign a
+client certificate request.&lt;/p>
+&lt;h2 id="create-a-ca-certificate">Create a CA Certificate&lt;/h2>
+&lt;p>Next create a CA Certificate; this is the server-side certificate that will be
+sent via the TLS server to the client. Note this certificate is specific to the
+client-side certs, and is not a replacement for your typical certificate needed
+for HTTPS authentication; we&amp;rsquo;ll get to that later.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># sign a certificate for 365 days; replace that number with whatever&amp;#39;s&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># suitable for your application&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">openssl req -new -x509 -days &lt;span class="m">365&lt;/span> -key ca.key -out ca.crt
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>You&amp;rsquo;ll be asked a number of questions; here&amp;rsquo;s what I&amp;rsquo;ve found:&lt;/p>
+&lt;ul>
+&lt;li>Note what you&amp;rsquo;ve entered for Country, State, Locality, and Organization;
+you&amp;rsquo;ll want these to match later when you renew the certificate.&lt;/li>
+&lt;li>Do not enter a common name (CN) for the certificate; I&amp;rsquo;m unsure why, but I
+had problems when I entered one.&lt;/li>
+&lt;li>Email can be omitted.&lt;/li>
+&lt;/ul>
+&lt;p>Renewing a certificate just requires running the same command; to generate a
+new certificate. If you need to see what you entered in the old certificate, you
+can run:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">openssl x509 -in ca.crt -noout -text
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>This will list all information about the certificate, including the values
+mentioned above.&lt;/p>
+&lt;h1 id="creating-a-client-certificate">Creating a Client Certificate&lt;/h1>
+&lt;p>Next, a client certificate will be created; it&amp;rsquo;s up to you how you want to
+handle these, but remember this is effectively a password, and if you want to
+&amp;ldquo;change&amp;rdquo; it, you must revoke the certificate. So, think about how you&amp;rsquo;d like to
+handle your authentication: per user, per device?&lt;/p>
+&lt;p>You&amp;rsquo;ll want a client key first; this is generated in the same manner as the
+certificate key; you could even use that one (but don&amp;rsquo;t). Typically, if you had
+a number of users, the next two steps would be the ones you&amp;rsquo;d ask them to do,
+to create a certificate signing requests for you do sign.&lt;/p>
+&lt;h2 id="users-create-a-key-and-a-certificate-signing-request">Users: Create a Key, and a Certificate Signing Request&lt;/h2>
+&lt;p>Create an RSA key, if you don&amp;rsquo;t have one already:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">openssl genrsa -des3 -out user.key &lt;span class="m">4096&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Then, create a Certificate Signing Request (CSR)&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">openssl req -new -key user.key -out user.csr
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>A number of questions will be asked; answer each one, including the
+Common Name (CN) and email address. The CSR that&amp;rsquo;s created would be sent to the
+CA (an administrator, but in this case probably also yourself) to be signed.&lt;/p>
+&lt;h1 id="signing-a-csr">Signing a CSR&lt;/h1>
+&lt;p>A CSR must now be signed by the CA; this is the CA saying &amp;ldquo;I know this person
+or device: they are who they say they are.&amp;rdquo;&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># sign the csr to a certificate valid for 365 days&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">openssl x509 -req -days &lt;span class="m">365&lt;/span> -in user.csr -CA ca.crt -CAkey ca.key -set_serial &lt;span class="m">01&lt;/span> -out user.crt
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>You&amp;rsquo;ll typically want to increment the serial number with each signing. Once the
+certificate expires, a new CSR doesn&amp;rsquo;t need to be recreated; the same one can
+be signed, which will create a new certificate tied to that public key.&lt;/p>
+&lt;p>The signed certificate would be sent back to the user along with the CA cert
+(not private key!), for installation on their device.&lt;/p>
+&lt;h1 id="creating-a-pkcs-12-pfx">Creating a PKCS #12 (PFX)&lt;/h1>
+&lt;p>Now the signed certifcate must be made installable on a device in a way that
+bundles the client keys and certificate. The resultant archive is effectively
+a password, so it must be kept as safe as the other private keys.&lt;/p>
+&lt;p>To create the pfx:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">openssl pkcs12 -export -out user.pfx -inkey user.key -in user.crt -certfile ca.crt
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>You will be asked to supply an &amp;ldquo;export password&amp;rdquo;, and it&amp;rsquo;s very recommended that
+one is set, since often you&amp;rsquo;ll need to transfer the PFX archive to a device such
+as your phone; you don&amp;rsquo;t want this sitting in your email without a password on
+it.&lt;/p>
+&lt;p>The PFX archive can now be imported into your web browser. This is pretty neat!
+You can see how a process like this can be used to prove identity and create
+valid access for a user, without either the administrator (CA) or the user
+revealing their private key to one another.&lt;/p>
+&lt;p>Now, lets look at setting up nginx for certificate auth, with a reverse proxy
+to our unauthenticated application.&lt;/p>
+&lt;h1 id="nginx-setup">nginx Setup&lt;/h1>
+&lt;p>A minimal &lt;code>nginx.conf&lt;/code> that supports certificate auth, http redirected to https
+and a reverse proxy would look as follows for a domain &lt;code>example.com&lt;/code>. Note that
+the HTTPS certificate in this example is provided by &lt;a href="https://letsencrypt.org/">letsencrypt&lt;/a>. That&amp;rsquo;s not
+covered here, but may be in some future post.&lt;/p>
+&lt;pre tabindex="0">&lt;code>user www-data;
+worker_processes auto;
+pid /run/nginx.pid;
+
+events {
+ worker_connections 768;
+}
+
+http {
+ # some HTTP boilerplate
+ sendfile on;
+ tcp_nopush on;
+ tcp_nodelay on;
+ keepalive_timeout 65;
+ types_hash_max_size 2048;
+ server_tokens off;
+
+ include /etc/nginx/mime.types;
+ default_type application/octet-stream;
+
+ ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+ ssl_prefer_server_ciphers on;
+
+ access_log /var/log/nginx/access.log;
+ error_log /var/log/nginx/error.log;
+
+ gzip on;
+ gzip_disable &amp;#34;msie6&amp;#34;;
+
+ map $http_upgrade $connection_upgrade {
+ default upgrade;
+ &amp;#39;&amp;#39; close;
+ }
+
+ # server on port 80 for HTTP -&amp;gt; HTTPS redirect
+ server {
+ listen 80;
+ server_name example.com;
+ return 301 https://example.com$request_uri;
+ }
+
+ # The letsencrypt-secured HTTPS server, which proxies our requests
+ server {
+ listen 443 ssl;
+ server_name example.com;
+
+ ssl_protocols TLSv1.1 TLSv1.2;
+ # letsencrypt certificate
+ ssl_certificate /etc/letsencrypt/live/example.com/fullchain.pem;
+ ssl_certificate_key /etc/letsencrypt/live/example.com/privkey.pem;
+
+ # client certificate
+ ssl_client_certificate /etc/nginx/client_certs/ca.crt;
+ # make verification optional, so we can display a 403 message to those
+ # who fail authentication
+ ssl_verify_client optional;
+
+ access_log /var/log/nginx/example.com;
+
+ location / {
+ # if the client-side certificate failed to authenticate, show a 403
+ # message to the client
+ if ($ssl_client_verify != SUCCESS) {
+ return 403;
+ }
+
+ proxy_set_header Host $host;
+ proxy_set_header X-Real-IP $remote_addr;
+ proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+ proxy_set_header X-Forwarded-Proto $scheme;
+
+ # Fix the &amp;#34;It appears that your reverse proxy set up is broken&amp;#34; error.
+ proxy_pass http://localhost:8080;
+ proxy_read_timeout 90;
+
+ # web sockets
+ proxy_http_version 1.1;
+ proxy_set_header Upgrade $http_upgrade;
+ proxy_set_header Connection $connection_upgrade;
+
+ proxy_redirect http://localhost:8080 https://example.com;
+ }
+ }
+}
+&lt;/code>&lt;/pre>&lt;p>Of course, in this example the server running on &lt;code>localhost:8080&lt;/code> would &lt;em>not&lt;/em>
+be exposed to the world; either it&amp;rsquo;d be running on a protected box inside a
+local network, or firewalled off from the outside.&lt;/p>
+&lt;p>Now, when you visit the nginx server, your browser will be prompted for its
+client certificate; select the certificate that you installed, and you should
+be proxied through to the upstream server. If you visit from a browser without
+client certificates installed, you should see a 403 without any sort of prompt.&lt;/p>
+&lt;h1 id="misc">Misc&lt;/h1>
+&lt;p>A few additional thoughts:&lt;/p>
+&lt;p>I documented this process because it&amp;rsquo;s easily forgettable, and a hassle to
+re-figure when you forget and it&amp;rsquo;s time to renew your certs. A thing I&amp;rsquo;d like
+to spend more time on in the future is a tool to make this process easier for
+folks.&lt;/p>
+&lt;p>This document assumes a lot, and also assumes that you know &lt;em>something&lt;/em> before
+coming in; don&amp;rsquo;t assume that following this document will give you a secure
+setup! I might not even be correct in what I&amp;rsquo;m doing!&lt;/p>
+&lt;p>Have fun, stay safe.&lt;/p></content:encoded></item><item><title>Removing old posts</title><link>https://fardog.io/blog/2017/12/30/removing-old-posts/</link><pubDate>Sat, 30 Dec 2017 17:10:00 -0700</pubDate><guid>https://fardog.io/blog/2017/12/30/removing-old-posts/</guid><content type="html">&lt;p>This site has a few old posts that are of dubious value and are never read; I&amp;rsquo;m
+removing them as part of a clean-up effort. For transparency&amp;rsquo;s sake, you can
+&lt;a href="https://github.com/fardog/fardog.io/pull/2">check this PR&lt;/a> if you care about
+what was removed.&lt;/p></content:encoded></item><item><title>Automatically publishing websites with Hugo, Travis, and Github</title><link>https://fardog.io/blog/2017/08/26/automatically-publishing-websites-with-hugo-travis-and-github/</link><pubDate>Sat, 26 Aug 2017 10:30:00 -0700</pubDate><guid>https://fardog.io/blog/2017/08/26/automatically-publishing-websites-with-hugo-travis-and-github/</guid><content type="html">&lt;p>Welcome to the new &lt;a href="https://fardog.io/">fardog.io&lt;/a>: an HTTPS website which is hosted for free,
+easy to maintain, and automatically built when I push updates to a git
+repository. It&amp;rsquo;s backed by &lt;a href="https://gohugo.io/">Hugo&lt;/a>, &lt;a href="https://travis-ci.org/">Travis-CI&lt;/a>, &lt;a href="https://github.com/">GitHub&lt;/a>, and
+&lt;a href="https://www.cloudflare.com/">Cloudflare&lt;/a>.&lt;/p>
+&lt;p>&lt;strong>Note:&lt;/strong> This article is out of date, as Travis-CI retired their open-source
+service and I moved the build to &lt;a href="https://github.com/features/actions">Github Actions&lt;/a>. I&amp;rsquo;ll publish an
+update to this article in due time but until then, &lt;a href="https://github.com/fardog/fardog.io/pull/12">this pull
+request&lt;/a> will explain the change.&lt;/p>
+&lt;p>Although I don&amp;rsquo;t intend for this article to be a complete how-to of launching a
+site like this, hopefully it gives you a basis to piece together how you can
+build your own.&lt;/p>
+&lt;h1 id="a-history">A History&lt;/h1>
+&lt;p>This site is rebuilt from the ashes of milkandtang.com (defunct, now redirects
+to this site) with the intention to preserve links to old articles, but
+modernize everything else about the setup. The old site was built on
+&lt;a href="http://octopress.org/">Octopress&lt;/a>, which—for a non-Ruby developer—was always problematic to build:
+it required unfamiliar tooling, installation of packages I didn&amp;rsquo;t otherwise
+need, and the typical &lt;code>gem&lt;/code> and &lt;code>rvm&lt;/code> foolin&amp;rsquo; that doesn&amp;rsquo;t feel particularly
+worth it when you just want to update a blog post.&lt;/p>
+&lt;h1 id="the-requirements">The Requirements&lt;/h1>
+&lt;p>I went in with the following requirements:&lt;/p>
+&lt;ul>
+&lt;li>HTTPS hosted&lt;/li>
+&lt;li>Staticaly generated&lt;/li>
+&lt;li>Built with a familar toolchain&lt;/li>
+&lt;li>Old links preserved&lt;/li>
+&lt;li>No &amp;ldquo;build&amp;rdquo; step; should be published automatically on commit/push&lt;/li>
+&lt;/ul>
+&lt;p>&amp;ldquo;Free&amp;rdquo; was not a requirement, but it ended up being (nearly) so due to the
+tools/services I chose.&lt;/p>
+&lt;h1 id="the-tools">The Tools&lt;/h1>
+&lt;p>fardog.io is built using the following:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://gohugo.io/">Hugo&lt;/a>: a static-site generator written in &lt;a href="https://golang.org/">Go&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://travis-ci.org/">Travis-CI&lt;/a>: a Continuous Integration (CI) service with a GitHub
+pages publisher out-of-the-box&lt;/li>
+&lt;li>&lt;a href="https://github.com/">GitHub&lt;/a>/&lt;a href="https://pages.github.com/">GitHub Pages&lt;/a>: the ubiquitous code-hosting platform,
+and their free static-site-hosting service&lt;/li>
+&lt;li>&lt;a href="https://www.cloudflare.com/">Cloudflare&lt;/a>: a service which provides a Content-Delivery Network (CDN),
+DNS hosting, and HTTPS termination&lt;/li>
+&lt;li>&lt;a href="https://aws.amazon.com/s3/">Amazon S3&lt;/a>: a file-hosting service; here, it&amp;rsquo;s used to handle redirections
+for the old milkandtang.com domain&lt;/li>
+&lt;li>&lt;a href="https://aws.amazon.com/route53/">Amazon Route 53&lt;/a>: a DNS service; here, used to handle the old
+milkandtang.com domain&lt;/li>
+&lt;/ul>
+&lt;p>Although I pay for many of these services for other reasons, here they are all
+used at their &amp;ldquo;free&amp;rdquo; tiers, with the exception of the Amazon services; those
+cost about $0.53 USD/month, fluctuating slightly based on usage.&lt;/p>
+&lt;h1 id="the-build-process">The Build Process&lt;/h1>
+&lt;p>The &lt;a href="https://github.com/fardog/fardog.io">code&lt;/a> for the site is hosted in a public repository on GitHub; this code
+contains the raw posts, configuration for Hugo, and the &lt;a href="https://github.com/fardog/fardog.io/blob/master/.travis.yml">travis
+configuration&lt;/a> which is the declarative file which tells Travis how
+to build the static site.&lt;/p>
+&lt;p>Really, you can learn the most from these two files:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/fardog/fardog.io/blob/master/.travis.yml">&lt;code>.travis.yml&lt;/code>&lt;/a> the Travis configuration file&lt;/li>
+&lt;li>&lt;a href="https://github.com/fardog/fardog.io/blob/master/config.toml">&lt;code>config.toml&lt;/code>&lt;/a> the Hugo configuration file&lt;/li>
+&lt;/ul>
+&lt;h2 id="travis-configuration">Travis Configuration&lt;/h2>
+&lt;p>The Travis configuration is the more interesting configuration; it&amp;rsquo;s embedded
+below, with annotations in-line:&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;p>The only other information Travis needs is your &lt;a href="https://github.com/settings/tokens">GitHub Token&lt;/a>; you&amp;rsquo;ll
+want to generate one specificaly for this purpose. The
+&lt;a href="https://docs.travis-ci.com/user/deployment/pages/">Travis docs&lt;/a> cover what access this token needs to your
+account. Once you have that, it just needs to be encrypted and stored in your
+&lt;code>.travis.yml&lt;/code>, which is done with Travis&amp;rsquo; CLI tools, run in your repository:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">travis encrypt &lt;span class="nv">GITHUB_TOKEN&lt;/span>&lt;span class="o">=&lt;/span>&amp;lt;your_token&amp;gt; --add env.matrix
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>This will encrypt the token, and insert it into your &lt;code>.travis.yml&lt;/code>.&lt;/p>
+&lt;h1 id="custom-domain-setup">Custom Domain Setup&lt;/h1>
+&lt;p>At this point, you should have Travis set up and auto-building your static
+site, and posting that build to the &lt;code>gh-pages&lt;/code> branch of your repository, but
+not at a custom domain.&lt;/p>
+&lt;p>Follow the instructions at GitHub: &lt;a href="https://help.github.com/articles/quick-start-setting-up-a-custom-domain/">Setting up a custom domain&lt;/a>,
+which will direct you create a file in the root of your built site named
+&lt;code>CNAME&lt;/code>. Hugo automatically puts any files in a directory named &lt;code>static&lt;/code> at the
+root of your site; see &lt;a href="https://github.com/fardog/fardog.io/tree/master/static">my &lt;code>static&lt;/code> directory&lt;/a> for an example.&lt;/p>
+&lt;h1 id="https-setup">HTTPS Setup&lt;/h1>
+&lt;p>By now, your site should be served at your custom domain, but is not yet SSL
+protected. It&amp;rsquo;s time to set up your account at &lt;a href="https://www.cloudflare.com/">Cloudflare&lt;/a>.&lt;/p>
+&lt;p>Once you sign up for a free account, Cloudflare will walk you through the
+process of setting up your domain and transferring DNS. There are only a few
+settings you&amp;rsquo;ll need to change after the fact:&lt;/p>
+&lt;ul>
+&lt;li>Crypto &amp;gt; SSL: Change &amp;ldquo;Full&amp;rdquo; to &amp;ldquo;Flexible&amp;rdquo;. This will allow Cloudflare to hit
+GitHub&amp;rsquo;s servers without strict SSL, since its certificates won&amp;rsquo;t match your
+bare domain.&lt;/li>
+&lt;li>Crypto &amp;gt; Always use HTTPS: Change to &amp;ldquo;on&amp;rdquo;. This will redirect all HTTP
+requests to your domain to HTTPS.&lt;/li>
+&lt;li>Crypto &amp;gt; Automatic HTTPS Rewrites: Change to &amp;ldquo;on&amp;rdquo;. This will rewrite any URLs
+that are local to your domain over to HTTPS. Not strictly necessary, but
+allows you to be a little less careful with how you&amp;rsquo;re linking things.
+Ideally, you&amp;rsquo;ve got your domain correctly set up in your Hugo config.&lt;/li>
+&lt;/ul>
+&lt;p>With this set up, your site should be available over HTTPS in a short time.&lt;/p>
+&lt;h1 id="amazon-redirect">Amazon Redirect&lt;/h1>
+&lt;p>In order to redirect the existing milkandtang.com, I used Amazon&amp;rsquo;s Route 53 and
+S3 site hosting service to redirect all URLs to fardog.io; I won&amp;rsquo;t go into
+detail here as it&amp;rsquo;s not the primary interest; Amazon
+&lt;a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html">maintains a page&lt;/a> on how to set this up.&lt;/p>
+&lt;p>There&amp;rsquo;s a few things to note:&lt;/p>
+&lt;h2 id="updating-yaml-frontmatter">Updating YAML Frontmatter&lt;/h2>
+&lt;p>The frontmatter I was using for my Octopress posts needed some small updates. I
+changed it from:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">layout&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">post&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Fixing a Famicom Disk System&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">author&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Nate&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">layout&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">post&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">categories&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">Gaming&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">tags&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">Famicom&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">repair&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>…to:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">title&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Fixing a Famicom Disk System&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">date&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="ld">2010-03-21T12:00:00&lt;/span>&lt;span class="m">-07&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="m">00&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">categories&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">Gaming&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">tags&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">Famicom&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">repair&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Specifically, Hugo requires a strict ISO-8601 date, whereas Octopress was more
+permissive. URLs appear to be generated in the same manner between the two, so
+nothing was changed there.&lt;/p>
+&lt;h2 id="matching-urls">Matching URLs&lt;/h2>
+&lt;p>I needed to add the following to my Hugo &lt;code>config.toml&lt;/code> to the permalinks matched
+the previous format:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-toml" data-lang="toml">&lt;span class="line">&lt;span class="cl">&lt;span class="p">[&lt;/span>&lt;span class="nx">permalinks&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">blog&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;blog/:year/:month/:day/:title/&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="other-reading">Other Reading&lt;/h1>
+&lt;ul>
+&lt;li>&lt;a href="https://docs.travis-ci.com/user/getting-started/">Getting started with Travis&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://gohugo.io/getting-started/quick-start/">Hugo Quick Start&lt;/a>&lt;/li>
+&lt;/ul></content:encoded></item><item><title>Retiring some old projects</title><link>https://fardog.io/blog/2014/10/23/retiring-some-old-projects/</link><pubDate>Thu, 23 Oct 2014 14:15:00 -0700</pubDate><guid>https://fardog.io/blog/2014/10/23/retiring-some-old-projects/</guid><content type="html">&lt;p>Some changes are coming; they&amp;rsquo;re changes for me, but a secondary effect is that I no longer have free hosting for some projects that have been in unmaintained-but-still-running status for the last few years. I&amp;rsquo;m taking the following offline:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://adventure.fardo.gs">Adventure&lt;/a>: My &amp;ldquo;Choose your own adventure&amp;rdquo;-like story builder. This hasn&amp;rsquo;t seen an update since early 2012; very few people were using it. Re-launching this application would require a considerable effort, so I&amp;rsquo;m taking this offline for the foreseeable future. It&amp;rsquo;s been backed up, and the source code has been &lt;a href="https://github.com/fardog/adventure">open sourced&lt;/a>. If anyone wants to help resurrect this, please contact me via &lt;a href="https://twitter.com/milkandtang">twitter&lt;/a>.&lt;/li>
+&lt;li>&lt;a href="http://isthisdst.us/">Is this DST?&lt;/a>: My geo-aware single-serving site that lets you know if you&amp;rsquo;re in daylight saving time or not. Similar to above, I&amp;rsquo;m taking it offline vs the effort to relaunch. Again, &lt;a href="https://github.com/fardog/isthisdst">source code is available&lt;/a>. I may get the urge to bring this one back online again.&lt;/li>
+&lt;li>&lt;a href="http://www.fardogllc.com">Far Dog LLC&lt;/a>: I spun down this LLC a few years ago, the website never had much on it.&lt;/li>
+&lt;/ul>
+&lt;p>Thanks for understanding. Onward!&lt;/p></content:encoded></item><item><title>Mac OS X Audio in node.js, and a Chromecast</title><link>https://fardog.io/blog/2014/09/26/mac-os-x-audio-in-node.js-and-a-chromecast/</link><pubDate>Fri, 26 Sep 2014 12:05:00 -0700</pubDate><guid>https://fardog.io/blog/2014/09/26/mac-os-x-audio-in-node.js-and-a-chromecast/</guid><content type="html">&lt;p>A few weeks ago, a simple idea formed: why can&amp;rsquo;t you easily stream system audio to a Chromecast? Sure, if your chosen listening application already supports it, you&amp;rsquo;re set. Otherwise you&amp;rsquo;re left out.&lt;/p>
+&lt;p>A solution seemed simple: node.js has &lt;a href="http://nodejs.org/api/stream.html">streams&lt;/a>, and they&amp;rsquo;re awesome! Take system audio, pipe it to an encoder, pipe that to an HTTP response, and tell the Chromecast where to look. Easy!&lt;/p>
+&lt;p>Except, there&amp;rsquo;s no node.js package that supports OS X audio input, except via &lt;a href="https://www.npmjs.org/package/node-core-audio">bindings to another library&lt;/a>. I wanted to write something that was only dependent on the OS X core frameworks.&lt;/p>
+&lt;h2 id="hello-osx-audioosx-audio">Hello &lt;a href="https://www.npmjs.org/package/osx-audio">osx-audio&lt;/a>&lt;/h2>
+&lt;p>A few weeks later, and there&amp;rsquo;s a solution (writing your first node.js native binding is hard!). &lt;a href="https://www.npmjs.org/package/osx-audio">osx-audio&lt;/a> will allow you to get a readable stream from your currently-selected OS X audio input. It only depends on the frameworks available in Mac OS X, so if you can compile any other native node.js extension, you should be able to install it!&lt;/p>
+&lt;p>You should check it out if audio input&amp;rsquo;s the thing you need. Output will be implemented in the future too!&lt;/p>
+&lt;h2 id="how-about-the-chromecast">How about the Chromecast?&lt;/h2>
+&lt;p>&lt;a href="https://www.npmjs.org/package/chromecast-osx-audio">Solved&lt;/a>, but it still requires an additional piece of software. You see, OS X doesn&amp;rsquo;t provide native methods for accessing system audio (the output of the system mixer) so anything that&amp;rsquo;s not an input (like the microphone) is inaccessible. However, there&amp;rsquo;s a open source utility called &lt;a href="http://rogueamoeba.com/freebies/soundflower/">Soundflower&lt;/a> that solves this for you. If you&amp;rsquo;re unfamiliar with it, here&amp;rsquo;s a step by step to get it working:&lt;/p>
+&lt;ol>
+&lt;li>Install &lt;a href="http://rogueamoeba.com/freebies/soundflower/">Soundflower&lt;/a>. Reboot.&lt;/li>
+&lt;li>Install &lt;a href="https://www.npmjs.org/package/chromecast-osx-audio">chromecast-osx-audio&lt;/a> globally, with an &lt;code>npm install -g chromecast-osx-audio&lt;/code>&lt;/li>
+&lt;li>Open your &lt;em>System Preferences -&amp;gt; Sound&lt;/em> preference pane, and select &amp;ldquo;Soundflower (2ch)&amp;rdquo; as both your input and output.&lt;/li>
+&lt;li>Run &lt;code>chromecast&lt;/code> in your terminal. It will find the first-available Chromecast, and stream your system audio to it.&lt;/li>
+&lt;li>Play your music/audio as normal. There is a 5–15	second delay due to how the Chromecast buffers.&lt;/li>
+&lt;li>Enjoy&lt;/li>
+&lt;/ol>
+&lt;h2 id="ok-great-i-dont-have-a-chromecast">Ok, great. I don&amp;rsquo;t have a Chromecast&lt;/h2>
+&lt;p>They are pretty cheap! But, I wrote a generic module that just exposes a live mp3 stream of your system audio. It&amp;rsquo;s called &lt;a href="https://www.npmjs.org/package/webcast-osx-audio">webcast-osx-audio&lt;/a>, and it&amp;rsquo;s what &lt;a href="https://www.npmjs.org/package/chromecast-osx-audio">chromecast-osx-audio&lt;/a> relies on for it&amp;rsquo;s streaming component. You can install it just as above, and it exposes a &lt;code>webcast-audio&lt;/code> command when installed globally. Connect to &lt;em>http://your_local_ip:3000/stream.mp3&lt;/em> and you&amp;rsquo;re good to go!&lt;/p>
+&lt;h2 id="whats-next">What&amp;rsquo;s next?&lt;/h2>
+&lt;ul>
+&lt;li>I still need to write the &lt;!-- raw HTML omitted -->input-side&lt;!-- raw HTML omitted --> output-side of &lt;a href="https://www.npmjs.org/package/osx-audio">osx-audio&lt;/a> before I consider it complete. And tests!&lt;/li>
+&lt;li>&lt;a href="https://www.npmjs.org/package/chromecast-osx-audio">chromecast-osx-audio&lt;/a> will only stream to the first Chromecast it finds. I plan to implement an interface that allows you to select which you&amp;rsquo;d like to stream to if multiple are found. That&amp;rsquo;ll be in before v1.0.&lt;/li>
+&lt;/ul>
+&lt;p>Note that both modules command-line interfaces have usage information! Just run &lt;code>chromecast --help&lt;/code> or &lt;code>webcast-audio --help&lt;/code> to see what options are available!&lt;/p>
+&lt;p>&lt;em>Note: What we go through to solve problems, eh? All of this still assumes some familiarity with node.js—this is definitely not a solution for the non-technical. Maybe someday!&lt;/em>&lt;/p></content:encoded></item><item><title>XKCD Password Generation for Node.js</title><link>https://fardog.io/blog/2014/04/07/xkcd-password-generation-for-node.js/</link><pubDate>Mon, 07 Apr 2014 17:30:00 -0700</pubDate><guid>https://fardog.io/blog/2014/04/07/xkcd-password-generation-for-node.js/</guid><content type="html">&lt;p>I created an &lt;a href="http://github.com/fardog/node-xkcd-password/">XKCD-style password generator for Node.js&lt;/a> (see &lt;a href="http://xkcd.com/936/">this comic&lt;/a> for reference). You can find it &lt;a href="http://github.com/fardog/node-xkcd-password/">on my github&lt;/a> or do an &lt;code>npm install -g xkcd-password&lt;/code> to get it on your path.&lt;/p>
+&lt;p>There are others available, but most don&amp;rsquo;t include a CLI, or easily configurable options. Many use &lt;a href="https://github.com/rstacruz/passwordgen.js/blob/master/lib/words.js">small word lists&lt;/a>. So I made one that uses a sufficiently large list—113,809 words provided by the &lt;a href="http://icon.shef.ac.uk/Moby/">Moby Project&lt;/a>—and both a simple commandline utility and a module that you can use in your Node.js apps. If you don&amp;rsquo;t like my wordlist, you can substitute your own easily. Everything is non-blocking, so you shouldn&amp;rsquo;t find it bogging down your stuff.&lt;/p>
+&lt;p>Send &lt;a href="http://github.com/fardog/node-xkcd-password/issues">issues&lt;/a> or pull requests!&lt;/p>
+&lt;pre tabindex="0">&lt;code>Usage: xkcd-password [options]
+
+Options:
+ -n, --numWords The number of words to generate for your password. [4]
+ -m, --minLength Minimum lengh of words chosen for the generated password. [5]
+ -x, --maxLength Maximum length of words chosen for the generated password. [8]
+ -f, --wordFile The newline-delimited list of words to be used as the source.
+ -s, --separator The separator character to use between words when output to the console. [ ]
+ --version print version and exit
+&lt;/code>&lt;/pre></content:encoded></item><item><title>primes, A Twitter-backed prime number generator</title><link>https://fardog.io/blog/2013/10/15/primes-a-twitter-backed-prime-number-generator/</link><pubDate>Tue, 15 Oct 2013 15:44:00 -0700</pubDate><guid>https://fardog.io/blog/2013/10/15/primes-a-twitter-backed-prime-number-generator/</guid><content type="html">&lt;p>&lt;a href="https://twitter.com/_primes_">&lt;img src="https://fardog.io/img/blog/2013-10-16_primes.png" alt="primes Twitter avatar">&lt;/a>&lt;/p>
+&lt;p>A few weeks ago I started &lt;a href="https://twitter.com/_primes_">&lt;em>primes&lt;/em>&lt;/a>, a Twitter-backed &lt;a href="http://en.wikipedia.org/wiki/Prime_number">prime number&lt;/a> generator. When I say &amp;ldquo;Twitter-backed&amp;rdquo;, I mean the bot that updates the account has very little idea of state: it only knows the last number it calculated because Twitter provides it. The program flow is this:&lt;/p>
+&lt;ol>
+&lt;li>Start up&lt;/li>
+&lt;li>Fetch the most recently calculated prime from the Twitter feed.&lt;/li>
+&lt;li>Calculate the next prime.&lt;/li>
+&lt;li>Post if an hour has passed since the last posting. Wait if not, then post.&lt;/li>
+&lt;li>Steps 2–4 forever.&lt;/li>
+&lt;/ol>
+&lt;p>Technically steps two and four are merged after the first posting, since Twitter returns your latest tweet as a response when you post it. You can &lt;a href="http://github.com/fardog/_primes_">view the code&lt;/a> on Github. It&amp;rsquo;s written in CoffeeScript on Node.js, and uses &lt;a href="https://github.com/laverdet/node-fibers">node-fibers&lt;/a> since I orginally built the prime number algorithm as a &lt;a href="http://en.wikipedia.org/wiki/Generator_(computer_programming)">generator&lt;/a>, but it&amp;rsquo;s unnecessary in this case.&lt;/p>
+&lt;p>The only state the application maintains is an internal &amp;ldquo;last posting&amp;rdquo; date, just as a fail-safe if the server it runs on spontaneously changed time: I didn&amp;rsquo;t want it accidentally posting too quickly.&lt;/p>
+&lt;p>You should give it a follow if you love primes! Or maybe &lt;a href="http://github.com/fardog/_primes_">fork the code&lt;/a> and make some new Twitter bots? I&amp;rsquo;d love to see some.&lt;/p></content:encoded></item><item><title>An Addendum to "Fixing a Famicom Disk System"</title><link>https://fardog.io/blog/2013/10/08/an-addendum-to-fixing-a-famicom-disk-system/</link><pubDate>Tue, 08 Oct 2013 09:25:00 -0700</pubDate><guid>https://fardog.io/blog/2013/10/08/an-addendum-to-fixing-a-famicom-disk-system/</guid><content type="html">&lt;p>My old &lt;a href="http://en.wikipedia.org/wiki/Twin_Famicom">Sharp Twin Famicom&lt;/a> threw the belt again, as they do. While replacing it, I wanted to make an update to &lt;a href="http://milkandtang.com/blog/2010/03/21/fixing-a-famicom-disk-system/">my previous blog post&lt;/a> about &lt;a href="http://en.wikipedia.org/wiki/Family_Computer_Disk_System">FDS&lt;/a> belts, since my old article wasn&amp;rsquo;t as helpful as I&amp;rsquo;d have liked when I actually tried to use it.&lt;/p>
+&lt;p>First, there&amp;rsquo;s now a &lt;a href="http://www.famicomdisksystem.com/tutorials/fds-repair-mod/belt-replacement-adjustment/">far better repair article&lt;/a> available at the &lt;a href="http://www.famicomdisksystem.com/">Famicom Disk System&lt;/a> website. This goes through the whole process of belt replacement as well as aligning the spindle hub, which I had a lot of problems with this time.&lt;/p>
+&lt;p>I&amp;rsquo;d recommend following &lt;a href="http://www.famicomdisksystem.com/tutorials/fds-repair-mod/belt-replacement-adjustment/">their article&lt;/a> over mine; it does a far better job of explaining how to align the spindle hub. The only addition I would make is that I still had to make small 5–10° adjustments both forward and backward to the spindle hub before everything worked.&lt;/p></content:encoded></item><item><title>Getting WiFi on a Headless Raspberry Pi</title><link>https://fardog.io/blog/2013/08/27/getting-wifi-on-a-headless-raspberry-pi/</link><pubDate>Tue, 27 Aug 2013 11:38:00 -0700</pubDate><guid>https://fardog.io/blog/2013/08/27/getting-wifi-on-a-headless-raspberry-pi/</guid><content type="html">&lt;p>One of the final steps in a to-be-announced project involved getting a headless &lt;a href="http://www.raspberrypi.org/">Raspberry Pi&lt;/a> up on WiFi at boot time—which turned out to be a little more challenging that first expected. Not because it was particularly difficult, but because the documentation was poor.&lt;/p>
+&lt;p>Below are my full configuration files that were required. The WiFi USB dongle itself was an &lt;a href="https://www.adafruit.com/products/1030">Adafruit USB WiFi with Antenna&lt;/a> which is actually a B-LINK BBL-LW05-AR5; notable becuase of its sizeable antenna, and for working with the latest Raspbian Wheezy distribution.&lt;/p>
+&lt;p>Prior to getting started, make sure your Raspbian is up to date by issuing:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt-get update
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt-get upgrade
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>At that point, reboot and connect your WiFi module to USB. Then, edit your config. It&amp;rsquo;s worth noting that I have an interface &lt;code>eth0&lt;/code> which is set to DHCP, and my &lt;code>wlan0&lt;/code> interface which has a static IP. This allows me to use ethernet as a failsafe if something goes wrong.&lt;/p>
+&lt;p>First, in the file &lt;code>/etc/network/interfaces&lt;/code>:&lt;/p>
+&lt;pre tabindex="0">&lt;code>auto lo
+
+iface lo inet loopback
+iface eth0 inet dhcp
+
+allow-hotplug wlan0
+iface wlan0 inet manual
+wpa-roam /etc/wpa_supplicant/wpa_supplicant.conf
+
+iface YOUR_WIFI_ID inet static
+address 192.168.1.5
+netmask 255.255.255.0
+gateway 192.168.1.1
+
+# iface default inet dhcp
+&lt;/code>&lt;/pre>&lt;p>This is setting up your ethernet to dhcp, your wifi to manual, sourcing the &lt;code>wpa_supplicant.conf&lt;/code> file, and then assigning your named Wireless connection to a static IP. Note that &lt;em>YOUR_WIFI_ID&lt;/em> above should be an identifier you make up yourself. For example, mine is &lt;em>NORTH_WPA&lt;/em>.&lt;/p>
+&lt;p>Now, configure the network information in &lt;code>/etc/wpa_supplicant/wpa_supplicant.conf&lt;/code>:&lt;/p>
+&lt;pre tabindex="0">&lt;code>ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+# update_config=1
+network={
+	ssid=&amp;#34;Your SSID Name&amp;#34;
+	proto=RSN
+	key_mgmt=WPA-PSK
+	pairwise=CCMP TKIP
+	group=CCMP TKIP
+	psk=&amp;#34;Your WPA Password&amp;#34;
+	id_str=&amp;#34;YOUR_WIFI_ID&amp;#34;
+}
+&lt;/code>&lt;/pre>&lt;p>Again, note that &lt;em>YOUR_WIFI_ID&lt;/em> is present.&lt;/p>
+&lt;p>At that point, reboot. Assuming you&amp;rsquo;ve got all your information correct (and that your key management and etc. match mine) you&amp;rsquo;ll be connected automatically at boot!&lt;/p>
+&lt;p>Much of the information in this post was gleaned from &lt;a href="http://pingbin.com/2012/12/setup-wifi-raspberry-pi/">this thread&lt;/a>. The original poster&amp;rsquo;s information didn&amp;rsquo;t work for me, but I was able to assemble a working config from various commenters&amp;rsquo; information.&lt;/p>
+&lt;h4 id="update-2014-01-06">UPDATE 2014-01-06&lt;/h4>
+&lt;p>When I switched from the older-style Airport Extreme base stations to the new &amp;ldquo;tower&amp;rdquo;-shaped base stations, I was having issues with the WiFi disconnected and then not reconnecting without a reboot. To resolve this, I followed one of the answers in &lt;a href="http://raspberrypi.stackexchange.com/questions/4120/how-to-automatically-reconnect-wifi">this stack exchange post&lt;/a>, reproduced below for convenience. This is originally from the user &lt;a href="http://raspberrypi.stackexchange.com/users/6365/andaluz">AndaluZ&lt;/a>:&lt;/p>
+&lt;blockquote>
+&lt;p>Well, there is a very simple solution:&lt;/p>
+&lt;ol>
+&lt;li>Go to &lt;code>/etc/ifplugd/action.d/&lt;/code> and rename the &lt;code>ifupdown&lt;/code> file to &lt;code>ifupdown.original&lt;/code>&lt;/li>
+&lt;li>Then do: &lt;code>cp /etc/wpa_supplicant/ifupdown.sh ./ifupdown&lt;/code>&lt;/li>
+&lt;li>Finally: &lt;code>sudo reboot&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;p>That&amp;rsquo;s all. Test this by turning off/on your AP; you should see that your Raspberry Pi properly reconnects.&lt;/p>
+&lt;/blockquote></content:encoded></item><item><title>vim, fish shell, and vim-sensible</title><link>https://fardog.io/blog/2013/03/22/vim-fish-shell-and-vim-sensible/</link><pubDate>Fri, 22 Mar 2013 00:07:00 -0700</pubDate><guid>https://fardog.io/blog/2013/03/22/vim-fish-shell-and-vim-sensible/</guid><content type="html">&lt;p>Part of this evening was spent making &lt;code>vim&lt;/code> workable for me, the first step was getting some sane defaults. &lt;a href="https://github.com/tpope/vim-sensible">vim-sensible&lt;/a> was recommended in several places (as was Tim Pope&amp;rsquo;s also excellent &lt;a href="https://github.com/tpope/vim-pathogen">pathogen&lt;/a>), but immediately after installation I was getting an error:&lt;/p>
+&lt;pre tabindex="0">&lt;code>Error detected while processing ~/.vim/bundle/vim-sensible/plugin/sensible.vim:
+line 75:
+E484: Can&amp;#39;t open file /tmp/v1NmKg8/0
+Press ENTER or type command to continue
+&lt;/code>&lt;/pre>&lt;p>Frustratingly, line 75 held no obvious suggestions. After some time troubleshooting, I found it worked fine if I wasn&amp;rsquo;t using &lt;a href="http://www.ridiculousfish.com/shell/">&lt;code>fish&lt;/code> shell&lt;/a>.&lt;/p>
+&lt;p>I&amp;rsquo;m not positive why this is the case, but you can fix the error by adding the following line to your &lt;code>.vimrc&lt;/code>.&lt;/p>
+&lt;pre tabindex="0">&lt;code>set shell=/bin/sh
+&lt;/code>&lt;/pre>&lt;p>On next launch of &lt;code>vim&lt;/code>, all is resolved.&lt;/p></content:encoded></item><item><title>Using Caps-Lock as a Compose key in XFCE4</title><link>https://fardog.io/blog/2013/02/22/using-caps-lock-as-a-compose-key-in-xfce4/</link><pubDate>Fri, 22 Feb 2013 14:03:00 -0700</pubDate><guid>https://fardog.io/blog/2013/02/22/using-caps-lock-as-a-compose-key-in-xfce4/</guid><content type="html">&lt;p>Why not take that useless key, and make it useful? The &lt;a href="http://en.wikipedia.org/wiki/Compose_key">Compose Key&lt;/a>—formerly present on many &lt;a href="https://www.google.com/search?q=sun+keyboard&amp;amp;hl=en&amp;amp;tbm=isch&amp;amp;tbo=u">Unix keyboards&lt;/a> of old—isn&amp;rsquo;t present on most modern laptops.&lt;/p>
+&lt;p>In &lt;a href="http://www.xfce.org/">XFCE&lt;/a>, this is a little more cumbersome than Gnome, since there isn&amp;rsquo;t a graphical interface for &lt;code>setxkbmap&lt;/code>, but these two commands will swap the Caps lock for a compose key:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">setxkbmap -option ctrl:nocaps &lt;span class="c1"># disables caps lock&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">setxkbmap -option compose:caps &lt;span class="c1"># sets caps key to compose&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>To make this active at login, you can add two entries to your &amp;ldquo;Session and Startup&amp;rdquo; -&amp;gt; &amp;ldquo;Application Autostart&amp;rdquo; available under the &lt;strong>Settings Manager&lt;/strong>. I&amp;rsquo;ve named mine &amp;ldquo;compose1&amp;rdquo; and &amp;ldquo;compose2&amp;rdquo;, each containing one of the above commands. Now enjoy all those &lt;a href="http://en.wikipedia.org/wiki/Dash#En_dash">en-dashes&lt;/a> you&amp;rsquo;ll surely be typing.&lt;/p></content:encoded></item><item><title>Making noise in Python</title><link>https://fardog.io/blog/2013/02/16/making-noise-in-python/</link><pubDate>Sat, 16 Feb 2013 14:44:00 -0700</pubDate><guid>https://fardog.io/blog/2013/02/16/making-noise-in-python/</guid><content type="html">&lt;p>I&amp;rsquo;ve been working with &lt;a href="https://github.com/bastibe/PyAudio">PyAudio&lt;/a> lately, on a project to synchronize sound streams across multiple devices. Nothing to say on that front yet, but I do have a nice snippet for programatically generating a tone:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">math&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">numpy&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">pyaudio&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">sine&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">frequency&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">length&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">rate&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">length&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">int&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">length&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">rate&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">factor&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">float&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">frequency&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">math&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">pi&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">/&lt;/span> &lt;span class="n">rate&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">numpy&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">sin&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">numpy&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">arange&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">length&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">factor&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">play_tone&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">stream&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">frequency&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">440&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">length&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">rate&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">44100&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">chunks&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">chunks&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">append&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">sine&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">frequency&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">length&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">rate&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">chunk&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">numpy&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">concatenate&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">chunks&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="mf">0.25&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">stream&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">write&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">chunk&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">astype&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">numpy&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">float32&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">tostring&lt;/span>&lt;span class="p">())&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="vm">__name__&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="s1">&amp;#39;__main__&amp;#39;&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">p&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">pyaudio&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">PyAudio&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">stream&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">p&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">open&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">format&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">pyaudio&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">paFloat32&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">channels&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">rate&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">44100&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">output&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">play_tone&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">stream&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">stream&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">close&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">p&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">terminate&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>This simply generates a sine wave of a specified frequency and length, and writes it out to an already open PyAudio stream. A pleasant tone is produced. It&amp;rsquo;s not too fancy, but it beats loading a wave file from disk.&lt;/p></content:encoded></item><item><title>Simple 'workon' Command for fish shell</title><link>https://fardog.io/blog/2013/02/15/simple-workon-command-for-fish-shell/</link><pubDate>Fri, 15 Feb 2013 00:15:00 -0700</pubDate><guid>https://fardog.io/blog/2013/02/15/simple-workon-command-for-fish-shell/</guid><content type="html">&lt;p>I put together a quick &lt;code>workon&lt;/code> clone for the &lt;a href="http://www.ridiculousfish.com/shell/">fish&amp;rsquo;s fish shell&lt;/a>. Definitely nothing as complete or useful as &lt;a href="http://www.doughellmann.com/projects/virtualenvwrapper/">virtualenvwrapper&lt;/a>, but it fixes my need: switching simply between virtualenv&amp;rsquo;s and projects.&lt;/p>
+&lt;h2 id="installation">Installation&lt;/h2>
+&lt;p>First, create a function file &lt;code>~/.config/fish/functions/workon.fish&lt;/code> with this defintion:&lt;/p>
+&lt;pre tabindex="0">&lt;code>function workon -d &amp;#34;Activate virtual environment in $WORKON_HOME&amp;#34;
+ set tgt {$WORKON_HOME}/$argv[1]
+ if [ -d $tgt ]
+ cd $tgt
+
+ # deactivate any active venv, and activate the target
+ # this needs to be rewritten with the `type` fish command
+ if test -n &amp;#34;$VIRTUAL_ENV&amp;#34;
+ deactivate
+ end
+
+ . bin/activate.fish
+
+ if test (count $argv) -gt 1
+ if test $argv[2] = &amp;#34;open&amp;#34;
+ set -gx WORKON_OPEN_SUBLIME True
+ end
+ else
+ set -ge WORKON_OPEN_SUBLIME
+ end
+
+ # open sublime text
+ if test -n &amp;#34;$WORKON_OPEN_SUBLIME&amp;#34;
+ open {$WORKON_SRC_DIR}/{$argv[1]}.sublime-project
+ end
+
+ # change to working dir
+ if test -n &amp;#34;$WORKON_SRC_DIR&amp;#34;
+ cd {$WORKON_SRC_DIR}/{$argv[1]}
+ end
+ else
+ echo &amp;#34;$tgt not found&amp;#34;
+ end
+end
+
+complete -c workon -a &amp;#34;(cd $WORKON_HOME; ls -d *)&amp;#34;
+&lt;/code>&lt;/pre>&lt;p>Then, define the necessary environment variables in your &lt;code>~/.config/fish/config.fish&lt;/code> file:&lt;/p>
+&lt;pre tabindex="0">&lt;code>set -gx WORKON_HOME ~/Documents/virtual_environments
+set -gx WORKON_SRC_DIR ~/Documents/code
+set -gx WORKON_OPEN_SUBLIME True
+&lt;/code>&lt;/pre>&lt;p>As you might imagine, this is set up for how I work, but it wouldn&amp;rsquo;t be difficult to customize for your needs. Since this uses the virtualenv-provided &lt;code>activate.fish&lt;/code> script, the &lt;code>deactivate&lt;/code> command works as expected, as well as any other usual functions.&lt;/p></content:encoded></item><item><title>Fixing a Famicom Disk System</title><link>https://fardog.io/blog/2010/03/21/fixing-a-famicom-disk-system/</link><pubDate>Sun, 21 Mar 2010 12:00:00 -0700</pubDate><guid>https://fardog.io/blog/2010/03/21/fixing-a-famicom-disk-system/</guid><content type="html">&lt;p>&lt;em>&lt;strong>Update 2013-10-08:&lt;/strong> There is now a
+&lt;a href="http://www.famicomdisksystem.com/tutorials/fds-repair-mod/belt-replacement-adjustment/">great article available&lt;/a>
+at the &lt;a href="http://www.famicomdisksystem.com/">Famicom Disk System&lt;/a> site, which I&amp;rsquo;d
+highly recommend. See
+&lt;a href="http://milkandtang.com/blog/2013/10/08/an-addendum-to-fixing-a-famicom-disk-system/">my addendum&lt;/a>
+for more info.&lt;/em>&lt;/p>
+&lt;p>This isn’t the usual fare from this blog, but this is good information that took
+me quite some time to find. I’m also an avid video game collector, and i
+recently picked up a &lt;a href="http://en.wikipedia.org/wiki/Twin_Famicom">Sharp Twin Famicom&lt;/a> and a few &lt;a href="http://en.wikipedia.org/wiki/Family_Computer_Disk_System">Famicom Disk System&lt;/a>
+games; notably Kid Icarus and the infamous &lt;a href="http://en.wikipedia.org/wiki/Doki_Doki_Panic">Doki Doki Panic!&lt;/a>, which later
+became the USA/World &lt;em>Super Mario Brothers 2&lt;/em>.&lt;/p>
+&lt;p>Anyhow, my Twin Famicom came with Super Mario Brothers 2 (known as the Lost
+Worlds outside of Japan) which works perfectly, but the game on the back (some
+sort of Tennis game) wouldn’t ever work. I didn’t think much of it, until both
+of my new games didn’t work either. I would receive an Err.21 or Err.22 message
+each time I attempted to load the games. The drive would attempt to read, come
+to a full stop (&lt;strong>note:&lt;/strong> this is important!) and then attempt to read again,
+shortly before throwing the error message.&lt;/p>
+&lt;p>So, my Twin Famicom came with a broken belt, which is very common, and the
+seller shipped the system with a new belt that would have to be &lt;a href="http://www.pinkgorillagames.com/retro_reviews/simply_ness_guide_to_famicom_d.php">installed&lt;/a>.
+This part went swell, but apparently there’s more to be done. There’s a lot of
+&lt;a href="http://www.digitpress.com/forum/showthread.php?t=140944">random forum posts&lt;/a> out there, telling you to adjust the potentiometer on
+the motor to adjust the drive speed, or the &lt;a href="http://www.famicomworld.com/forum/index.php?topic=392.0">read head&lt;/a> on the disk drive.
+Adjusting the pot was simple, but didn’t give me any results, and the read head
+is factory set (and thoroughly waxed/glued in) and seemed a little too dangerous
+to adjust, so I didn’t want to try.&lt;/p>
+&lt;p>I found a lot of passing mentions to aligning the spindle, but no real good
+information on how to do so, until I came across this &lt;a href="http://digitpress.com/forum/showpost.php?p=364900&amp;amp;postcount=97">forum post&lt;/a> by “Zach”:&lt;/p>
+&lt;blockquote>
+&lt;p>The tough part (for me, at least) comes when you have to phyiscally align the
+drive. The first time I replaced a belt, the drive worked (without any
+alignment) for most of my games, but not some others.&lt;br>
+[&amp;hellip;]&lt;br>
+So what you have to do is reach in from the front of the drive, loosen the
+SMALL black allen head set screw that holds the grey metal block to the
+spindle, then rotate the big gear with the belt slot around until it clicks
+(you’ll see the spring-loaded piece snap into place, dropping down a steep
+notch). At that point, you have to rotate the big gear another quarter turn.
+This is the position where you want the assembly to be when you have the
+little, black set screw pointing straight out the front of the drive, so line
+up the smal, grey metal disk pickup block (which should be free to spin around
+the spindle since the set screw is loose) , and tighten the set screw with
+your little allen wrench. Try it out and see if more disks are loading (or see
+if you’ve messed up the drive even more!)&lt;/p>
+&lt;/blockquote>
+&lt;p>I followed his instructions by performing the following:&lt;/p>
+&lt;ol>
+&lt;li>Remove the FDS drive from the system, and disassemble the following:
+&lt;ul>
+&lt;li>Front faceplate and drive door&lt;/li>
+&lt;li>Bottom Plate&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Look inside the drive from the front (where the drive door was), and spin
+the spindle (from the gear at the bottom of the drive) until the small allen
+screw faces you.&lt;/li>
+&lt;li>Loosen the screw, and keep the allen key in the screw to hold the spindle
+still.&lt;/li>
+&lt;li>Spin the drive pulley clockwise until you hear a small click (clockwise
+should be observed by looking at the bottom of the drive. The spindle (if
+you were looking straight down at the top, would be moving
+counter-clockwise).&lt;/li>
+&lt;li>Once you hear the small click, spin one quarter turn clockwise, and tighten
+down the spindle (allen screw).&lt;/li>
+&lt;/ol>
+&lt;p>I half reassembled things to see if the trick worked, and I was getting a new
+behavior! Now, the drive would spin up, attempt to read, and go to a black
+screen! The drive would continue spinning (and wouldn’t come to a full stop mid
+read, very important!), and then eventually the Famicom BIOS screen would
+return, with Err.27. I was on the way!&lt;/p>
+&lt;p>From here, I did the following:&lt;/p>
+&lt;ol>
+&lt;li>Loosen spindle, and turn the pulley 5 degrees or so clockwise, then
+retighten the spindle.&lt;/li>
+&lt;li>Try a disk again.&lt;/li>
+&lt;/ol>
+&lt;p>I repeated those steps until the drive began exhibiting somewhat similar
+behavior as before (coming to a full stop during the read operation). Then I did
+the same, only moving 5 degrees counter-clockwise instead; and you know what?&lt;/p>
+&lt;p>&lt;strong>IT WORKED.&lt;/strong>&lt;/p>
+&lt;p>Stupid thing loaded. It turns out that the systems are aware of the spindle
+position, and if it isn’t correct it will cause them to read the header data
+incorrectly, causing the games to fail. Afterwards, I reassembled the system and
+all of my games have been loading flawlessly.&lt;/p>
+&lt;p>Someday in the future maybe I’ll turn this into a guide with pretty pictures and
+everything, but for now hopefully this’ll help someone get their FDS working.&lt;/p>
+&lt;p>For reference, here’s a list of FDS Error Codes:&lt;/p>
+&lt;blockquote>
+&lt;p>ERROR 01 Disk not correctly inserted. (No Disk Card)&lt;br>
+ERROR 02 Battery error. Check power adaptor or batteries.&lt;br>
+ERROR 03 Broken prong on disk card.&lt;br>
+ERROR 04 Wrong gamemaker ID.&lt;br>
+ERROR 05 Wrong game name.&lt;br>
+ERROR 06 Wrong version name.&lt;br>
+ERROR 07 A, B side error (eject disk, turn and insert disk again).&lt;br>
+ERROR 08 Disk #1 wrong.&lt;br>
+ERROR 09 Disk #2 wrong.&lt;br>
+ERROR 10 Disk #3 wrong.&lt;br>
+ERROR 20 screen data differs.&lt;br>
+ERROR 21 Disk header block(&lt;em>NINTENDO-HVC&lt;/em>) part is wrong.&lt;br>
+ERROR 22 Disk header block reecognition #$01 isn’t read and cant be ignored.&lt;br>
+ERROR 23 File recognition block #$02 can’t read for several reasons and cant
+be ignored.&lt;br>
+ERROR 24 File header block recognition #$03 can’t read and cant be ignored.&lt;br>
+ERROR 25 File data block recognition #$04 can’t read and cant be ignored.&lt;br>
+ERROR 26 Can’t save properly to disk card.&lt;br>
+ERROR 27 Block end mark seen and ends prematurely.&lt;br>
+ERROR 28 The disk unit and the same period can’t take it.&lt;br>
+ERROR 29 The disk unit and the same period can’t take it.&lt;br>
+ERROR 30 Disk card too full to save.&lt;br>
+ERROR 31 Data number of a disk card doesn’t match up.&lt;/p>
+&lt;/blockquote>
+&lt;p>Then, a commenter named &amp;ldquo;Jon&amp;rdquo; posted the following:&lt;/p>
+&lt;blockquote>
+&lt;p>Thanks for posting this! When I got a “broken” FDS recently this helped direct
+me towards the cure.&lt;/p>
+&lt;p>I did find a much more direct &amp;amp; accurate way to align these though. It can be
+done during belt replacement &amp;amp; should eliminate the need for fine-tuning
+afterward.&lt;/p>
+&lt;p>How? When the gear assembly retainer (triangular piece) is removed for belt
+replacement, simply point the rectangular notch in the large white gear to the
+largest notch in the metal cam below it.&lt;/p>
+&lt;p>Maintain those positions during reinstall &amp;amp; you should be good to go. No need
+to hunt for a hex key (1.5mm BTW) to adjust the disk catch on the spindle &amp;amp;
+all positioning remains at original factory settings.&lt;/p>
+&lt;/blockquote></content:encoded></item></channel></rss>
