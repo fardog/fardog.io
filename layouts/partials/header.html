@@ -1,7 +1,13 @@
 <header>
-  {{ if not .IsHome }}
-  <nav><a title="Return to the home page" href="{{ ref . "/" }}">&larr; Home</a></nav>
-  {{ end }}
+  {{ if not .IsHome -}}
+  {{- with .Parent -}}
+  {{ $title := .Title }}
+  {{- if .IsHome -}}
+  {{ $title = "Home" }}
+  {{- end -}}
+  <nav><a title="Return to {{ $title }}" href="{{ .RelPermalink }}">&larr; {{ $title }}</a></nav>
+  {{- end -}}
+  {{- end }}
   <h1>{{ .Title }}</h1>
   {{ if .IsHome }}
   {{ partial "nav.html" . }}
