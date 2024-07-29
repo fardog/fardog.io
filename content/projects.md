@@ -57,8 +57,8 @@ In advance of the inevitable shutdown, the bot was ported to a website:
 [primes.today]: https://primes.today
 [primes-twitter]: https://twitter.com/_primes_
 [primes-mastodon]: https://botsin.space/@primes
-[primes-original]: https://github.com/fardog/primebot
-[primes-github]: https://github.com/fardog/_primes_
+[primes-original]: https://github.com/fardog/_primes_
+[primes-github]: https://github.com/primes-today/primebot
 
 ## frock
 
