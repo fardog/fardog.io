@@ -32,13 +32,13 @@ version of Windows.
 
 - **What?** A bot that posts prime numbers, sequentially; originally a Twitter
   bot, now elsewhere
-- **Where?** [primes.today][] and [botsin.space/@primes][primes-mastodon]
+- **Where?** [primes.today][]
 - **Why?** Art?
 
 The [original code][primes-original] for _primes_ is some of the worst I've
 written; it was a CoffeeScript project, written before I decided to like
 Javascript. It was also the first-ish thing I wrote for Node.js. But: one of the
-most successful? 
+most successful?
 
 (I later re-wrote it to run all bots from the [same codebase][primes-github].)
 
