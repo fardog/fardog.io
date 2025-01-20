@@ -39,8 +39,8 @@ robotsBlockSourceUrl   = "https://raw.githubusercontent.com/ai-robots-txt/ai.rob
   name = "Nathan Wittstock"
 
   [params.contentLicense]
-  text = "CC BY 4.0"
-  url = "https://creativecommons.org/licenses/by/4.0/"
+  text = "CC BY-NC 4.0"
+  url = "https://creativecommons.org/licenses/by-nc/4.0/"
 
   [params.codeLicense]
   text = "MIT"
