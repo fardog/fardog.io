@@ -9,7 +9,7 @@ import math import numpy import pyaudio def sine(frequency, length, rate): lengt
 Installation First, create a function file ~/.config/fish/functions/workon.fish with this defintion:
 function workon -d "Activate virtual environment in $WORKON_HOME" set tgt {$WORKON_HOME}/$argv[1] if [ -d $tgt ] cd $tgt # deactivate any active venv, and activate the target # this needs to be rewritten with the `type` fish command if test -n "$VIRTUAL_ENV" deactivate end . <a title="Read full article" href=/blog/2013/02/15/simple-workon-command-for-fish-shell/>&rarr;</a></p></main><footer role=contentinfo>© 2024 Nathan Wittstock
 —
-Content: <a href=https://creativecommons.org/licenses/by/4.0/ target=_blank>CC BY 4.0</a>,
+Content: <a href=https://creativecommons.org/licenses/by-nc/4.0/ target=_blank>CC BY-NC 4.0</a>,
 Code: <a href=https://github.com/fardog/fardog.io/blob/master/LICENSE target=_blank>MIT</a>, unless otherwise noted.<p class="f6 fw6 pv0 mv2">View the
 <a href=https://github.com/fardog/fardog.io/ target=_blank>source</a>
 for this site.
