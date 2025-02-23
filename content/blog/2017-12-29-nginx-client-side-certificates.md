@@ -1,6 +1,7 @@
 ---
 title: Client-Side Certificate Authentication with nginx
 date: 2017-12-30T17:20:00-07:00
+lastmod: 2025-02-23T21:42:00-00:00
 categories: [nginx, security]
 ---
 
@@ -46,6 +47,14 @@ using it to ensure only devices I allow may access the application.
 For that reason, this article only covers the "device may access application"
 portion; using this method to do full authentication may be covered in a later
 article.
+
+**Note:** Some folks have [reported][issue-9] that on macOS the certificates
+that are generated will not work properly unless the system openssl is used.
+Ensure you are using `/usr/bin/openssl` when running these commands on macOS.
+Thanks to [@sanssecours][sanssecours] for the tip.
+
+[issue-9]: https://github.com/fardog/fardog.io/issues/9
+[sanssecours]: https://github.com/sanssecours
 
 # Creating the Certificate Authority
 
