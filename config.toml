@@ -1,7 +1,7 @@
 baseURL = "https://fardog.io/"
 languageCode = "en-us"
 title = "fardog.io"
-copyright = "© 2024 Nathan Wittstock"
+copyright = "© 2025 Nathan Wittstock"
 enableRobotsTXT = true
 
 [[menu.main]]

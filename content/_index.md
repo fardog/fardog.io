@@ -1,14 +1,14 @@
 ---
 title: fardog.io
 date: 2017-08-14T21:29:24-07:00
-lastmod: 2024-06-30T09:24:00Z
+lastmod: 2025-11-03T14:22:00Z
 description: The website of Nathan Wittstock.
 ---
 
-Hi. I'm Nathan Wittstock, and you've found my little web page. I'm a software
-engineer. I spend my days at [Airship][ua], working wherever I'm needed. In my
-spare time, some [projects][] have happened. I write Typescript, Go, and Python,
-typically.
+Hi. I'm Nat Wittstock, and you've found my little web page. I'm a
+software engineer. I spend my days at [Airship][ua], working wherever I'm
+needed. In my spare time, some [projects][] have happened. I write Typescript,
+Go, and Python, typically.
 
 If you need to reach me, you can [try these methods][contact].
 
