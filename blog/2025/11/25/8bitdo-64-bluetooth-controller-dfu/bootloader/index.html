@@ -1,0 +1,23 @@
+<!doctype html><html lang=en-us><head><title>8BitDo 64 Bluetooth Controller DFU/Bootloader | fardog.io</title>
+<meta name=generator content="Hugo 0.128.0"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=color-scheme content="dark light"><meta name=author content="Nathan Wittstock"><meta name=description content="Instructions for putting an 8BitDo 64 controller into its DFU/Bootloader mode."><meta name=referrer content="no-referrer"><link rel=canonical href=https://fardog.io/blog/2025/11/25/8bitdo-64-bluetooth-controller-dfu/bootloader/><link rel="shortcut icon" type=image/vnd.microsoft.icon href=/favicon.ico><link rel=stylesheet href=/main.min.9637009c6b01416517e2b0e76a0530c7038e1c72499cd53ae621955c3631a6f5a07d4c5b7de66c4c27dfa27d92de278cc57ac5e5994409027ddc733b09dec622.css integrity="sha512-ljcAnGsBQWUX4rDnagUwxwOOHHJJnNU65iGVXDYxpvWgfUxbfeZsTCffon2S3ieMxXrF5ZlECQJ93HM7Cd7GIg=="><meta itemprop=name content="8BitDo 64 Bluetooth Controller DFU/Bootloader"><meta itemprop=description content="Instructions for putting an 8BitDo 64 controller into its DFU/Bootloader mode."><meta itemprop=datePublished content="2025-11-25T17:37:00+00:00"><meta itemprop=dateModified content="2025-11-25T17:37:00+00:00"><meta itemprop=wordCount content="248"><meta property="og:url" content="https://fardog.io/blog/2025/11/25/8bitdo-64-bluetooth-controller-dfu/bootloader/"><meta property="og:site_name" content="fardog.io"><meta property="og:title" content="8BitDo 64 Bluetooth Controller DFU/Bootloader"><meta property="og:description" content="Instructions for putting an 8BitDo 64 controller into its DFU/Bootloader mode."><meta property="og:locale" content="en_us"><meta property="og:type" content="article"><meta property="article:section" content="blog"><meta property="article:published_time" content="2025-11-25T17:37:00+00:00"><meta property="article:modified_time" content="2025-11-25T17:37:00+00:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="8BitDo 64 Bluetooth Controller DFU/Bootloader"><meta name=twitter:description content="Instructions for putting an 8BitDo 64 controller into its DFU/Bootloader mode."></head><body><header><nav><a title="Return to Blog" href=/blog/>&larr; Blog</a></nav><h1>8BitDo 64 Bluetooth Controller DFU/Bootloader</h1></header><main><p><em>tl;dr:</em> With the controller off, hold <code>L+R</code> and connect it via USB. This is
+different from other controllers, where you hold <code>L(1)+R(1)+Start</code> then connect
+it over USB after a red LED is shown.</p><hr><p>In order to update the 8BitDo 64 controller from Linux, you first need to place
+it into its DFU mode, booting it into its bootloader. For most 8BitDo
+controllers, it&rsquo;s said to hold <code>L(1)+R(1)+Start</code> for 3 seconds, wait for the red
+LED to be shown, then connect over USB. That does not seem to work with the
+8BitDo 64. However following the FAQ on their <a href=https://app.8bitdo.com/Ultimate-Software-V2/>&ldquo;Ultimate Software V2&rdquo;</a>
+page:</p><blockquote><p><strong>What should I do if my device is not recognized?</strong></p><p>[…]</p><ul><li>8BitDo Ultimate 2C Bluetooth Controller: Ensure the controller is turned
+off, press and hold the L1 + R1 buttons and connect via USB.</li></ul></blockquote><p>While this is for a different controller, this works on the 8BitDo 64 as well:
+press <code>L+R</code> while the controller is off and connect it over USB while keeping
+the buttons held. If the controller is not off, you can hold down the <code>Start</code>
+button for several seconds until it turns off.</p><p>Unfortunately I figured that out <em>after</em> I dusted off a Windows machine, so I
+haven&rsquo;t tried a full update from Linux yet, but I expect it will work once
+that&rsquo;s done. I expect I&rsquo;ll use <a href=https://github.com/franfermon/8bitdo_update><code>franfermon/8bitdo_update</code></a> the
+next time I need to update a controller, although I can&rsquo;t comment on its
+efficacy as I&rsquo;ve only updated with the official software.</p></main><footer role=contentinfo>© 2025 Nathan Wittstock
+—
+Content: <a href=https://creativecommons.org/licenses/by-nc/4.0/ target=_blank>CC BY-NC 4.0</a>,
+Code: <a href=https://github.com/fardog/fardog.io/blob/master/LICENSE target=_blank>MIT</a>, unless otherwise noted.<p>View the
+<a href=https://github.com/fardog/fardog.io/ target=_blank>source</a>
+for this site.
+<a href=https://fardog.io/privacy/>Privacy</a>.</p></footer></body></html>

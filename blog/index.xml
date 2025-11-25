@@ -1,4 +1,31 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Blog on fardog.io</title><link>https://fardog.io/blog/</link><description>Recent content in Blog on fardog.io</description><generator>Hugo</generator><language>en-us</language><copyright>© 2025 Nathan Wittstock</copyright><lastBuildDate>Sun, 23 Feb 2025 21:42:00 +0000</lastBuildDate><atom:link href="https://fardog.io/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>Chai Tea Blend</title><link>https://fardog.io/blog/2024/07/02/chai-tea-blend/</link><pubDate>Tue, 02 Jul 2024 21:32:00 +0000</pubDate><guid>https://fardog.io/blog/2024/07/02/chai-tea-blend/</guid><description>Here&amp;rsquo;s a blend of chai black tea I&amp;rsquo;ve been messing with:
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Blog on fardog.io</title><link>https://fardog.io/blog/</link><description>Recent content in Blog on fardog.io</description><generator>Hugo</generator><language>en-us</language><copyright>© 2025 Nathan Wittstock</copyright><lastBuildDate>Tue, 25 Nov 2025 17:37:00 +0000</lastBuildDate><atom:link href="https://fardog.io/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>8BitDo 64 Bluetooth Controller DFU/Bootloader</title><link>https://fardog.io/blog/2025/11/25/8bitdo-64-bluetooth-controller-dfu/bootloader/</link><pubDate>Tue, 25 Nov 2025 17:37:00 +0000</pubDate><guid>https://fardog.io/blog/2025/11/25/8bitdo-64-bluetooth-controller-dfu/bootloader/</guid><description>tl;dr: With the controller off, hold L+R and connect it via USB. This is different from other controllers, where you hold L(1)+R(1)+Start then connect it over USB after a red LED is shown.
+In order to update the 8BitDo 64 controller from Linux, you first need to place it into its DFU mode, booting it into its bootloader. For most 8BitDo controllers, it&amp;rsquo;s said to hold L(1)+R(1)+Start for 3 seconds, wait for the red LED to be shown, then connect over USB.</description><content:encoded>&lt;p>&lt;em>tl;dr:&lt;/em> With the controller off, hold &lt;code>L+R&lt;/code> and connect it via USB. This is
+different from other controllers, where you hold &lt;code>L(1)+R(1)+Start&lt;/code> then connect
+it over USB after a red LED is shown.&lt;/p>
+&lt;hr>
+&lt;p>In order to update the 8BitDo 64 controller from Linux, you first need to place
+it into its DFU mode, booting it into its bootloader. For most 8BitDo
+controllers, it&amp;rsquo;s said to hold &lt;code>L(1)+R(1)+Start&lt;/code> for 3 seconds, wait for the red
+LED to be shown, then connect over USB. That does not seem to work with the
+8BitDo 64. However following the FAQ on their &lt;a href="https://app.8bitdo.com/Ultimate-Software-V2/">&amp;ldquo;Ultimate Software V2&amp;rdquo;&lt;/a>
+page:&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>What should I do if my device is not recognized?&lt;/strong>&lt;/p>
+&lt;p>[…]&lt;/p>
+&lt;ul>
+&lt;li>8BitDo Ultimate 2C Bluetooth Controller: Ensure the controller is turned
+off, press and hold the L1 + R1 buttons and connect via USB.&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;p>While this is for a different controller, this works on the 8BitDo 64 as well:
+press &lt;code>L+R&lt;/code> while the controller is off and connect it over USB while keeping
+the buttons held. If the controller is not off, you can hold down the &lt;code>Start&lt;/code>
+button for several seconds until it turns off.&lt;/p>
+&lt;p>Unfortunately I figured that out &lt;em>after&lt;/em> I dusted off a Windows machine, so I
+haven&amp;rsquo;t tried a full update from Linux yet, but I expect it will work once
+that&amp;rsquo;s done. I expect I&amp;rsquo;ll use &lt;a href="https://github.com/franfermon/8bitdo_update">&lt;code>franfermon/8bitdo_update&lt;/code>&lt;/a> the
+next time I need to update a controller, although I can&amp;rsquo;t comment on its
+efficacy as I&amp;rsquo;ve only updated with the official software.&lt;/p></content:encoded></item><item><title>Chai Tea Blend</title><link>https://fardog.io/blog/2024/07/02/chai-tea-blend/</link><pubDate>Tue, 02 Jul 2024 21:32:00 +0000</pubDate><guid>https://fardog.io/blog/2024/07/02/chai-tea-blend/</guid><description>Here&amp;rsquo;s a blend of chai black tea I&amp;rsquo;ve been messing with:
 100g Darjeeling tea 70g whole cloves, lightly pulverized to create a mix of fines and pieces 40g dried ginger, ground coarsely to 1–2mm pieces 32g cinnamon sticks, chipped into 5–7mm length pieces 35g black peppercorns 18g mixed peppercorns (black, red, green, white) This makes for a nice clove-heavy blend but it doesn&amp;rsquo;t overpower the tea flavor. For grinding the spices, I use an attachment for my immersion blender but it&amp;rsquo;s essentially the same setup as a coffee grinder: spinning blades in a container.</description><content:encoded>&lt;p>Here&amp;rsquo;s a blend of chai black tea I&amp;rsquo;ve been messing with:&lt;/p>
 &lt;ul>
 &lt;li>100g Darjeeling tea&lt;/li>
